@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 48" fill="none" width="260" height="48">
+  <defs>
+    <linearGradient id="rs-teal-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3D6E5C" />
+      <stop offset="100%" stop-color="#224337" />
+    </linearGradient>
+    <linearGradient id="rs-orange-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFA25B" />
+      <stop offset="100%" stop-color="#E87428" />
+    </linearGradient>
+  </defs>
+
+  <!-- Logo Mark (Left 44x44) -->
+  <g transform="translate(2, 2)">
+    <path d="M22 42L4 32V20L22 30L40 20V32L22 42Z" fill="url(#rs-teal-grad)" />
+    <path d="M22 31L8 23V13L22 21L36 13V23L22 31Z" fill="#315C4C" />
+    <path d="M22 2L5 12L22 22L39 12L22 2Z" fill="url(#rs-orange-grad)" />
+    <polygon points="22,9 28,13 22,17 16,13" fill="#FFF7E8" opacity="0.9" />
+  </g>
+
+  <!-- Typography: RELASI SUKSES -->
+  <text x="56" y="24" font-family="'Familjen Grotesk', 'Inter', -apple-system, sans-serif" font-size="20" font-weight="800" letter-spacing="1.5" fill="#1A3027">RELASI SUKSES</text>
+  <!-- Subtitle: FOOD MACHINERY & PACKAGING -->
+  <text x="56.5" y="38" font-family="'Inter', -apple-system, sans-serif" font-size="8.5" font-weight="700" letter-spacing="1.8" fill="#FF8A3D">FOOD MACHINERY &amp; PACKAGING</text>
+</svg>

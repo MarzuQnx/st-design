@@ -8,7 +8,7 @@ export const solutionsData = {
   lifecycleStages: [
     {
       stepNumber: "01",
-      badge: "Pre-Purchase",
+      badge: { id: "Pra-Pembelian", en: "Pre-Purchase" },
       icon: "audit",
       title: {
         id: "Audit Alur Kerja & Daya Listrik",
@@ -29,15 +29,15 @@ export const solutionsData = {
     },
     {
       stepNumber: "02",
-      badge: "Test Kitchen Lab",
+      badge: { id: "Test Kitchen Lab", en: "Test Kitchen Lab" },
       icon: "testRun",
       title: {
         id: "Uji Coba Resep Bahan Baku Asli",
         en: "Real Recipe Trial in Test Kitchen"
       },
       tagline: {
-        id: "Bawa adonan & saus Anda langsung ke lab kami di PIK & Surabaya",
-        en: "Bring your raw dough & sauces to our PIK & Surabaya demo labs"
+        id: "Bawa adonan & saus Anda langsung ke lab kami di PIK & Bekasi",
+        en: "Bring your raw dough & sauces to our PIK & Bekasi facilities"
       },
       desc: {
         id: "Sebelum mesin dikirim, kami mengundang Anda menguji adonan resep sendiri pada unit demo. Kami memverifikasi tekstur, waktu mixing, kerataan pemanggangan, atau kerapatan segel kemasan hingga sesuai ekspektasi Anda.",
@@ -50,7 +50,7 @@ export const solutionsData = {
     },
     {
       stepNumber: "03",
-      badge: "Commissioning",
+      badge: { id: "Instalasi & Komisioning", en: "Commissioning" },
       icon: "installation",
       title: {
         id: "Instalasi & Pelatihan Operator di Dapur Anda",
@@ -71,7 +71,7 @@ export const solutionsData = {
     },
     {
       stepNumber: "04",
-      badge: "SLA 48 Jam",
+      badge: { id: "SLA 48 Jam", en: "48-Hour SLA" },
       icon: "support",
       title: {
         id: "Jaminan Sparepart & Tanggap Darurat Servis",
@@ -82,7 +82,7 @@ export const solutionsData = {
         en: "Rapid emergency field dispatch & thousands of domestic genuine parts"
       },
       desc: {
-        id: "Downtime mesin adalah kerugian nyata. Kami memberikan Garansi Servis Resmi 2 Tahun, Garansi Suku Cadang 1 Tahun, dan komitmen pengiriman suku cadang orisinil dari gudang Jakarta & Surabaya tanpa menunggu impor berbulan-bulan.",
+        id: "Downtime mesin adalah kerugian nyata. Kami memberikan Garansi Servis Resmi 2 Tahun, Garansi Suku Cadang 1 Tahun, dan komitmen pengiriman suku cadang orisinil dari gudang Jakarta & Bekasi tanpa menunggu impor berbulan-bulan.",
         en: "Machine downtime burns real profit. We provide an Official 2-Year Service Warranty, 1-Year Parts Warranty, and rapid spare parts dispatch from our domestic hubs without import delays."
       },
       keyDeliverable: {
@@ -270,7 +270,7 @@ export const solutionsData = {
   // Service Level Agreements (SLA) & Warranty Breakdown
   protectionPlans: [
     {
-      badge: "Garansi Resmi",
+      badge: { id: "Garansi Resmi", en: "Official Warranty" },
       title: { id: "Garansi Servis 2 Tahun Penuh", en: "Full 2-Year Service Warranty" },
       coverage: {
         id: "Mencakup seluruh biaya jasa perbaikan, kalibrasi berkala, dan penanganan problem kelistrikan oleh teknisi bersertifikat Relasi Sukses di lokasi usaha Anda.",
@@ -279,7 +279,7 @@ export const solutionsData = {
       highlight: { id: "Bebas Biaya Jasa Teknisi", en: "Zero Labor Fee Charges" }
     },
     {
-      badge: "Ketersediaan Suku Cadang",
+      badge: { id: "Ketersediaan Suku Cadang", en: "Genuine Parts" },
       title: { id: "Garansi Suku Cadang 1 Tahun", en: "1-Year Domestic Parts Guarantee" },
       coverage: {
         id: "Penggantian komponen mekanis, motor listrik, pemanas, dan modul kontrol orisinil secara cuma-cuma jika terjadi cacat produksi dalam 12 bulan pertama.",
@@ -288,11 +288,11 @@ export const solutionsData = {
       highlight: { id: "Suku Cadang Ready-Stock di RI", en: "Domestic Stocked Genuine Parts" }
     },
     {
-      badge: "Tanggap Darurat",
+      badge: { id: "Tanggap Darurat", en: "Rapid Dispatch" },
       title: { id: "SLA Respons Cepat 48 Jam", en: "48-Hour Rapid Dispatch SLA" },
       coverage: {
-        id: "Saat terjadi kendala di lini produksi, tim teknisi kami di Jakarta dan Surabaya siap diberangkatkan dalam kurun waktu maksimal 48 jam untuk inspeksi langsung.",
-        en: "Should line stoppage occur, certified field engineers from Jakarta & Surabaya hubs are dispatched within a maximum of 48 hours."
+        id: "Saat terjadi kendala di lini produksi, tim teknisi kami di Jakarta dan Bekasi siap diberangkatkan dalam kurun waktu maksimal 48 jam untuk inspeksi langsung.",
+        en: "Should line stoppage occur, certified field engineers from Jakarta & Bekasi hubs are dispatched within a maximum of 48 hours."
       },
       highlight: { id: "Prioritas Line Stoppage", en: "Emergency Line Priority" }
     }

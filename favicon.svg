@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <defs>
+    <linearGradient id="fav-teal" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#315C4C" />
+      <stop offset="100%" stop-color="#1B382E" />
+    </linearGradient>
+    <linearGradient id="fav-orange" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FF9E54" />
+      <stop offset="100%" stop-color="#E87428" />
+    </linearGradient>
+  </defs>
+
+  <!-- Rounded Tile Base in Spruce Teal -->
+  <rect width="64" height="64" rx="14" fill="url(#fav-teal)" />
+  <rect x="1" y="1" width="62" height="62" rx="13" stroke="#FFF7E8" stroke-opacity="0.15" stroke-width="1.5" />
+
+  <!-- Emblem Centerpiece -->
+  <g transform="translate(8, 8)">
+    <!-- Bottom layer -->
+    <path d="M24 43L7 33V22L24 31L41 22V33L24 43Z" fill="#FFF7E8" fill-opacity="0.3" />
+    <!-- Middle layer -->
+    <path d="M24 32L11 25V16L24 23L37 16V25L24 32Z" fill="#FFF7E8" fill-opacity="0.8" />
+    <!-- Top Tangerine Cap -->
+    <path d="M24 5L9 14L24 23L39 14L24 5Z" fill="url(#fav-orange)" />
+    <!-- Center pivot point -->
+    <polygon points="24,11 29,14 24,17 19,14" fill="#FFFFFF" />
+  </g>
+</svg>

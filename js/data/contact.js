@@ -25,22 +25,23 @@ export const contactData = {
       mapEmbedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3967.0989063234125!2d106.7456784!3d-6.1173921!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6a1d47913cf677%3A0xbcf03a71b12b58d0!2sElang%20Laut%20Pantai%20Indah%20Kapuk!5e0!3m2!1sen!2sid!4v1700000000000!5m2!1sen!2sid"
     },
     {
-      id: "sby-rungkut",
-      city: { id: "Surabaya (Cabang Jawa Timur & Workshop Kalibrasi)", en: "Surabaya (East Java Branch & Calibration Workshop)" },
-      complex: "Komplek Rungkut Industri Megah",
-      address: "Komplek Rungkut Industri Megah Blok D-12, Jl. Raya Rungkut No. 88, Surabaya, Jawa Timur 60293",
-      phone: "+62 31 843 7200",
-      whatsapp: "628118899234",
+      id: "bks-mustika",
+      city: { id: "Bekasi (Kantor & Workshop Servis)", en: "Bekasi (Office & Service Workshop)" },
+      complex: "Mustika Jaya Industrial Area",
+      address: "Jln. Mawar 141, Mustika Sari, Mustika Jaya, Bekasi",
+      email: "info@relasisukses.co.id",
+      phone: "+62 812-9525-4747",
+      whatsapp: "6281295254747",
       hours: {
         id: "Senin - Sabtu: 08.30 - 17.00 WIB",
         en: "Monday - Saturday: 08:30 - 17:00 WIB"
       },
       features: [
-        { id: "Showroom Unit Best-Seller Wilayah Timur", en: "Top-Selling Units Staged for Demo" },
-        { id: "Bengkel Bubut & Workshop Servis Presisi", en: "Lathe Workshop & Precision Calibration Hub" },
-        { id: "Depo Suku Cadang Fast-Moving Jawa Timur", en: "Fast-Moving Regional Spare Parts Depot" }
+        { id: "Workshop Perakitan & Rekayasa Mesin Presisi", en: "Machine Assembly & Precision Engineering Hub" },
+        { id: "Depo Suku Cadang Resmi Ready-Stock", en: "Official Domestic Spare Parts Depot" },
+        { id: "Layanan Servis & Kalibrasi Mesin Pangan", en: "Food Machinery Calibration & Service Center" }
       ],
-      mapEmbedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3957.2989063234125!2d112.7556784!3d-7.3273921!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd7fb3913cf677%3A0xbcf03a71b12b58d0!2sRungkut%20Industri%20Surabaya!5e0!3m2!1sen!2sid!4v1700000000000!5m2!1sen!2sid"
+      mapEmbedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3965.9456784!2d107.0123456!3d-6.3012345!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69910000000000%3A0x0!2sMustika%20Jaya%20Bekasi!5e0!3m2!1sen!2sid!4v1700000000000!5m2!1sen!2sid"
     }
   ],
 
@@ -66,8 +67,8 @@ export const contactData = {
       badge: "Test Kitchen Lab",
       title: { id: "Reservasi Demo & Uji Resep", en: "Test Kitchen & Recipe Trial" },
       desc: {
-        id: "Jadwalkan uji coba bahan baku asli Anda di showroom Jakarta PIK atau workshop Tangerang/Surabaya.",
-        en: "Book a hands-on trial run using your own raw recipe ingredients at Jakarta PIK or Tangerang/Surabaya."
+        id: "Jadwalkan uji coba bahan baku asli Anda di showroom Jakarta PIK atau workshop Bekasi.",
+        en: "Book a hands-on trial run using your own raw recipe ingredients at Jakarta PIK or Bekasi workshop."
       },
       phone: "+62 812-9525-4747",
       waPhone: "6281295254747",
@@ -112,8 +113,8 @@ export const contactData = {
         en: "Can I bring my own recipe ingredients to test run the machines prior to purchasing?"
       },
       a: {
-        id: "Sangat bisa dan sangat kami anjurkan! Setiap adonan tepung, kekentalan saus, dan kelembapan biskuit memiliki sifat unik. Di Test Kitchen Showroom kami di Pantai Indah Kapuk (Jakarta) dan Rungkut (Surabaya), Anda dipersilakan membawa bahan baku asli dan mencoba mesin didampingi sales engineer kami tanpa dipungut biaya sepeser pun dan tanpa paksaan membeli.",
-        en: "Absolutely, and we strongly encourage it! Every flour dough, sauce viscosity, and snack texture behaves differently. In our Jakarta (PIK) and Surabaya (Rungkut) Test Kitchens, bring your proprietary ingredients and run the machines alongside certified engineers at zero fee and with no purchase obligation."
+        id: "Sangat bisa dan sangat kami anjurkan! Setiap adonan tepung, kekentalan saus, dan kelembapan biskuit memiliki sifat unik. Di Test Kitchen Showroom kami di Pantai Indah Kapuk (Jakarta) dan workshop Bekasi, Anda dipersilakan membawa bahan baku asli dan mencoba mesin didampingi sales engineer kami tanpa dipungut biaya sepeser pun dan tanpa paksaan membeli.",
+        en: "Absolutely, and we strongly encourage it! Every flour dough, sauce viscosity, and snack texture behaves differently. In our Jakarta (PIK) and Bekasi Test Kitchens, bring your proprietary ingredients and run the machines alongside certified engineers at zero fee and with no purchase obligation."
       }
     },
     {
@@ -172,8 +173,8 @@ export const contactData = {
         en: "Are replacement spare parts always in-stock domestically in Indonesia?"
       },
       a: {
-        id: "Pasti. Kami mengoperasikan gudang sentral suku cadang di Tangerang dan Jakarta Utara serta depo pendukung di Surabaya. Ribuan komponen fast-moving seperti belt, bearing, seal kedap udara, elemen pemanas, thermocouple, dan gear motor selalu tersedia ready-stock sehingga Anda tidak perlu menunggu impor berbulan-bulan saat membutuhkan penggantian.",
-        en: "Absolutely. We operate central parts distribution centers in Tangerang and North Jakarta as well as Surabaya. Thousands of fast-moving items like conveyor belts, food-grade bearings, heating elements, thermocouples, and gearmotors are stocked domestically for same-day or next-day dispatch."
+        id: "Pasti. Kami mengoperasikan gudang sentral suku cadang di Tangerang dan Jakarta Utara serta depo pendukung di Bekasi. Ribuan komponen fast-moving seperti belt, bearing, seal kedap udara, elemen pemanas, thermocouple, dan gear motor selalu tersedia ready-stock sehingga Anda tidak perlu menunggu impor berbulan-bulan saat membutuhkan penggantian.",
+        en: "Absolutely. We operate central parts distribution centers in Tangerang and North Jakarta as well as Bekasi. Thousands of fast-moving items like conveyor belts, food-grade bearings, heating elements, thermocouples, and gearmotors are stocked domestically for same-day or next-day dispatch."
       }
     },
     {

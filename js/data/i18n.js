@@ -105,7 +105,7 @@ export const i18nData = {
       whyusSubtitle: "Dengarkan langsung cerita bagaimana otomasi mesin dan pendampingan teknisi kami melipatgandakan omzet serta menjaga konsistensi resep mereka.",
       facilitiesBadge: "Fasilitas & Lab Riset",
       facilitiesTitle: "Fasilitas Test Kitchen & Bengkel Kalibrasi",
-      facilitiesSubtitle: "Kunjungi showroom kami di Jakarta dan Surabaya untuk menguji resep dan melihat langsung kualitas mesin sebelum memutuskan.",
+      facilitiesSubtitle: "Kunjungi showroom kami di Jakarta dan workshop Bekasi untuk menguji resep dan melihat langsung kualitas mesin sebelum memutuskan.",
       facilitiesBookBtn: "Jadwalkan Kunjungan Showroom via WA",
       milestonesBadge: "Rekam Jejak 40 Tahun",
       milestonesTitle: "Dedikasi Panjang dalam Industri Mesin Pangan Indonesia",
@@ -163,13 +163,14 @@ export const i18nData = {
       heroBadge: "Jalur Komunikasi & Pusat Bantuan",
       heroTitle: "Terhubung Langsung dengan Tim Sales Engineer & Layanan Servis Relasi Sukses",
       heroLead: "Punya rencana investasi mesin, ingin uji coba resep di showroom, atau butuh bantuan teknis darurat? Kami siap melayani Anda melalui hotline resmi, WhatsApp per divisi, dan panduan FAQ transparan di bawah ini.",
+      hotlineRibbon: "Hotline Cepat: <strong>+62 812-9525-4747</strong> (Setiap Hari 08.00 - 20.00 WIB)",
       channelsBadge: "Layanan Cepat Tanggap",
       channelsTitle: "Pilih Divisi Konsultasi yang Anda Butuhkan",
       channelsSubtitle: "Hubungi langsung spesialis di divisi terkait tanpa perantara untuk respon yang lebih cepat dan tepat sasaran.",
       channelsDirectBtn: "Hubungi via WhatsApp",
       showroomBadge: "Fasilitas Showroom",
       showroomTitle: "Lokasi Showroom & Test Kitchen Lab",
-      showroomSubtitle: "Silakan datang langsung ke showroom kami di Jakarta dan Surabaya untuk melihat fisik mesin dan mencoba bahan baku resep Anda.",
+      showroomSubtitle: "Silakan datang langsung ke showroom kami di Jakarta atau workshop Bekasi untuk melihat fisik mesin dan mencoba bahan baku resep Anda.",
       hoursLabel: "Jam Operasional:",
       featuresLabel: "Fasilitas Utama:",
       bookingCardBadge: "Formulir Reservasi Kunjungan",
@@ -181,7 +182,7 @@ export const i18nData = {
       formBusinessPlaceholder: "Contoh: Roti Manis Kencana",
       formShowroomLabel: "Pilih Lokasi Showroom:",
       formShowroomJkt: "Jakarta Utara (PIK Elang Laut)",
-      formShowroomSby: "Surabaya (Rungkut Industri)",
+      formShowroomSby: "Bekasi (Mustika Jaya)",
       formMachineLabel: "Mesin yang Ingin Dicoba:",
       formMachinePlaceholder: "Contoh: Spiral Mixer 60L & Deck Oven 3-Deck",
       formDateLabel: "Rencana Tanggal Kunjungan:",
@@ -240,7 +241,7 @@ export const i18nData = {
         },
         {
           title: "Uji Coba & Demo Mesin Langsung",
-          desc: "Bawa bahan baku resep Anda ke showroom kami di Jakarta atau Surabaya. Uji coba mesinnya sampai Anda puas dengan tekstur dan hasil kemasannya.",
+          desc: "Bawa bahan baku resep Anda ke showroom kami di Jakarta atau workshop Bekasi. Uji coba mesinnya sampai Anda puas dengan tekstur dan hasil kemasannya.",
           icon: "play"
         },
         {
@@ -254,6 +255,19 @@ export const i18nData = {
           icon: "shield"
         }
       ]
+    },
+    blueprint: {
+      badge: "Ready Stock Demo Unit",
+      outputLabel: "Efisiensi Output",
+      outputVal: "+340% / Batch",
+      materialLabel: "Standar Bahan",
+      materialVal: "SUS 304 Food Grade",
+      freeConsult: "✓ Free Konsultasi Resep & Uji Coba Bahan Baku"
+    },
+    faqSection: {
+      badge: "FAQ & Jawaban Cepat",
+      title: "Pertanyaan yang Sering Diajukan Pemilik Usaha",
+      subtitle: "Informasi transparan seputar uji coba mesin, kelistrikan, garansi, dan pengiriman."
     },
     testimonials: {
       badge: "Kisah Sukses Mitra",
@@ -272,8 +286,8 @@ export const i18nData = {
       about: "Penyedia mesin industri pengolahan pangan, bakery equipment, dan sistem pengemasan otomatis terpercaya di Indonesia.",
       headOffice: "Kantor Pusat & Showroom Jakarta (PIK)",
       headOfficeAddr: "Arcade Business Center Lt. 6 Unit 6-03, Jl. Pantai Indah Utara 2 Kav. C1, Pantai Indah Kapuk, Jakarta Utara",
-      branchOffice: "Kantor Cabang Surabaya",
-      branchOfficeAddr: "Kawasan Rungkut Industri Megah Blok D-12, Surabaya, Jawa Timur",
+      branchOffice: "Kantor & Workshop Bekasi",
+      branchOfficeAddr: "Jln. Mawar 141, Mustika Sari, Mustika Jaya, Bekasi",
       contactTitle: "Kontak & Layanan Cepat",
       quickLinks: "Tautan Cepat",
       legalNotice: "© 2026 PT Relasi Sukses Bersama (relasisukses.co.id). Seluruh hak cipta dilindungi. Didesain dengan standar presisi industri.",
@@ -381,7 +395,7 @@ export const i18nData = {
       whyusSubtitle: "Real stories on how our smart machinery and certified field engineers quadrupled daily output and protected recipe consistency.",
       facilitiesBadge: "Facilities & Research Lab",
       facilitiesTitle: "Test Kitchen Laboratories & Calibration Hubs",
-      facilitiesSubtitle: "Visit our Jakarta & Surabaya showrooms to run your own raw recipe ingredients and test machine performance prior to purchasing.",
+      facilitiesSubtitle: "Visit our Jakarta showroom & Bekasi workshop to run your own raw recipe ingredients and test machine performance prior to purchasing.",
       facilitiesBookBtn: "Schedule Showroom Visit via WA",
       milestonesBadge: "40-Year Industry Legacy",
       milestonesTitle: "Decades of Precision Engineering in Indonesia's Food Sector",
@@ -439,13 +453,14 @@ export const i18nData = {
       heroBadge: "Direct Inquiries & Buyer Support",
       heroTitle: "Connect Directly with Relasi Sukses Sales Engineering & Technical Services",
       heroLead: "Planning an equipment upgrade, looking to run a test trial in our showroom, or need rapid field service support? We are ready to assist via official hotlines, departmental WhatsApp desks, and our comprehensive FAQ knowledge base below.",
+      hotlineRibbon: "Direct Hotline: <strong>+62 812-9525-4747</strong> (Daily 08:00 - 20:00 WIB)",
       channelsBadge: "Fast Response Dispatch",
       channelsTitle: "Select the Dedicated Department for Your Inquiry",
       channelsSubtitle: "Reach out directly to specialized sales engineers without middlemen for faster, accurate technical guidance.",
       channelsDirectBtn: "Connect on WhatsApp",
       showroomBadge: "Showroom Facilities",
       showroomTitle: "Showroom & Test Kitchen Hubs",
-      showroomSubtitle: "Visit our facilities in Jakarta and Surabaya to inspect the physical build quality and test run your raw recipe dough.",
+      showroomSubtitle: "Visit our facilities in Jakarta or Bekasi workshop to inspect the physical build quality and test run your raw recipe dough.",
       hoursLabel: "Operating Hours:",
       featuresLabel: "Key Hub Features:",
       bookingCardBadge: "Showroom Booking Form",
@@ -457,7 +472,7 @@ export const i18nData = {
       formBusinessPlaceholder: "e.g. Kencana Bakery & Pastry",
       formShowroomLabel: "Select Showroom Hub:",
       formShowroomJkt: "North Jakarta (PIK Elang Laut)",
-      formShowroomSby: "Surabaya (Rungkut Industrial)",
+      formShowroomSby: "Bekasi (Mustika Jaya)",
       formMachineLabel: "Machinery You Want to Test:",
       formMachinePlaceholder: "e.g. Spiral Mixer 60L & 3-Deck Oven",
       formDateLabel: "Planned Visit Date:",
@@ -516,7 +531,7 @@ export const i18nData = {
         },
         {
           title: "Live Machine Demo & Testing",
-          desc: "Bring your raw ingredients to our Jakarta or Surabaya showroom. Test run the machine until you're completely satisfied with dough texture and pack seal.",
+          desc: "Bring your raw ingredients to our Jakarta showroom or Bekasi workshop. Test run the machine until you're completely satisfied with dough texture and pack seal.",
           icon: "play"
         },
         {
@@ -530,6 +545,19 @@ export const i18nData = {
           icon: "shield"
         }
       ]
+    },
+    blueprint: {
+      badge: "Ready Stock Demo Unit",
+      outputLabel: "Output Efficiency",
+      outputVal: "+340% / Batch",
+      materialLabel: "Material Standard",
+      materialVal: "SUS 304 Food Grade",
+      freeConsult: "✓ Free Recipe Consultation & Raw Material Trial"
+    },
+    faqSection: {
+      badge: "FAQ & Quick Answers",
+      title: "Frequently Asked Questions by Business Owners",
+      subtitle: "Transparent answers regarding machine test runs, power ratings, official 2-year warranty, and logistics."
     },
     testimonials: {
       badge: "Partner Stories",
@@ -548,8 +576,8 @@ export const i18nData = {
       about: "Indonesia's premier supplier of food processing equipment, bakery systems, and automated packaging lines.",
       headOffice: "Jakarta Head Office & Showroom (PIK)",
       headOfficeAddr: "Arcade Business Center 6th Floor Unit 6-03, Pantai Indah Kapuk, North Jakarta",
-      branchOffice: "Surabaya Branch Office",
-      branchOfficeAddr: "Rungkut Megah Industrial Complex Block D-12, Surabaya, East Java",
+      branchOffice: "Bekasi Office & Workshop",
+      branchOfficeAddr: "Jln. Mawar 141, Mustika Sari, Mustika Jaya, Bekasi",
       contactTitle: "Fast-Track Inquiries",
       quickLinks: "Quick Navigation",
       legalNotice: "© 2026 PT Relasi Sukses Bersama (relasisukses.co.id). All rights reserved. Built to rigorous industrial standards.",

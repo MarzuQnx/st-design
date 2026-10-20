@@ -1,0 +1,293 @@
+- generic [active] [ref=f9e1]:
+  - complementary "Announcement" [ref=f9e2]:
+    - generic [ref=f9e3]:
+      - generic [ref=f9e4]: Gudang Sparepart Sentral & Teknisi Siaga Se-Indonesia | Showroom Jakarta & Workshop Bekasi
+      - generic [ref=f9e8]:
+        - text: "Hotline Engineering:"
+        - strong [ref=f9e9]: +62 812-9525-4747
+  - banner [ref=f9e10]:
+    - generic [ref=f9e11]:
+      - link "Relasi Sukses Homepage" [ref=f9e12] [cursor=pointer]:
+        - /url: index.html
+        - generic [ref=f9e19]:
+          - generic [ref=f9e20]: RELASI SUKSES
+          - generic [ref=f9e21]: Food Machinery & Packaging
+      - navigation "Main Navigation" [ref=f9e22]:
+        - list [ref=f9e23]:
+          - listitem [ref=f9e24]:
+            - link "Beranda" [ref=f9e25] [cursor=pointer]:
+              - /url: index.html#home
+          - listitem [ref=f9e26]:
+            - link "Katalog Mesin" [ref=f9e27] [cursor=pointer]:
+              - /url: products.html
+          - listitem [ref=f9e28]:
+            - link "Tentang Kami" [ref=f9e29] [cursor=pointer]:
+              - /url: about.html
+          - listitem [ref=f9e30]:
+            - link "Solusi Bisnis" [ref=f9e31] [cursor=pointer]:
+              - /url: solutions.html
+          - listitem [ref=f9e32]:
+            - link "Artikel" [ref=f9e33] [cursor=pointer]:
+              - /url: articles.html
+          - listitem [ref=f9e34]:
+            - link "Kontak & FAQ" [ref=f9e35] [cursor=pointer]:
+              - /url: contact.html
+      - generic [ref=f9e36]:
+        - group "Language selection" [ref=f9e37]:
+          - button "Switch to Indonesian" [ref=f9e38] [cursor=pointer]: ID
+          - button "Switch to English" [ref=f9e39] [cursor=pointer]: EN
+        - link "Chat Sales Engineer" [ref=f9e40] [cursor=pointer]:
+          - /url: https://wa.me/6281295254747?text=Halo%20Tim%20Relasi%20Sukses%2C%20saya%20tertarik%20berkonsultasi%20mengenai%20mesin%20industri%20makanan%20%26%20pengemasan%20untuk%20usaha%20saya.%20Mohon%20informasi%20katalog%20%26%20jadwal%20demo.
+  - navigation "Breadcrumb navigation" [ref=f9e44]:
+    - list [ref=f9e46]:
+      - listitem [ref=f9e47]:
+        - link "Beranda" [ref=f9e48] [cursor=pointer]:
+          - /url: index.html
+      - listitem [ref=f9e49]: /
+      - listitem [ref=f9e50]: Solusi Bisnis & Layanan Servis
+  - main [ref=f9e51]:
+    - region [ref=f9e52]:
+      - generic [ref=f9e54]:
+        - generic [ref=f9e55]: Siklus Kemitraan Menyeluruh // Marketing 5.0
+        - heading "Bukan Hanya Membeli Mesin — Kami Mengawal Kelancaran Pabrik Anda" [level=1] [ref=f9e56]
+        - paragraph [ref=f9e57]: Dari audit kesiapan daya listrik, uji coba resep di lab, instalasi langsung di dapur Anda, hingga jaminan servis darurat 48 jam dan ketersediaan ribuan suku cadang orisinil ready-stock.
+        - generic [ref=f9e58]:
+          - link "Mulai Simulasi Kebutuhan Mesin" [ref=f9e59] [cursor=pointer]:
+            - /url: "#calculator"
+          - link "Konsultasi Alur Produksi (WA)" [ref=f9e63] [cursor=pointer]:
+            - /url: https://wa.me/6281295254747?text=Halo%20Tim%20Sales%20Engineer%20Relasi%20Sukses%2C%20saya%20ingin%20berdiskusi%20mengenai%20audit%20alur%20produksi%20dan%20kesiapan%20daya%20listrik%20tempat%20usaha%20saya.%20Mohon%20infonya.
+    - region [ref=f9e67]:
+      - generic [ref=f9e68]:
+        - generic [ref=f9e69]:
+          - generic [ref=f9e70]: 4 Tahap Pendampingan
+          - heading "Alur Kerja Nyata Bersama Tim Sales Engineer Relasi Sukses" [level=2] [ref=f9e71]
+          - paragraph [ref=f9e72]: Proses transparan tanpa biaya terselubung untuk memastikan investasi mesin Anda benar-benar menguntungkan.
+        - generic [ref=f9e73]:
+          - article [ref=f9e74]:
+            - generic [ref=f9e75]:
+              - generic [ref=f9e76]:
+                - generic [ref=f9e77]: "01"
+                - generic [ref=f9e78]: Pre-Purchase
+              - heading "Audit Alur Kerja & Daya Listrik" [level=3] [ref=f9e83]
+              - generic [ref=f9e84]: Analisis layout dapur & kecukupan daya PLN sebelum transaksi
+              - paragraph [ref=f9e85]: Sales engineer kami membantu Anda mengukur kapasitas riil, ketersediaan daya listrik (220V atau 380V), dan alur perpindahan bahan baku agar mesin yang dipilih tidak menimbulkan bottleneck di dapur Anda.
+            - generic [ref=f9e86]:
+              - generic [ref=f9e87]: "Hasil Nyata:"
+              - generic [ref=f9e88]: Laporan Estimasi Kapasitas & Rekomendasi Kelistrikan
+          - article [ref=f9e89]:
+            - generic [ref=f9e90]:
+              - generic [ref=f9e91]:
+                - generic [ref=f9e92]: "02"
+                - generic [ref=f9e93]: Test Kitchen Lab
+              - heading "Uji Coba Resep Bahan Baku Asli" [level=3] [ref=f9e98]
+              - generic [ref=f9e99]: Bawa adonan & saus Anda langsung ke lab kami di PIK & Bekasi
+              - paragraph [ref=f9e100]: Sebelum mesin dikirim, kami mengundang Anda menguji adonan resep sendiri pada unit demo. Kami memverifikasi tekstur, waktu mixing, kerataan pemanggangan, atau kerapatan segel kemasan hingga sesuai ekspektasi Anda.
+            - generic [ref=f9e101]:
+              - generic [ref=f9e102]: "Hasil Nyata:"
+              - generic [ref=f9e103]: Verifikasi Tekstur & Uji Ketahanan Segel Kemasan
+          - article [ref=f9e104]:
+            - generic [ref=f9e105]:
+              - generic [ref=f9e106]:
+                - generic [ref=f9e107]: "03"
+                - generic [ref=f9e108]: Commissioning
+              - heading "Instalasi & Pelatihan Operator di Dapur Anda" [level=3] [ref=f9e112]
+              - generic [ref=f9e113]: Teknisi datang langsung, menyetel parameter & membimbing staf
+              - paragraph [ref=f9e114]: Teknisi Relasi Sukses hadir di lokasi usaha Anda untuk perakitan presisi, kalibrasi sensor, pengujian kelistrikan awal, dan mendampingi operator dapur sampai benar-benar mandiri mengoperasikan serta merawat mesin.
+            - generic [ref=f9e115]:
+              - generic [ref=f9e116]: "Hasil Nyata:"
+              - generic [ref=f9e117]: Sertifikat Pelatihan Operator & Standard Operating Procedure (SOP)
+          - article [ref=f9e118]:
+            - generic [ref=f9e119]:
+              - generic [ref=f9e120]:
+                - generic [ref=f9e121]: "04"
+                - generic [ref=f9e122]: SLA 48 Jam
+              - heading "Jaminan Sparepart & Tanggap Darurat Servis" [level=3] [ref=f9e127]
+              - generic [ref=f9e128]: Siaga teknisi lapangan dan ribuan suku cadang orisinil ready-stock
+              - paragraph [ref=f9e129]: Downtime mesin adalah kerugian nyata. Kami memberikan Garansi Servis Resmi 2 Tahun, Garansi Suku Cadang 1 Tahun, dan komitmen pengiriman suku cadang orisinil dari gudang Jakarta & Bekasi tanpa menunggu impor berbulan-bulan.
+            - generic [ref=f9e130]:
+              - generic [ref=f9e131]: "Hasil Nyata:"
+              - generic [ref=f9e132]: Jaminan Tanggap Darurat 48 Jam & Kartu Servis Resmi Relasi Sukses
+    - region [ref=f9e133]:
+      - generic [ref=f9e134]:
+        - generic [ref=f9e135]:
+          - generic [ref=f9e136]: Simulator Alur Produksi & Daya Listrik
+          - heading "Kalkulator Kebutuhan Kapasitas & Kelistrikan" [level=2] [ref=f9e137]
+          - paragraph [ref=f9e138]: Pilih sektor usaha, target produksi, dan daya listrik tempat Anda untuk melihat rekomendasi konfigurasi mesin secara instan.
+        - generic [ref=f9e139]:
+          - generic [ref=f9e140]:
+            - generic [ref=f9e141]:
+              - generic [ref=f9e142]: "1. Pilih Sektor Usaha Anda:"
+              - generic [ref=f9e143]:
+                - button "Peralatan Bakery & Toko Roti" [ref=f9e144] [cursor=pointer]
+                - button "Pengemasan & Sealing Makanan" [ref=f9e145] [cursor=pointer]
+                - button "Pengolahan Makanan & Pastry" [ref=f9e146] [cursor=pointer]
+            - generic [ref=f9e147]:
+              - generic [ref=f9e148]: "2. Target Kapasitas Harian:"
+              - generic [ref=f9e149]:
+                - generic [ref=f9e150] [cursor=pointer]:
+                  - generic [ref=f9e151]:
+                    - generic [ref=f9e152]: Skala UMKM / Studio Dapur
+                    - generic [ref=f9e153]: 50 - 150 kg adonan / hari (500 - 1.200 roti)
+                  - generic [ref=f9e154]: 1-2 Operator
+                - generic [ref=f9e155] [cursor=pointer]:
+                  - generic [ref=f9e156]:
+                    - generic [ref=f9e157]: Skala Komersial Menengah
+                    - generic [ref=f9e158]: 200 - 500 kg adonan / hari (2.000 - 5.000 roti)
+                  - generic [ref=f9e159]: 3-5 Operator
+                - generic [ref=f9e160] [cursor=pointer]:
+                  - generic [ref=f9e161]:
+                    - generic [ref=f9e162]: Skala Pabrik / Industri Besar
+                    - generic [ref=f9e163]: "> 800 kg adonan / hari (> 8.000 roti skala pabrik)"
+                  - generic [ref=f9e164]: Lini Otomatis
+            - generic [ref=f9e165]:
+              - generic [ref=f9e166]: "3. Sumber Daya Listrik Tempat Usaha:"
+              - generic [ref=f9e167]:
+                - button "220V (1 Phase - Listrik Standar)" [ref=f9e168] [cursor=pointer]
+                - button "380V (3 Phase - Listrik Industri)" [ref=f9e169] [cursor=pointer]
+          - generic [ref=f9e170]:
+            - generic [ref=f9e171]:
+              - generic [ref=f9e172]:
+                - generic [ref=f9e173]: Rekomendasi Konfigurasi Mesin
+                - generic [ref=f9e174]: Kelistrikan Kompatibel
+              - generic [ref=f9e175]:
+                - generic [ref=f9e176]:
+                  - generic [ref=f9e177]: 1.2 kW
+                  - generic [ref=f9e178]: "Estimasi Daya Listrik:"
+                - generic [ref=f9e179]:
+                  - generic [ref=f9e180]: 60%
+                  - generic [ref=f9e181]: "Estimasi Efisiensi Waktu:"
+                - generic [ref=f9e182]:
+                  - generic [ref=f9e183]: +250%
+                  - generic [ref=f9e184]: "Peningkatan Output Batch:"
+              - generic [ref=f9e185]:
+                - generic [ref=f9e186]: "Paket Mesin Rekomendasi:"
+                - list [ref=f9e187]:
+                  - listitem [ref=f9e188]:
+                    - generic [ref=f9e189]: Heavy-Duty Spiral Mixer 20L (VM-SP20)
+                    - generic [ref=f9e190]: 1.1 kW
+                  - listitem [ref=f9e191]:
+                    - generic [ref=f9e192]: Luxury Gas Deck Oven 1-Deck 2-Tray (VO-DK12)
+                    - generic [ref=f9e193]: 0.1 kW (Gas Utama)
+              - generic [ref=f9e194]:
+                - generic [ref=f9e195]: "✓ Catatan Teknis Sales Engineer:"
+                - paragraph [ref=f9e196]: "Kelistrikan Kompatibel: Konfigurasi ini aman dan dapat langsung beroperasi pada instalasi 220V 1-Phase standar."
+                - generic [ref=f9e197]: Sangat aman untuk meteran listrik rumahan standar (2.200 VA). Oven menggunakan pemanas gas LPG dengan konsumsi listrik minimal hanya untuk pengapian digital.
+            - link "Diskusikan Rekomendasi Ini via WhatsApp" [ref=f9e199] [cursor=pointer]:
+              - /url: https://wa.me/6281295254747?text=Halo%20Tim%20Sales%20Engineer%20Relasi%20Sukses%2C%20saya%20telah%20menggunakan%20simulator%20kapasitas%20untuk%20sektor%20*Peralatan%20Bakery%20%26%20Toko%20Roti*%20(Skala%3A%20UMKM%2C%20Sumber%20Listrik%3A%20220V%2C%20Total%20Daya%3A%201.2%20kW).%20Saya%20ingin%20mendiskusikan%20rekomendasi%20mesin%20dan%20audit%20layout%20dapur%20ini.
+    - region [ref=f9e203]:
+      - generic [ref=f9e204]:
+        - generic [ref=f9e205]:
+          - generic [ref=f9e206]: Kepastian Investasi
+          - heading "Jaminan Purna Jual & Servis Berkala" [level=2] [ref=f9e207]
+          - paragraph [ref=f9e208]: Kami melindungi kelangsungan operasional pabrik Anda dengan perlindungan hukum dan komitmen servis yang nyata.
+        - generic [ref=f9e209]:
+          - article [ref=f9e210]:
+            - generic [ref=f9e211]:
+              - generic [ref=f9e212]: Garansi Resmi
+              - heading "Garansi Servis 2 Tahun Penuh" [level=3] [ref=f9e213]
+              - paragraph [ref=f9e214]: Mencakup seluruh biaya jasa perbaikan, kalibrasi berkala, dan penanganan problem kelistrikan oleh teknisi bersertifikat Relasi Sukses di lokasi usaha Anda.
+            - generic [ref=f9e215]: Bebas Biaya Jasa Teknisi
+          - article [ref=f9e219]:
+            - generic [ref=f9e220]:
+              - generic [ref=f9e221]: Ketersediaan Suku Cadang
+              - heading "Garansi Suku Cadang 1 Tahun" [level=3] [ref=f9e222]
+              - paragraph [ref=f9e223]: Penggantian komponen mekanis, motor listrik, pemanas, dan modul kontrol orisinil secara cuma-cuma jika terjadi cacat produksi dalam 12 bulan pertama.
+            - generic [ref=f9e224]: Suku Cadang Ready-Stock di RI
+          - article [ref=f9e228]:
+            - generic [ref=f9e229]:
+              - generic [ref=f9e230]: Tanggap Darurat
+              - heading "SLA Respons Cepat 48 Jam" [level=3] [ref=f9e231]
+              - paragraph [ref=f9e232]: Saat terjadi kendala di lini produksi, tim teknisi kami di Jakarta dan Bekasi siap diberangkatkan dalam kurun waktu maksimal 48 jam untuk inspeksi langsung.
+            - generic [ref=f9e233]: Prioritas Line Stoppage
+    - generic [ref=f9e239]:
+      - generic [ref=f9e240]: Audit Layout Dapur Gratis
+      - heading "Ragu Apakah Daya Listrik Tempat Usaha Anda Cukup?" [level=2] [ref=f9e241]
+      - paragraph [ref=f9e242]: Kirimkan foto lokasi atau panel listrik Anda ke tim engineering Relasi Sukses. Kami berikan rekomendasi pembagian daya gratis tanpa paksaan.
+      - generic [ref=f9e243]:
+        - link "Konsultasikan Kesiapan Dapur via WhatsApp" [ref=f9e244] [cursor=pointer]:
+          - /url: https://wa.me/6281295254747?text=Halo%20Tim%20Relasi%20Sukses%2C%20saya%20tertarik%20berkonsultasi%20mengenai%20kesiapan%20daya%20listrik%20dan%20audit%20layout%20dapur%20usaha%20saya.%20Mohon%20arahannya.
+        - link "Eksplorasi Katalog Mesin Lengkap" [ref=f9e248] [cursor=pointer]:
+          - /url: products.html
+  - contentinfo [ref=f9e252]:
+    - generic [ref=f9e253]:
+      - generic [ref=f9e254]:
+        - generic [ref=f9e255]:
+          - generic [ref=f9e256]: RELASI SUKSES
+          - paragraph [ref=f9e264]: Penyedia mesin industri pengolahan pangan, bakery equipment, dan sistem pengemasan otomatis terpercaya di Indonesia.
+          - generic [ref=f9e265]: ISO 9001 Certified Supplier
+        - generic [ref=f9e266]:
+          - generic [ref=f9e267]: Tautan Cepat
+          - list [ref=f9e268]:
+            - listitem [ref=f9e269]:
+              - link "Beranda" [ref=f9e270] [cursor=pointer]:
+                - /url: index.html#home
+            - listitem [ref=f9e271]:
+              - link "Katalog Mesin" [ref=f9e272] [cursor=pointer]:
+                - /url: products.html
+            - listitem [ref=f9e273]:
+              - link "Tentang Kami" [ref=f9e274] [cursor=pointer]:
+                - /url: about.html
+            - listitem [ref=f9e275]:
+              - link "Solusi Bisnis" [ref=f9e276] [cursor=pointer]:
+                - /url: solutions.html
+            - listitem [ref=f9e277]:
+              - link "Artikel" [ref=f9e278] [cursor=pointer]:
+                - /url: articles.html
+            - listitem [ref=f9e279]:
+              - link "Kontak & FAQ" [ref=f9e280] [cursor=pointer]:
+                - /url: contact.html
+        - generic [ref=f9e281]:
+          - generic [ref=f9e282]: Kantor Pusat & Showroom Jakarta (PIK)
+          - generic [ref=f9e283]:
+            - paragraph [ref=f9e284]: Arcade Business Center Lt. 6 Unit 6-03, Jl. Pantai Indah Utara 2 Kav. C1, Pantai Indah Kapuk, Jakarta Utara
+            - paragraph [ref=f9e285]: "Telp: (021) 5596 8800"
+        - generic [ref=f9e286]:
+          - generic [ref=f9e287]: Kantor & Workshop Bekasi
+          - generic [ref=f9e288]:
+            - paragraph [ref=f9e289]: Jln. Mawar 141, Mustika Sari, Mustika Jaya, Bekasi
+            - paragraph [ref=f9e290]:
+              - link "info@relasisukses.co.id" [ref=f9e291] [cursor=pointer]:
+                - /url: mailto:info@relasisukses.co.id
+            - paragraph [ref=f9e292]:
+              - link "Hubungi Kami (Get in Touch) →" [ref=f9e293] [cursor=pointer]:
+                - /url: https://relasisukses.co.id/get-in-touch/
+      - generic [ref=f9e294]:
+        - paragraph [ref=f9e295]: © 2026 PT Relasi Sukses Bersama (relasisukses.co.id). Seluruh hak cipta dilindungi. Didesain dengan standar presisi industri.
+        - generic [ref=f9e296]:
+          - link "Syarat Layanan" [ref=f9e297] [cursor=pointer]:
+            - /url: https://relasisukses.co.id/legal-notice
+          - link "Kebijakan Privasi" [ref=f9e298] [cursor=pointer]:
+            - /url: https://relasisukses.co.id/privacy
+          - link "Get in Touch" [ref=f9e299] [cursor=pointer]:
+            - /url: https://relasisukses.co.id/get-in-touch/
+  - generic [ref=f9e300]:
+    - button "Chat via WhatsApp" [ref=f9e301] [cursor=pointer]
+    - dialog [aria-hidden]:
+      - generic:
+        - generic:
+          - paragraph: RELASI SUKSES SUPPORT
+          - heading [level=2]: Ada yang bisa kami bantu?
+        - button
+      - paragraph: Pilih divisi yang sesuai dengan kebutuhan Anda untuk terhubung langsung dengan tim kami via WhatsApp.
+      - generic:
+        - link:
+          - /url: https://wa.me/6281295254747?text=Halo%20Sales%20Consultant%20Relasi%20Sukses%2C%20saya%20tertarik%20berkonsultasi%20mengenai%20mesin%20industri%20makanan%20%26%20kemasan.%20Mohon%20informasi%20rekomendasi%20%26%20penawaran%20harga.
+          - generic:
+            - strong: Konsultasi & Penawaran Mesin
+            - generic: Kapasitas produksi, spesifikasi & penawaran
+          - generic [aria-hidden]: →
+        - link:
+          - /url: https://wa.me/6281295254747?text=Halo%20Tim%20Teknis%20Relasi%20Sukses%2C%20saya%20membutuhkan%20bantuan%20servis%20teknis%20%2F%20ketersediaan%20sparepart%20untuk%20mesin%20pabrik%20saya.
+          - generic:
+            - strong: Servis Teknis & Suku Cadang
+            - generic: Teknisi siaga, kalibrasi & pengiriman sparepart
+          - generic [aria-hidden]: →
+        - link:
+          - /url: https://wa.me/6281295254747?text=Halo%20Relasi%20Sukses%2C%20saya%20ingin%20menjadwalkan%20kunjungan%20%26%20uji%20coba%20resep%20di%20Test%20Kitchen%20Showroom%20PIK.
+          - generic:
+            - strong: Trial Resep di Test Kitchen
+            - generic: Uji coba adonan langsung di Showroom PIK JKT & Workshop Bekasi
+          - generic [aria-hidden]: →
+      - generic:
+        - strong: JAM OPERASIONAL KONSULTASI
+        - text: Senin – Sabtu, 08.00 – 17.30 WIB

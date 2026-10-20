@@ -1,125 +1,45 @@
 /**
- * VECTRO INDUSTRIAL - Main Application Script
- * Clean Code Architecture: Reactive State, Event Delegations, i18n Management & WhatsApp Deeplinks
+ * RELASI SUKSES (relasisukses.co.id) - Main Application Script
+ * Clean Code Architecture: Reactive State, Event Delegations, i18n Management & Canonical WhatsApp Deeplinks
  */
 
-import { i18nData } from "./data/i18n.js";
-import { productsData } from "./data/products.js";
-import { companyData } from "./data/company.js";
-import { updateWhatsAppWidgetLang } from "./components/whatsapp-widget.js";
+import { i18nData } from "./data/i18n.js?v=4";
+import { productsData } from "./data/products.js?v=4";
+import { companyData } from "./data/company.js?v=4";
+import { machineIcons } from "./data/icons.js?v=4";
+import { buildWhatsAppLink } from "./utils/whatsapp.js?v=4";
+import { 
+  getCurrentLanguage, 
+  setCurrentLanguage, 
+  setSafeText, 
+  setSafeHtml, 
+  setSafePlaceholder, 
+  setSafeHref, 
+  renderSharedHeader, 
+  renderSharedFooter 
+} from "./utils/dom.js?v=4";
+import { updateWhatsAppWidgetLang } from "./components/whatsapp-widget.js?v=4";
 
 // Application State
 const AppState = {
-  currentLang: localStorage.getItem("vectro_lang") || "id",
+  currentLang: getCurrentLanguage(),
   selectedCategory: "all",
   selectedScale: "all",
   searchKeyword: "",
   activeModalProduct: null
 };
 
-// SVG Machine Icons for Product Blueprint Cards
-const machineIcons = {
-  mixer: `
-    <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-      <rect x="8" y="10" width="48" height="12" rx="2" fill="rgba(247,192,45,0.15)"/>
-      <path d="M16 22v26a16 16 0 0 0 32 0V22"/>
-      <line x1="32" y1="22" x2="32" y2="40"/>
-      <path d="M26 34c0 3 6 4 6 8s-6 5-6 5"/>
-      <circle cx="32" cy="16" r="3" fill="currentColor"/>
-    </svg>
-  `,
-  oven: `
-    <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-      <rect x="8" y="8" width="48" height="48" rx="4" fill="rgba(32,152,209,0.15)"/>
-      <rect x="14" y="14" width="36" height="10" rx="1"/>
-      <rect x="14" y="28" width="36" height="10" rx="1"/>
-      <rect x="14" y="42" width="36" height="10" rx="1"/>
-      <circle cx="46" cy="19" r="1.5" fill="currentColor"/>
-      <circle cx="46" cy="33" r="1.5" fill="currentColor"/>
-      <circle cx="46" cy="47" r="1.5" fill="currentColor"/>
-    </svg>
-  `,
-  wrapper: `
-    <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-      <rect x="6" y="24" width="52" height="16" rx="3" fill="rgba(247,192,45,0.15)"/>
-      <path d="M18 16l8 8M38 16l8 8"/>
-      <circle cx="16" cy="48" r="4"/>
-      <circle cx="48" cy="48" r="4"/>
-      <path d="M20 48h24"/>
-      <line x1="26" y1="24" x2="26" y2="40"/>
-      <line x1="38" y1="24" x2="38" y2="40"/>
-    </svg>
-  `,
-  pouch: `
-    <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-      <polygon points="18,12 46,12 52,52 12,52" fill="rgba(60,118,61,0.15)"/>
-      <line x1="22" y1="18" x2="42" y2="18"/>
-      <path d="M26 28h12M24 36h16M28 44h8"/>
-      <path d="M24 12v-4a4 4 0 0 1 4-4h8a4 4 0 0 1 4 4v4"/>
-    </svg>
-  `,
-  encrusting: `
-    <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-      <rect x="12" y="10" width="40" height="20" rx="2" fill="rgba(247,192,45,0.15)"/>
-      <path d="M24 30v14l8 6 8-6V30"/>
-      <circle cx="32" cy="56" r="4" fill="rgba(247,192,45,0.4)"/>
-      <line x1="20" y1="20" x2="44" y2="20"/>
-    </svg>
-  `,
-  pot: `
-    <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-      <path d="M12 24a20 20 0 0 0 40 0H12z" fill="rgba(60,118,61,0.15)"/>
-      <line x1="8" y1="24" x2="56" y2="24"/>
-      <path d="M32 10v14M24 14l8 4 8-4"/>
-      <line x1="16" y1="44" x2="16" y2="54"/>
-      <line x1="48" y1="44" x2="48" y2="54"/>
-      <line x1="12" y1="54" x2="52" y2="54"/>
-    </svg>
-  `,
-  conveyor: `
-    <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-      <rect x="6" y="24" width="52" height="12" rx="6" fill="rgba(247,192,45,0.15)"/>
-      <circle cx="16" cy="30" r="4"/>
-      <circle cx="48" cy="30" r="4"/>
-      <rect x="22" y="14" width="8" height="10" rx="1"/>
-      <rect x="34" y="14" width="8" height="10" rx="1"/>
-      <line x1="14" y1="36" x2="10" y2="52"/>
-      <line x1="50" y1="36" x2="54" y2="52"/>
-      <line x1="32" y1="36" x2="32" y2="52"/>
-    </svg>
-  `,
-  sheeter: `
-    <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-      <rect x="6" y="28" width="52" height="8" rx="2" fill="rgba(32,152,209,0.15)"/>
-      <circle cx="32" cy="22" r="8"/>
-      <circle cx="32" cy="42" r="8"/>
-      <line x1="10" y1="28" x2="10" y2="50"/>
-      <line x1="54" y1="28" x2="54" y2="50"/>
-    </svg>
-  `
-};
-
 /**
- * Creates dynamic, pre-filled WhatsApp URLs
+ * Creates dynamic, pre-filled WhatsApp URLs using canonical builder
+ * @param {Object|null} product
+ * @param {string} intent - 'general' | 'quote' | 'demo'
  */
 function createWALink(product = null, intent = "general") {
-  const phone = companyData.whatsapp.number;
-  const lang = AppState.currentLang;
-  let msg = "";
-
-  if (intent === "demo" && product) {
-    msg = lang === "id"
-      ? `Halo Sales Engineer Relasi Sukses, saya ingin menjadwalkan UJI COBA / DEMO LANGSUNG untuk mesin *${product.title.id}* (Tipe: ${product.modelCode}). Mohon info jadwal ketersediaan unit demo di showroom.`
-      : `Hello Relasi Sukses Sales Engineer, I would like to schedule a LIVE DEMO & TEST RUN for *${product.title.en}* (Model: ${product.modelCode}). Please let me know the available showroom schedule.`;
-  } else if (product) {
-    msg = lang === "id"
-      ? `Halo Sales Engineer Relasi Sukses, saya tertarik dengan mesin *${product.title.id}* (Tipe: ${product.modelCode}). Tolong kirimkan penawaran spesifikasi & konsultasi daya listrik untuk tempat usaha saya.`
-      : `Hello Relasi Sukses Sales Engineer, I am inquiring about the *${product.title.en}* (Model: ${product.modelCode}). Please provide detailed quotation and electrical consultation for our facility.`;
-  } else {
-    msg = companyData.whatsapp.defaultMessage[lang];
-  }
-
-  return `https://wa.me/${phone}?text=${encodeURIComponent(msg)}`;
+  return buildWhatsAppLink({
+    product,
+    intent,
+    lang: AppState.currentLang
+  });
 }
 
 /**
@@ -132,46 +52,26 @@ function renderI18n() {
   // Update WhatsApp widget language
   updateWhatsAppWidgetLang(lang);
 
-  // Language buttons visual active state
-  document.querySelectorAll(".lang-btn").forEach(btn => {
-    btn.classList.toggle("active", btn.dataset.lang === lang);
-  });
-
-  // Top Announcement
-  const annEl = document.getElementById("top-announcement-text");
-  if (annEl) annEl.textContent = lang === "id" 
-    ? "Gudang Sparepart Sentral & Teknisi Siaga Se-Indonesia | Showroom Jakarta & Surabaya" 
-    : "Central Spare Parts Hub & Active Support Across Indonesia | Jakarta & Surabaya Showroom";
-
-  // Navigation Links
-  const navBrandTag = document.getElementById("nav-brand-tag");
-  if (navBrandTag) navBrandTag.textContent = t.nav.brandTag;
-  
-  const navLinks = {
-    "nav-link-home": t.nav.home,
-    "nav-link-showcase": t.nav.showcase,
-    "nav-link-about": t.nav.about || (lang === "id" ? "Tentang Kami" : "About Us"),
-    "nav-link-solutions": t.nav.solutions,
-    "nav-link-articles": t.nav.articles || (lang === "id" ? "Artikel" : "Articles / News"),
-    "nav-link-contact": t.nav.contact
-  };
-  for (const [id, text] of Object.entries(navLinks)) {
-    const el = document.getElementById(id);
-    if (el) el.textContent = text;
-  }
-  const navWaBtn = document.getElementById("nav-wa-btn");
-  const navWaText = document.getElementById("nav-wa-text");
-  if (navWaText) navWaText.textContent = t.nav.waButton;
-  if (navWaBtn) navWaBtn.href = createWALink(null, "general");
+  // Render standardized shared header & footer
+  renderSharedHeader(lang, i18nData);
+  renderSharedFooter(lang, i18nData);
 
   // Hero Section
-  document.getElementById("hero-badge-text").textContent = t.hero.badge;
-  document.getElementById("hero-lead-text").textContent = t.hero.headlineLead;
-  document.getElementById("hero-highlight-text").textContent = t.hero.headlineHighlight;
-  document.getElementById("hero-subheadline").textContent = t.hero.subheadline;
-  document.getElementById("hero-cta-primary").textContent = t.hero.ctaPrimary;
-  document.getElementById("hero-cta-secondary").textContent = t.hero.ctaSecondary;
-  document.getElementById("hero-cta-secondary").href = createWALink(null, "general");
+  setSafeText("hero-badge-text", t.hero.badge);
+  setSafeText("hero-lead-text", t.hero.headlineLead);
+  setSafeText("hero-highlight-text", t.hero.headlineHighlight);
+  setSafeText("hero-subheadline", t.hero.subheadline);
+  setSafeText("hero-cta-primary", t.hero.ctaPrimary);
+  setSafeText("hero-cta-secondary", t.hero.ctaSecondary);
+  setSafeHref("hero-cta-secondary", createWALink(null, "general"));
+
+  // Hero Blueprint Card
+  setSafeText("blueprint-stock-badge", t.blueprint?.badge);
+  setSafeText("blueprint-spec-output-lbl", t.blueprint?.outputLabel);
+  setSafeText("blueprint-spec-output-val", t.blueprint?.outputVal);
+  setSafeText("blueprint-spec-mat-lbl", t.blueprint?.materialLabel);
+  setSafeText("blueprint-spec-mat-val", t.blueprint?.materialVal);
+  setSafeText("blueprint-free-consult", t.blueprint?.freeConsult);
 
   // Hero Stats Ribbon
   const statsContainer = document.getElementById("hero-stats-ribbon");
@@ -185,10 +85,9 @@ function renderI18n() {
   }
 
   // Filter Section Titles & Placeholders
-  document.getElementById("filter-title").textContent = t.filter.title;
-  document.getElementById("filter-subtitle").textContent = t.filter.subtitle;
-  const searchInput = document.getElementById("search-input");
-  if (searchInput) searchInput.placeholder = t.filter.searchPlaceholder;
+  setSafeText("filter-title", t.filter.title);
+  setSafeText("filter-subtitle", t.filter.subtitle);
+  setSafePlaceholder("search-input", t.filter.searchPlaceholder);
 
   // Filter Category Buttons
   const catMapping = {
@@ -210,54 +109,59 @@ function renderI18n() {
     "scaleMedium": t.filter.scaleMedium,
     "scaleFactory": t.filter.scaleFactory
   };
-  document.getElementById("scale-group-label").textContent = t.filter.scaleLabel;
+  setSafeText("scale-group-label", t.filter.scaleLabel);
   for (const [sc, label] of Object.entries(scaleMapping)) {
     const btn = document.querySelector(`.scale-btn[data-scale="${sc}"]`);
     if (btn) btn.textContent = label;
   }
 
   // Solutions Section
-  document.getElementById("solutions-badge").textContent = t.solutions.badge;
-  document.getElementById("solutions-title").textContent = t.solutions.title;
-  document.getElementById("solutions-desc").textContent = t.solutions.description;
+  setSafeText("solutions-badge", t.solutions.badge);
+  setSafeText("solutions-title", t.solutions.title);
+  setSafeText("solutions-desc", t.solutions.description);
   renderSolutions();
 
   // Testimonials Section
-  document.getElementById("testimonials-badge").textContent = t.testimonials.badge;
-  document.getElementById("testimonials-title").textContent = t.testimonials.title;
-  document.getElementById("testimonials-subtitle").textContent = t.testimonials.subtitle;
+  setSafeText("testimonials-badge", t.testimonials.badge);
+  setSafeText("testimonials-title", t.testimonials.title);
+  setSafeText("testimonials-subtitle", t.testimonials.subtitle);
   renderTestimonials();
 
-  // FAQs
+  // FAQ Section Header & Accordion List
+  setSafeText("faq-section-badge", t.faqSection?.badge);
+  setSafeText("faq-section-title", t.faqSection?.title);
+  setSafeText("faq-section-subtitle", t.faqSection?.subtitle);
   renderFAQs();
 
   // CTA Banner
-  document.getElementById("cta-badge").textContent = t.ctaBanner.badge;
-  document.getElementById("cta-title").textContent = t.ctaBanner.title;
-  document.getElementById("cta-desc").textContent = t.ctaBanner.desc;
+  setSafeText("cta-badge", t.ctaBanner.badge);
+  setSafeText("cta-title", t.ctaBanner.title);
+  setSafeText("cta-desc", t.ctaBanner.desc);
   const ctaWABtn = document.getElementById("cta-wa-btn");
   if (ctaWABtn) {
-    ctaWABtn.textContent = t.ctaBanner.btnWA;
+    ctaWABtn.innerHTML = `
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+        <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.311.045-.698.034-1.85-.444-1.294-.537-2.13-1.849-2.196-1.936-.064-.087-.521-.692-.521-1.319 0-.626.326-.935.443-1.062.116-.127.255-.159.34-.159.085 0 .17.001.244.005.078.004.183-.029.287.218.106.254.361.88.393.945.032.064.053.14.01.223-.042.085-.064.138-.127.212-.064.074-.134.165-.192.222-.063.064-.13.133-.056.26.074.127.329.544.706.88.486.433.896.568 1.023.632.127.063.201.053.276-.032.074-.085.318-.371.403-.498.085-.127.17-.106.286-.064.116.043.742.35.869.414.127.064.212.095.244.148.031.053.031.307-.113.712z"/>
+      </svg>
+      <span>${t.ctaBanner.btnWA}</span>
+    `;
     ctaWABtn.href = createWALink(null, "general");
   }
-  document.getElementById("cta-catalog-btn").textContent = t.ctaBanner.btnCatalog;
-  document.getElementById("cta-office-hours").textContent = t.ctaBanner.officeHours;
-
-  // Footer
-  document.getElementById("footer-about-text").textContent = t.footer.about;
-  document.getElementById("footer-quick-title").textContent = t.footer.quickLinks;
-  document.getElementById("footer-hq-title").textContent = t.footer.headOffice;
-  document.getElementById("footer-hq-addr").textContent = companyData.locations[0].address;
-  document.getElementById("footer-branch-title").textContent = t.footer.branchOffice;
-  document.getElementById("footer-branch-addr").textContent = companyData.locations[1].address;
-  document.getElementById("footer-contact-title").textContent = t.footer.contactTitle;
-  document.getElementById("footer-legal-text").textContent = t.footer.legalNotice;
+  const ctaCatBtn = document.getElementById("cta-catalog-btn");
+  if (ctaCatBtn) {
+    ctaCatBtn.innerHTML = `
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+        <polyline points="7 10 12 15 17 10"></polyline>
+        <line x1="12" y1="15" x2="12" y2="3"></line>
+      </svg>
+      <span>${t.ctaBanner.btnCatalog}</span>
+    `;
+  }
+  setSafeText("cta-office-hours", t.ctaBanner.officeHours);
 
   // Floating WhatsApp
-  const floatWABtn = document.getElementById("floating-wa-btn");
-  if (floatWABtn) {
-    floatWABtn.href = createWALink(null, "general");
-  }
+  setSafeHref("floating-wa-btn", createWALink(null, "general"));
 
   // Refresh Product Cards in New Language
   renderProducts();
@@ -265,6 +169,11 @@ function renderI18n() {
   // If modal is open, re-render modal content
   if (AppState.activeModalProduct) {
     populateModal(AppState.activeModalProduct);
+  }
+
+  // Update Hero Slideshow Caption language
+  if (typeof window.__updateHeroSlideCaption === "function") {
+    window.__updateHeroSlideCaption();
   }
 }
 
@@ -301,13 +210,13 @@ function renderProducts() {
 
   if (filtered.length === 0) {
     grid.innerHTML = `
-      <div style="grid-column: 1/-1; text-align: center; padding: 60px 20px; background: #262626; border: 1px dashed #444; border-radius: 6px;">
-        <svg style="width: 48px; height: 48px; color: #777; margin: 0 auto 15px auto;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <div style="grid-column: 1/-1; text-align: center; padding: 60px 20px; background: var(--bg-surface); border: 1px dashed var(--border-color); border-radius: var(--radius-md); box-shadow: var(--shadow-card);">
+        <svg style="width: 48px; height: 48px; color: var(--accent-gold); margin: 0 auto 15px auto;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
           <circle cx="11" cy="11" r="8"></circle>
           <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
         </svg>
-        <h3 style="color: #fff; margin-bottom: 8px;">${lang === "id" ? "Mesin Tidak Ditemukan" : "No Machines Found"}</h3>
-        <p style="color: #999; margin-bottom: 20px;">${lang === "id" ? "Coba ganti kata kunci pencarian atau reset filter skala kapasitas." : "Try adjusting your search query or reset business capacity filters."}</p>
+        <h3 style="color: var(--text-primary); margin-bottom: 8px;">${lang === "id" ? "Mesin Tidak Ditemukan" : "No Machines Found"}</h3>
+        <p style="color: var(--text-muted); margin-bottom: 20px;">${lang === "id" ? "Coba ganti kata kunci pencarian atau reset filter skala kapasitas." : "Try adjusting your search query or reset business capacity filters."}</p>
         <button id="reset-filter-btn" class="btn btn-ghost btn-sm" style="display: inline-flex;">${lang === "id" ? "Reset Filter" : "Reset Filters"}</button>
       </div>
     `;
@@ -537,6 +446,7 @@ function populateModal(product) {
   document.getElementById("modal-product-desc").textContent = product.description[lang];
 
   // Specs Table
+  setSafeText("modal-specs-header", t.modal.specsTableTitle + ":");
   const tableBody = document.getElementById("modal-specs-table-body");
   if (tableBody) {
     tableBody.innerHTML = product.specs.map(s => `
@@ -592,6 +502,73 @@ function closeModal() {
 }
 
 /**
+ * Hero Background Slideshow with Auto-Rotation & Indicator Dots
+ */
+function initHeroSlideshow() {
+  const slides = document.querySelectorAll(".hero-slide");
+  const dots = document.querySelectorAll(".slide-dot");
+  const captionEl = document.getElementById("hero-slide-caption");
+  if (!slides.length) return;
+
+  let currentIndex = 0;
+  let timer = null;
+
+  function setSlide(index) {
+    currentIndex = (index + slides.length) % slides.length;
+    slides.forEach((slide, i) => {
+      slide.classList.toggle("active", i === currentIndex);
+    });
+    dots.forEach((dot, i) => {
+      dot.classList.toggle("active", i === currentIndex);
+    });
+    updateHeroCaption();
+  }
+
+  function updateHeroCaption() {
+    if (!captionEl) return;
+    const activeSlide = slides[currentIndex];
+    if (activeSlide) {
+      const lang = AppState.currentLang;
+      const text = lang === "en" ? activeSlide.dataset.labelEn : activeSlide.dataset.labelId;
+      if (text) captionEl.textContent = text;
+    }
+  }
+
+  function startAutoPlay() {
+    stopAutoPlay();
+    timer = setInterval(() => {
+      setSlide(currentIndex + 1);
+    }, 5000);
+  }
+
+  function stopAutoPlay() {
+    if (timer) {
+      clearInterval(timer);
+      timer = null;
+    }
+  }
+
+  dots.forEach(dot => {
+    dot.addEventListener("click", () => {
+      const idx = parseInt(dot.dataset.index, 10);
+      setSlide(idx);
+      startAutoPlay();
+    });
+  });
+
+  const heroSection = document.getElementById("home");
+  if (heroSection) {
+    heroSection.addEventListener("mouseenter", stopAutoPlay);
+    heroSection.addEventListener("mouseleave", startAutoPlay);
+  }
+
+  // Expose updater globally for renderI18n language toggle
+  window.__updateHeroSlideCaption = updateHeroCaption;
+
+  startAutoPlay();
+}
+
+/**
  * Event Listeners & Bootstrapping
  */
 document.addEventListener("DOMContentLoaded", () => {
@@ -601,7 +578,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const selected = btn.dataset.lang;
       if (selected !== AppState.currentLang) {
         AppState.currentLang = selected;
-        localStorage.setItem("vectro_lang", selected);
+        setCurrentLanguage(selected);
         renderI18n();
       }
     });
@@ -656,6 +633,9 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  // 6. Initial Render
+  // 6. Hero Slideshow Auto-Rotation
+  initHeroSlideshow();
+
+  // 7. Initial Render
   renderI18n();
 });

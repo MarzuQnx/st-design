@@ -1,17 +1,28 @@
 /**
- * VECTRO INDUSTRIAL - About Us & Partnership Philosophy Page Controller
+ * RELASI SUKSES (relasisukses.co.id) - About Us & Partnership Philosophy Page Controller
  * Clean Code Architecture: Reactive State, i18n Re-rendering, Specialist WhatsApp Routing
  * Standards: Utilitarian Industrial High-Craft, Marketing 5.0 (Human-Centered Automation)
  */
 
-import { aboutData } from "./data/about.js";
-import { i18nData } from "./data/i18n.js";
-import { companyData } from "./data/company.js";
-import { updateWhatsAppWidgetLang } from "./components/whatsapp-widget.js";
+import { aboutData } from "./data/about.js?v=4";
+import { i18nData } from "./data/i18n.js?v=4";
+import { companyData } from "./data/company.js?v=4";
+import { buildWhatsAppLink } from "./utils/whatsapp.js?v=4";
+import { 
+  getCurrentLanguage, 
+  setCurrentLanguage, 
+  setSafeText, 
+  setSafeHtml, 
+  setSafePlaceholder, 
+  setSafeHref, 
+  renderSharedHeader, 
+  renderSharedFooter 
+} from "./utils/dom.js?v=4";
+import { updateWhatsAppWidgetLang } from "./components/whatsapp-widget.js?v=4";
 
 // Page State
 const PageState = {
-  currentLang: localStorage.getItem("vectro_lang") || "id"
+  currentLang: getCurrentLanguage()
 };
 
 // SVG Icons for 4 Pillars
@@ -72,55 +83,12 @@ function renderHeaderAndNav() {
   const t = i18nData[lang];
   const aboutT = t.aboutPage;
 
-  // Update active state on language switcher buttons
-  document.querySelectorAll(".lang-btn").forEach(btn => {
-    btn.classList.toggle("active", btn.dataset.lang === lang);
-  });
-
-  // Top Announcement Bar
-  const announcementEl = document.getElementById("top-announcement-text");
-  if (announcementEl) {
-    announcementEl.textContent = lang === "id"
-      ? "Gudang Sparepart Sentral & Teknisi Siaga Se-Indonesia | Showroom Jakarta & Surabaya"
-      : "Central Domestic Spare Parts Hub & On-Site Field Engineers | Jakarta & Surabaya Showrooms";
-  }
-
-  // Brand Subtitle
-  const brandTagEl = document.getElementById("nav-brand-tag");
-  if (brandTagEl) brandTagEl.textContent = t.nav.brandTag;
-
-  // Main Navigation links
-  const navMap = {
-    "nav-link-home": t.nav.home,
-    "nav-link-showcase": t.nav.showcase,
-    "nav-link-about": t.nav.about || (lang === "id" ? "Tentang Kami" : "About Us"),
-    "nav-link-solutions": t.nav.solutions,
-    "nav-link-articles": t.nav.articles || (lang === "id" ? "Artikel" : "Articles / News"),
-    "nav-link-contact": t.nav.contact
-  };
-  for (const [id, label] of Object.entries(navMap)) {
-    const el = document.getElementById(id);
-    if (el) el.textContent = label;
-  }
-
-  // Header WhatsApp Action Button
-  const navWaBtn = document.getElementById("nav-wa-btn");
-  const navWaText = document.getElementById("nav-wa-text");
-  if (navWaBtn) {
-    navWaBtn.href = createWhatsAppUrl(companyData.whatsapp.number, companyData.whatsapp.defaultMessage[lang]);
-  }
-  if (navWaText) {
-    navWaText.textContent = t.nav.waButton;
-  }
-
-  // Update WhatsApp widget language
+  renderSharedHeader(lang, i18nData);
   updateWhatsAppWidgetLang(lang);
 
   // Breadcrumbs
-  const bcHome = document.getElementById("bc-home");
-  const bcCurrent = document.getElementById("bc-current");
-  if (bcHome) bcHome.textContent = aboutT.breadcrumbHome;
-  if (bcCurrent) bcCurrent.textContent = aboutT.breadcrumbAbout;
+  setSafeText("bc-home", aboutT.breadcrumbHome);
+  setSafeText("bc-current", aboutT.breadcrumbAbout);
 }
 
 /**
@@ -436,27 +404,7 @@ function renderCTA() {
  */
 function renderFooter() {
   const lang = PageState.currentLang;
-  const f = i18nData[lang].footer;
-
-  const aboutText = document.getElementById("footer-about-text");
-  const quickTitle = document.getElementById("footer-quicklinks-title");
-  const headTitle = document.getElementById("footer-head-title");
-  const headAddr = document.getElementById("footer-head-addr");
-  const branchTitle = document.getElementById("footer-branch-title");
-  const branchAddr = document.getElementById("footer-branch-addr");
-  const legalNotice = document.getElementById("footer-legal-notice");
-  const privacyLink = document.getElementById("footer-privacy-link");
-  const termsLink = document.getElementById("footer-terms-link");
-
-  if (aboutText) aboutText.textContent = f.about;
-  if (quickTitle) quickTitle.textContent = f.quickLinks;
-  if (headTitle) headTitle.textContent = f.headOffice;
-  if (headAddr) headAddr.textContent = f.headOfficeAddr;
-  if (branchTitle) branchTitle.textContent = f.branchOffice;
-  if (branchAddr) branchAddr.textContent = f.branchOfficeAddr;
-  if (legalNotice) legalNotice.textContent = f.legalNotice;
-  if (privacyLink) privacyLink.textContent = f.privacy;
-  if (termsLink) termsLink.textContent = f.terms;
+  renderSharedFooter(lang, i18nData);
 }
 
 /**
@@ -484,7 +432,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const selected = btn.dataset.lang;
       if (selected !== PageState.currentLang) {
         PageState.currentLang = selected;
-        localStorage.setItem("vectro_lang", selected);
+        setCurrentLanguage(selected);
         renderAll();
       }
     });

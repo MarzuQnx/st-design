@@ -1,20 +1,32 @@
 /**
- * VECTRO INDUSTRIAL - Products Showcase Page Controller
+ * RELASI SUKSES (relasisukses.co.id) - Products Showcase Page Controller
  * 3-Layer Architecture:
  * - Layer 1: Categories Overview & Exploration
  * - Layer 2: Filterable Product List within Category
  * - Layer 3: Comprehensive Product Detail View & Companion Machinery
  */
 
-import { i18nData } from "./data/i18n.js";
-import { categoriesData } from "./data/categories.js";
-import { productsData } from "./data/products.js";
-import { companyData } from "./data/company.js";
-import { updateWhatsAppWidgetLang } from "./components/whatsapp-widget.js";
+import { i18nData } from "./data/i18n.js?v=4";
+import { categoriesData } from "./data/categories.js?v=4";
+import { productsData } from "./data/products.js?v=4";
+import { companyData } from "./data/company.js?v=4";
+import { machineIcons } from "./data/icons.js?v=4";
+import { buildWhatsAppLink } from "./utils/whatsapp.js?v=4";
+import { 
+  getCurrentLanguage, 
+  setCurrentLanguage, 
+  setSafeText, 
+  setSafeHtml, 
+  setSafePlaceholder, 
+  setSafeHref, 
+  renderSharedHeader, 
+  renderSharedFooter 
+} from "./utils/dom.js?v=4";
+import { updateWhatsAppWidgetLang } from "./components/whatsapp-widget.js?v=4";
 
 // Page State
 const PageState = {
-  currentLang: localStorage.getItem("vectro_lang") || "id",
+  currentLang: getCurrentLanguage(),
   activeLayer: 1, // 1, 2, or 3
   selectedCategory: "all",
   selectedProductId: null,
@@ -23,109 +35,17 @@ const PageState = {
   sortBy: "popular"
 };
 
-// SVG Machine Icons Map
-const machineIcons = {
-  mixer: `
-    <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-      <rect x="8" y="10" width="48" height="12" rx="2" fill="rgba(247,192,45,0.15)"/>
-      <path d="M16 22v26a16 16 0 0 0 32 0V22"/>
-      <line x1="32" y1="22" x2="32" y2="40"/>
-      <path d="M26 34c0 3 6 4 6 8s-6 5-6 5"/>
-      <circle cx="32" cy="16" r="3" fill="currentColor"/>
-    </svg>
-  `,
-  oven: `
-    <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-      <rect x="8" y="8" width="48" height="48" rx="4" fill="rgba(32,152,209,0.15)"/>
-      <rect x="14" y="14" width="36" height="10" rx="1"/>
-      <rect x="14" y="28" width="36" height="10" rx="1"/>
-      <rect x="14" y="42" width="36" height="10" rx="1"/>
-      <circle cx="46" cy="19" r="1.5" fill="currentColor"/>
-      <circle cx="46" cy="33" r="1.5" fill="currentColor"/>
-      <circle cx="46" cy="47" r="1.5" fill="currentColor"/>
-    </svg>
-  `,
-  wrapper: `
-    <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-      <rect x="6" y="24" width="52" height="16" rx="3" fill="rgba(247,192,45,0.15)"/>
-      <path d="M18 16l8 8M38 16l8 8"/>
-      <circle cx="16" cy="48" r="4"/>
-      <circle cx="48" cy="48" r="4"/>
-      <path d="M20 48h24"/>
-      <line x1="26" y1="24" x2="26" y2="40"/>
-      <line x1="38" y1="24" x2="38" y2="40"/>
-    </svg>
-  `,
-  pouch: `
-    <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-      <polygon points="18,12 46,12 52,52 12,52" fill="rgba(60,118,61,0.15)"/>
-      <line x1="22" y1="18" x2="42" y2="18"/>
-      <path d="M26 28h12M24 36h16M28 44h8"/>
-      <path d="M24 12v-4a4 4 0 0 1 4-4h8a4 4 0 0 1 4 4v4"/>
-    </svg>
-  `,
-  encrusting: `
-    <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-      <rect x="12" y="10" width="40" height="20" rx="2" fill="rgba(247,192,45,0.15)"/>
-      <path d="M24 30v14l8 6 8-6V30"/>
-      <circle cx="32" cy="56" r="4" fill="rgba(247,192,45,0.4)"/>
-      <line x1="20" y1="20" x2="44" y2="20"/>
-    </svg>
-  `,
-  pot: `
-    <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-      <path d="M12 24a20 20 0 0 0 40 0H12z" fill="rgba(60,118,61,0.15)"/>
-      <line x1="8" y1="24" x2="56" y2="24"/>
-      <path d="M32 10v14M24 14l8 4 8-4"/>
-      <line x1="16" y1="44" x2="16" y2="54"/>
-      <line x1="48" y1="44" x2="48" y2="54"/>
-      <line x1="12" y1="54" x2="52" y2="54"/>
-    </svg>
-  `,
-  conveyor: `
-    <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-      <rect x="6" y="24" width="52" height="12" rx="6" fill="rgba(247,192,45,0.15)"/>
-      <circle cx="16" cy="30" r="4"/>
-      <circle cx="48" cy="30" r="4"/>
-      <rect x="22" y="14" width="8" height="10" rx="1"/>
-      <rect x="34" y="14" width="8" height="10" rx="1"/>
-      <line x1="14" y1="36" x2="10" y2="52"/>
-      <line x1="50" y1="36" x2="54" y2="52"/>
-      <line x1="32" y1="36" x2="32" y2="52"/>
-    </svg>
-  `,
-  sheeter: `
-    <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-      <rect x="6" y="28" width="52" height="8" rx="2" fill="rgba(32,152,209,0.15)"/>
-      <circle cx="32" cy="22" r="8"/>
-      <circle cx="32" cy="42" r="8"/>
-      <line x1="10" y1="28" x2="10" y2="50"/>
-      <line x1="54" y1="28" x2="54" y2="50"/>
-    </svg>
-  `
-};
-
 /**
- * Creates dynamic, pre-filled WhatsApp URLs
+ * Creates dynamic, pre-filled WhatsApp URLs using canonical builder
+ * @param {Object|null} product
+ * @param {string} intent - 'general' | 'quote' | 'demo'
  */
 function createWALink(product = null, intent = "general") {
-  const phone = companyData.whatsapp.number;
-  const lang = PageState.currentLang;
-  let msg = "";
-
-  if (intent === "demo" && product) {
-    msg = lang === "id"
-      ? `Halo Sales Engineer Relasi Sukses, saya ingin menjadwalkan UJI COBA / DEMO LANGSUNG untuk mesin *${product.title.id}* (Tipe: ${product.modelCode}). Mohon info jadwal ketersediaan unit demo di showroom.`
-      : `Hello Relasi Sukses Sales Engineer, I would like to schedule a LIVE DEMO & TEST RUN for *${product.title.en}* (Model: ${product.modelCode}). Please let me know the available showroom schedule.`;
-  } else if (product) {
-    msg = lang === "id"
-      ? `Halo Sales Engineer Relasi Sukses, saya tertarik dengan mesin *${product.title.id}* (Tipe: ${product.modelCode}). Tolong kirimkan penawaran spesifikasi & konsultasi daya listrik untuk tempat usaha saya.`
-      : `Hello Relasi Sukses Sales Engineer, I am inquiring about the *${product.title.en}* (Model: ${product.modelCode}). Please provide detailed quotation and electrical consultation for our facility.`;
-  } else {
-    msg = companyData.whatsapp.defaultMessage[lang];
-  }
-
-  return `https://wa.me/${phone}?text=${encodeURIComponent(msg)}`;
+  return buildWhatsAppLink({
+    product,
+    intent,
+    lang: PageState.currentLang
+  });
 }
 
 /**
@@ -245,13 +165,13 @@ function renderLayer1() {
   document.getElementById("layer-3-container").classList.remove("active-layer");
 
   // Titles & Headings
-  document.getElementById("layer1-badge").textContent = t.layer1Badge;
-  document.getElementById("layer1-title").textContent = t.layer1Title;
-  document.getElementById("layer1-subtitle").textContent = t.layer1Subtitle;
+  setSafeText("layer1-badge", t.layer1Badge);
+  setSafeText("layer1-title", t.layer1Title);
+  setSafeText("layer1-subtitle", t.layer1Subtitle);
+  setSafeText("layer1-all-text", t.layer1AllBtn.replace("{count}", productsData.length));
 
   const allBtn = document.getElementById("layer1-all-btn");
   if (allBtn) {
-    allBtn.textContent = t.layer1AllBtn.replace("{count}", productsData.length);
     allBtn.onclick = () => navigateTo("category=all");
   }
 
@@ -413,12 +333,12 @@ function renderLayer2() {
 
   if (filtered.length === 0) {
     grid.innerHTML = `
-      <div style="grid-column: 1/-1; text-align: center; padding: 60px 20px; background: #262626; border: 1px dashed #444; border-radius: 6px;">
-        <svg style="width: 48px; height: 48px; color: #777; margin: 0 auto 15px auto;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <div style="grid-column: 1/-1; text-align: center; padding: 60px 20px; background: var(--bg-surface); border: 1px dashed var(--border-light); border-radius: var(--radius-md); box-shadow: var(--shadow-raised);">
+        <svg style="width: 48px; height: 48px; color: var(--accent-gold); margin: 0 auto 15px auto;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
           <circle cx="11" cy="11" r="8"></circle>
           <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
         </svg>
-        <h3 style="color: #fff; margin-bottom: 8px;">${t.layer2FilterEmpty}</h3>
+        <h3 style="color: var(--text-primary); margin-bottom: 8px; font-family: var(--font-family-display);">${t.layer2FilterEmpty}</h3>
         <button id="layer2-reset-btn" class="btn btn-ghost btn-sm" style="margin-top: 15px;">${t.layer2ResetBtn}</button>
       </div>
     `;
@@ -531,11 +451,16 @@ function renderLayer3(product) {
   }
 
   // Header badges & titles
-  document.getElementById("layer3-code-badge").textContent = product.modelCode;
-  document.getElementById("layer3-popular-badge").textContent = product.badge[lang];
-  document.getElementById("layer3-title").textContent = product.title[lang];
-  document.getElementById("layer3-tagline").textContent = product.tagline[lang];
-  document.getElementById("layer3-desc").textContent = product.description[lang];
+  setSafeText("layer3-code-badge", product.modelCode);
+  setSafeText("layer3-popular-badge", product.badge[lang]);
+  setSafeText("layer3-stock-badge", lang === "id" ? "Ready Stock Demo Unit" : "Demo Unit Ready in Stock");
+  setSafeText("layer3-spec-warranty-lbl", lang === "id" ? "Garansi Resmi" : "Official Warranty");
+  setSafeText("layer3-spec-warranty-val", lang === "id" ? "2 Tahun Servis + Suku Cadang" : "2 Years Service + Parts");
+  setSafeText("layer3-spec-mat-lbl", lang === "id" ? "Standar Bahan" : "Material Standard");
+  setSafeText("layer3-spec-mat-val", "SUS 304 Food Grade");
+  setSafeText("layer3-title", product.title[lang]);
+  setSafeText("layer3-tagline", product.tagline[lang]);
+  setSafeText("layer3-desc", product.description[lang]);
 
   // Visual Icon
   const visualArt = document.getElementById("layer3-visual-art");
@@ -555,11 +480,11 @@ function renderLayer3(product) {
   }
 
   // ROI Value Highlight Box
-  document.getElementById("layer3-roi-title").textContent = t.layer3WhyInvestTitle;
-  document.getElementById("layer3-roi-text").textContent = product.roiHighlight[lang];
+  setSafeText("layer3-roi-title", t.layer3WhyInvestTitle);
+  setSafeText("layer3-roi-text", product.roiHighlight[lang]);
 
   // Operational Features Grid
-  document.getElementById("layer3-features-title").textContent = t.layer3OperationalTitle;
+  setSafeText("layer3-features-title", t.layer3OperationalTitle);
   const featuresGrid = document.getElementById("layer3-features-grid");
   if (featuresGrid) {
     featuresGrid.innerHTML = product.features.map(f => `
@@ -573,7 +498,7 @@ function renderLayer3(product) {
   }
 
   // Deep Specs Table
-  document.getElementById("layer3-specs-table-title").textContent = t.layer3SpecsTableTitle;
+  setSafeText("layer3-specs-table-title", t.layer3SpecsTableTitle);
   const tableBody = document.getElementById("layer3-specs-tbody");
   if (tableBody) {
     tableBody.innerHTML = product.specs.map(s => `
@@ -585,10 +510,11 @@ function renderLayer3(product) {
   }
 
   // Applications
-  document.getElementById("layer3-apps-content").textContent = product.suitableFor[lang];
+  setSafeText("layer3-apps-title", lang === "id" ? "Rekomendasi Aplikasi Produk:" : "Recommended Product Applications:");
+  setSafeText("layer3-apps-content", product.suitableFor[lang]);
 
   // Related Machinery in the Same Line
-  document.getElementById("layer3-related-title").textContent = t.layer3RelatedTitle;
+  setSafeText("layer3-related-title", t.layer3RelatedTitle);
   const relatedGrid = document.getElementById("layer3-related-grid");
   if (relatedGrid) {
     const relatedProducts = productsData.filter(p => product.relatedProductIds.includes(p.id));
@@ -603,8 +529,8 @@ function renderLayer3(product) {
             ${machineIcons[rel.typeIcon] || machineIcons.mixer}
           </div>
         </div>
-        <h4 style="font-size: 1.1rem; color: #fff; margin-bottom: 6px;">${rel.title[lang]}</h4>
-        <p style="font-size: 0.8125rem; color: #999; margin-bottom: 12px;">${rel.tagline[lang]}</p>
+        <h4 style="font-size: 1.1rem; color: var(--text-primary); margin-bottom: 6px;">${rel.title[lang]}</h4>
+        <p style="font-size: 0.8125rem; color: var(--text-muted); margin-bottom: 12px;">${rel.tagline[lang]}</p>
         <button type="button" class="btn btn-ghost btn-sm rel-drill-btn" style="width: 100%;" data-id="${rel.id}">
           ${lang === 'id' ? 'Buka Detail Mesin Ini →' : 'View This Machine →'}
         </button>
@@ -621,8 +547,8 @@ function renderLayer3(product) {
   }
 
   // Direct Sales Engineer Contact Card
-  document.getElementById("layer3-direct-wa-title").textContent = t.layer3DirectWaTitle;
-  document.getElementById("layer3-direct-wa-desc").textContent = t.layer3DirectWaDesc;
+  setSafeText("layer3-direct-wa-title", t.layer3DirectWaTitle);
+  setSafeText("layer3-direct-wa-desc", t.layer3DirectWaDesc);
   const salesRepBtn = document.getElementById("layer3-sales-rep-btn");
   if (salesRepBtn) {
     salesRepBtn.textContent = lang === "id" ? "Hubungi Ir. Hendra (WA Langsung)" : "Chat Ir. Hendra on WhatsApp";
@@ -635,32 +561,8 @@ function renderLayer3(product) {
  */
 function renderHeaderI18n() {
   const lang = PageState.currentLang;
-  const t = i18nData[lang];
-
-  // Language buttons visual active state
-  document.querySelectorAll(".lang-btn").forEach(btn => {
-    btn.classList.toggle("active", btn.dataset.lang === lang);
-  });
-
-  const navLinks = {
-    "nav-link-home": t.nav.home,
-    "nav-link-showcase": t.nav.showcase,
-    "nav-link-about": t.nav.about || (lang === "id" ? "Tentang Kami" : "About Us"),
-    "nav-link-solutions": t.nav.solutions,
-    "nav-link-articles": t.nav.articles || (lang === "id" ? "Artikel" : "Articles / News"),
-    "nav-link-contact": t.nav.contact
-  };
-  for (const [id, text] of Object.entries(navLinks)) {
-    const el = document.getElementById(id);
-    if (el) el.textContent = text;
-  }
-
-  const navWaBtn = document.getElementById("nav-wa-btn");
-  const navWaText = document.getElementById("nav-wa-text");
-  if (navWaText) navWaText.textContent = t.nav.waButton;
-  if (navWaBtn) navWaBtn.href = createWALink(null, "general");
-
-  // Update WhatsApp widget language
+  renderSharedHeader(lang, i18nData);
+  renderSharedFooter(lang, i18nData);
   updateWhatsAppWidgetLang(lang);
 }
 
@@ -674,7 +576,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const selected = btn.dataset.lang;
       if (selected !== PageState.currentLang) {
         PageState.currentLang = selected;
-        localStorage.setItem("vectro_lang", selected);
+        setCurrentLanguage(selected);
         renderHeaderI18n();
         parseHashAndRender();
       }

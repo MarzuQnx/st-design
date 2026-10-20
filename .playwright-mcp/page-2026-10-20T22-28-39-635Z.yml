@@ -1,0 +1,222 @@
+- generic [ref=e1]:
+  - complementary "Announcement" [ref=e2]:
+    - generic [ref=e3]:
+      - generic [ref=e4]: Central Spare Parts Hub & Active Support Across Indonesia | Jakarta Showroom & Bekasi Workshop
+      - generic [ref=e8]:
+        - text: "Engineering Hotline:"
+        - strong [ref=e9]: +62 812-9525-4747
+  - banner [ref=e10]:
+    - generic [ref=e11]:
+      - link "Relasi Sukses Homepage" [ref=e12] [cursor=pointer]:
+        - /url: index.html
+        - generic [ref=e19]:
+          - generic [ref=e20]: RELASI SUKSES
+          - generic [ref=e21]: Industrial Machinery & Automation
+      - navigation "Main Navigation" [ref=e22]:
+        - list [ref=e23]:
+          - listitem [ref=e24]:
+            - link "Home" [ref=e241] [cursor=pointer]:
+              - /url: index.html#home
+          - listitem [ref=e26]:
+            - link "Machine Showcase" [ref=e242] [cursor=pointer]:
+              - /url: products.html
+          - listitem [ref=e28]:
+            - link "About Us" [ref=e243] [cursor=pointer]:
+              - /url: about.html
+          - listitem [ref=e30]:
+            - link "Solutions" [ref=e244] [cursor=pointer]:
+              - /url: solutions.html
+          - listitem [ref=e32]:
+            - link "Articles / News" [ref=e245] [cursor=pointer]:
+              - /url: articles.html
+          - listitem [ref=e34]:
+            - link "Contact & FAQ" [ref=e246] [cursor=pointer]:
+              - /url: contact.html
+      - generic [ref=e36]:
+        - group "Language selection" [ref=e37]:
+          - button "Switch to Indonesian" [ref=e38] [cursor=pointer]: ID
+          - button "Switch to English" [active] [ref=e39] [cursor=pointer]: EN
+        - link "Chat Sales Engineer" [ref=e40] [cursor=pointer]:
+          - /url: https://wa.me/6281295254747?text=Hello%20Relasi%20Sukses%20Team%2C%20I%20am%20interested%20in%20consulting%20about%20food%20processing%20%26%20packaging%20machinery%20for%20my%20business.%20Please%20share%20catalog%20specs%20%26%20demo%20schedule.
+  - navigation "Breadcrumb navigation" [ref=e44]:
+    - list [ref=e46]:
+      - listitem [ref=e247]:
+        - link "Home" [ref=e248] [cursor=pointer]:
+          - /url: index.html
+      - listitem [ref=e249]: /
+      - listitem [ref=e250]: Machine Showcase
+  - main [ref=e51]:
+    - region [ref=e251]:
+      - generic [ref=e53]:
+        - generic [ref=e54]: Layer 1 · Machine Categories
+        - heading "Food & Packaging Machinery Categories" [level=1] [ref=e252]
+        - paragraph [ref=e56]: Select a specialized product line below to explore dedicated machinery, or view the complete catalog.
+        - button "Browse All Machines (10 Units)" [ref=e253] [cursor=pointer]
+      - generic [ref=e62]:
+        - article [ref=e254] [cursor=pointer]:
+          - generic [ref=e255]:
+            - generic [ref=e256]: Bakery & Pastry Solutions
+            - heading "Bakery & Bread Equipment" [level=3] [ref=e264]
+            - paragraph [ref=e265]: From high-torque spiral mixers to energy-efficient deck ovens and pastry sheeters.
+            - paragraph [ref=e266]: Comprehensive lineup of bakery machinery for artisan shops, commercial patisseries, and industrial bread lines. Accelerates gluten development while guaranteeing delicate crumb structure.
+            - generic [ref=e267]:
+              - generic [ref=e268]:
+                - generic [ref=e269]: Available Units
+                - generic [ref=e270]: 4 Machines Ready For Demo
+              - generic [ref=e271]:
+                - generic [ref=e272]: Hygiene Standard
+                - generic [ref=e273]: SUS 304 Food Grade
+            - generic [ref=e274]:
+              - generic [ref=e275]: "Common Applications:"
+              - generic [ref=e276]:
+                - generic [ref=e277]: Sweet Bread & Loaf
+                - generic [ref=e278]: Croissants & Danish Pastries
+                - generic [ref=e279]: Cakes, Sponge & Brownies
+                - generic [ref=e280]: Donuts & Pizza Crusts
+          - button "Explore Category" [ref=e281]
+        - article [ref=e285] [cursor=pointer]:
+          - generic [ref=e286]:
+            - generic [ref=e287]: Airtight & Retail Ready
+            - heading "Packaging & Sealing Machinery" [level=3] [ref=e295]
+            - paragraph [ref=e296]: High-speed pillow pack flow wrappers and automatic rotary standing pouch packaging.
+            - paragraph [ref=e297]: Industrial packaging solutions engineered to extend shelf-life, prevent contamination, and elevate shelf presence in retail hypermarkets. Supports nitrogen gas flushing and inline date coding.
+            - generic [ref=e298]:
+              - generic [ref=e299]:
+                - generic [ref=e300]: Available Units
+                - generic [ref=e301]: 3 Machines Ready For Demo
+              - generic [ref=e302]:
+                - generic [ref=e303]: Hygiene Standard
+                - generic [ref=e304]: SUS 304 / HACCP Ready
+            - generic [ref=e305]:
+              - generic [ref=e306]: "Common Applications:"
+              - generic [ref=e307]:
+                - generic [ref=e308]: Single-Serve Buns & Cookies
+                - generic [ref=e309]: Standing Pouch Chips & Coffee
+                - generic [ref=e310]: Sauce & Powder Sachets
+                - generic [ref=e311]: Frozen Foods & Meatballs
+          - button "Explore Category" [ref=e312]
+        - article [ref=e316] [cursor=pointer]:
+          - generic [ref=e317]:
+            - generic [ref=e318]: Encrusting & Food Processing
+            - heading "Food Processing & Forming Equipment" [level=3] [ref=e325]
+            - paragraph [ref=e326]: Automated encrusting for filled pastries, planetary cooking kettles, and snack forming.
+            - paragraph [ref=e327]: Eliminates labor-intensive manual shaping for filled delicacies (nastar, mochi, mooncakes) and automatic scrap-stirring kettles for sauces and jams with zero scorch risk.
+            - generic [ref=e328]:
+              - generic [ref=e329]:
+                - generic [ref=e330]: Available Units
+                - generic [ref=e331]: 2 Machines Ready For Demo
+              - generic [ref=e332]:
+                - generic [ref=e333]: Hygiene Standard
+                - generic [ref=e334]: SUS 304 Solid 3mm
+            - generic [ref=e335]:
+              - generic [ref=e336]: "Common Applications:"
+              - generic [ref=e337]:
+                - generic [ref=e338]: Pineapple Tarts, Mochi & Bakpia
+                - generic [ref=e339]: Fruit Spreads, Toffee & Sauces
+                - generic [ref=e340]: Meatballs & Savory Nuggets
+                - generic [ref=e341]: Mooncakes & Filled Pastries
+          - button "Explore Category" [ref=e342]
+        - article [ref=e346] [cursor=pointer]:
+          - generic [ref=e347]:
+            - generic [ref=e348]: Turnkey Plant Solution
+            - heading "Automated Production Lines" [level=3] [ref=e359]
+            - paragraph [ref=e360]: Fully synchronized turnkey lines from automated dividing to proofer and packaging.
+            - paragraph [ref=e361]: Turnkey continuous manufacturing lines for large food processors targeting thousands of units per hour. Powered by synchronized PLC controllers and optical pacing sensors.
+            - generic [ref=e362]:
+              - generic [ref=e363]:
+                - generic [ref=e364]: Available Units
+                - generic [ref=e365]: 1 Machines Ready For Demo
+              - generic [ref=e366]:
+                - generic [ref=e367]: Hygiene Standard
+                - generic [ref=e368]: CE Marked / ISO 9001
+            - generic [ref=e369]:
+              - generic [ref=e370]: "Common Applications:"
+              - generic [ref=e371]:
+                - generic [ref=e372]: Commercial Sliced Bread Plants
+                - generic [ref=e373]: Quick-Service Burger Bun Bakeries
+                - generic [ref=e374]: Automated Biscuit & Cookie Lines
+                - generic [ref=e375]: Continuous Laminated Pastry Lines
+          - button "Explore Category" [ref=e376]
+  - contentinfo [ref=e189]:
+    - generic [ref=e190]:
+      - generic [ref=e191]:
+        - generic [ref=e192]:
+          - generic [ref=e193]: RELASI SUKSES
+          - paragraph [ref=e201]: Indonesia's premier supplier of food processing equipment, bakery systems, and automated packaging lines.
+          - generic [ref=e202]: ISO 9001 Certified Supplier
+        - generic [ref=e203]:
+          - generic [ref=e204]: Quick Navigation
+          - list [ref=e205]:
+            - listitem [ref=e206]:
+              - link "Home" [ref=e380] [cursor=pointer]:
+                - /url: index.html#home
+            - listitem [ref=e208]:
+              - link "Machine Showcase" [ref=e381] [cursor=pointer]:
+                - /url: products.html
+            - listitem [ref=e210]:
+              - link "About Us" [ref=e382] [cursor=pointer]:
+                - /url: about.html
+            - listitem [ref=e212]:
+              - link "Solutions" [ref=e383] [cursor=pointer]:
+                - /url: solutions.html
+            - listitem [ref=e214]:
+              - link "Articles / News" [ref=e384] [cursor=pointer]:
+                - /url: articles.html
+            - listitem [ref=e216]:
+              - link "Contact & FAQ" [ref=e385] [cursor=pointer]:
+                - /url: contact.html
+        - generic [ref=e218]:
+          - generic [ref=e219]: Jakarta Head Office & Showroom (PIK)
+          - generic [ref=e220]:
+            - paragraph [ref=e221]: Arcade Business Center 6th Floor Unit 6-03, Pantai Indah Kapuk, North Jakarta
+            - paragraph [ref=e222]: "Telp: (021) 5596 8800"
+        - generic [ref=e223]:
+          - generic [ref=e224]: Bekasi Office & Workshop
+          - generic [ref=e225]:
+            - paragraph [ref=e226]: Jln. Mawar 141, Mustika Sari, Mustika Jaya, Bekasi
+            - paragraph [ref=e227]:
+              - link "info@relasisukses.co.id" [ref=e228] [cursor=pointer]:
+                - /url: mailto:info@relasisukses.co.id
+            - paragraph [ref=e229]:
+              - link "Hubungi Kami (Get in Touch) →" [ref=e230] [cursor=pointer]:
+                - /url: https://relasisukses.co.id/get-in-touch/
+      - generic [ref=e231]:
+        - paragraph [ref=e232]: © 2026 PT Relasi Sukses Bersama (relasisukses.co.id). All rights reserved. Built to rigorous industrial standards.
+        - generic [ref=e233]:
+          - link "Terms of Service" [ref=e386] [cursor=pointer]:
+            - /url: https://relasisukses.co.id/legal-notice
+          - link "Privacy Policy" [ref=e387] [cursor=pointer]:
+            - /url: https://relasisukses.co.id/privacy
+          - link "Get in Touch" [ref=e388] [cursor=pointer]:
+            - /url: https://relasisukses.co.id/get-in-touch/
+  - generic [ref=e237]:
+    - button "Chat via WhatsApp" [ref=e389] [cursor=pointer]
+    - dialog [aria-hidden]:
+      - generic:
+        - generic:
+          - paragraph: RELASI SUKSES SUPPORT
+          - heading [level=2]: How can we help you?
+        - button
+      - paragraph: Choose the department that best matches your inquiry and we'll connect you directly on WhatsApp.
+      - generic:
+        - link:
+          - /url: https://wa.me/6281295254747?text=Hello%20Relasi%20Sukses%20Sales%20Consultant%2C%20I%20am%20interested%20in%20consulting%20about%20food%20machinery%20and%20packaging%20systems.%20Please%20provide%20recommendations%20%26%20pricing.
+          - generic:
+            - strong: Machine Sizing & Sales Quote
+            - generic: Production capacity, specs & formal quote
+          - generic [aria-hidden]: →
+        - link:
+          - /url: https://wa.me/6281295254747?text=Hello%20Relasi%20Sukses%20Technical%20Support%2C%20I%20need%20on-site%20assistance%20%2F%20spare%20parts%20availability%20for%20my%20food%20processing%20machinery.
+          - generic:
+            - strong: Technical Support & Spare Parts
+            - generic: On-site engineers, calibration & parts delivery
+          - generic [aria-hidden]: →
+        - link:
+          - /url: https://wa.me/6281295254747?text=Hello%20Relasi%20Sukses%2C%20I%20would%20like%20to%20schedule%20a%20visit%20and%20live%20recipe%20trial%20at%20your%20PIK%20Test%20Kitchen%20Showroom.
+          - generic:
+            - strong: Recipe Trial at Test Kitchen
+            - generic: Live ingredient testing in PIK Jakarta or Bekasi workshop
+          - generic [aria-hidden]: →
+      - generic:
+        - strong: CLIENT CONSULTATION HOURS
+        - text: Monday – Saturday, 8:00 AM – 5:30 PM WIB

@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none" width="48" height="48">
+  <defs>
+    <linearGradient id="rs-teal-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3D6E5C" />
+      <stop offset="100%" stop-color="#224337" />
+    </linearGradient>
+    <linearGradient id="rs-orange-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFA25B" />
+      <stop offset="100%" stop-color="#E87428" />
+    </linearGradient>
+    <filter id="rs-shadow" x="-10%" y="-10%" width="125%" height="125%" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="1.5" stdDeviation="1" flood-color="#1A3027" flood-opacity="0.25" />
+    </filter>
+  </defs>
+
+  <!-- Base Interlocking Geometric Isometric Layers (R & S Synergy) -->
+  <!-- Bottom Industrial Base Layer (Spruce Teal) -->
+  <path d="M24 44L6 33.6V20.8L24 31.2L42 20.8V33.6L24 44Z" fill="url(#rs-teal-grad)" />
+
+  <!-- Middle Precision Gear / Carrier Layer -->
+  <path d="M24 33L10 24.8V14L24 22.2L38 14V24.8L24 33Z" fill="#315C4C" />
+
+  <!-- Top Dynamic Ascending Chevron (Tangerine Orange - Growth & Success) -->
+  <path d="M24 4L7 14L24 23.8L41 14L24 4Z" fill="url(#rs-orange-grad)" filter="url(#rs-shadow)" />
+
+  <!-- Central Precision Core Accent (Warm Ivory Dot / Mechanical Pivot) -->
+  <polygon points="24,11 31,15 24,19 17,15" fill="#FFF7E8" opacity="0.95" />
+</svg>

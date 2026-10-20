@@ -62,8 +62,8 @@ const widgetConfig = {
         en: "Recipe Trial at Test Kitchen"
       },
       subtitle: {
-        id: "Uji coba adonan langsung di Showroom PIK JKT & SBY",
-        en: "Live ingredient testing in PIK Jakarta or Surabaya"
+        id: "Uji coba adonan langsung di Showroom PIK JKT & Workshop Bekasi",
+        en: "Live ingredient testing in PIK Jakarta or Bekasi workshop"
       },
       message: {
         id: "Halo Relasi Sukses, saya ingin menjadwalkan kunjungan & uji coba resep di Test Kitchen Showroom PIK.",

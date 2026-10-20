@@ -1,16 +1,27 @@
 /**
- * VECTRO INDUSTRIAL - Contact Hub & Dynamic Accordion FAQ Controller
+ * RELASI SUKSES (relasisukses.co.id) - Contact Hub & Dynamic Accordion FAQ Controller
  * Clean Code Architecture: Reactive State, Dynamic Accordion Filtering, Live Search & Booking Form
  */
 
-import { contactData } from "./data/contact.js";
-import { i18nData } from "./data/i18n.js";
-import { companyData } from "./data/company.js";
-import { updateWhatsAppWidgetLang } from "./components/whatsapp-widget.js";
+import { contactData } from "./data/contact.js?v=4";
+import { i18nData } from "./data/i18n.js?v=4";
+import { companyData } from "./data/company.js?v=4";
+import { buildWhatsAppLink } from "./utils/whatsapp.js?v=4";
+import { 
+  getCurrentLanguage, 
+  setCurrentLanguage, 
+  setSafeText, 
+  setSafeHtml, 
+  setSafePlaceholder, 
+  setSafeHref, 
+  renderSharedHeader, 
+  renderSharedFooter 
+} from "./utils/dom.js?v=4";
+import { updateWhatsAppWidgetLang } from "./components/whatsapp-widget.js?v=4";
 
 // Page State
 const PageState = {
-  currentLang: localStorage.getItem("vectro_lang") || "id",
+  currentLang: getCurrentLanguage(),
   faqCategory: "all",
   faqSearch: "",
   openFaqId: "faq-1" // First item open by default
@@ -35,51 +46,12 @@ function renderHeaderAndNav() {
   const t = i18nData[lang];
   const cT = t.contactPage;
 
-  // Language button active state
-  document.querySelectorAll(".lang-btn").forEach(btn => {
-    btn.classList.toggle("active", btn.dataset.lang === lang);
-  });
-
-  // Top Announcement
-  const annEl = document.getElementById("top-announcement-text");
-  if (annEl) {
-    annEl.textContent = lang === "id"
-      ? "Gudang Sparepart Sentral & Teknisi Siaga Se-Indonesia | Showroom Jakarta & Surabaya"
-      : "Central Domestic Spare Parts Hub & Active Support Across Indonesia | Jakarta & Surabaya Showrooms";
-  }
-
-  // Brand Subtitle
-  const brandTagEl = document.getElementById("nav-brand-tag");
-  if (brandTagEl) brandTagEl.textContent = t.nav.brandTag;
-
-  // Nav links
-  const navMap = {
-    "nav-link-home": t.nav.home,
-    "nav-link-showcase": t.nav.showcase,
-    "nav-link-about": t.nav.about || (lang === "id" ? "Tentang Kami" : "About Us"),
-    "nav-link-solutions": t.nav.solutions,
-    "nav-link-articles": t.nav.articles || (lang === "id" ? "Artikel" : "Articles / News"),
-    "nav-link-contact": t.nav.contact || (lang === "id" ? "Kontak & FAQ" : "Contact & FAQ")
-  };
-  for (const [id, label] of Object.entries(navMap)) {
-    const el = document.getElementById(id);
-    if (el) el.textContent = label;
-  }
-
-  // Nav WA Button
-  const navWaBtn = document.getElementById("nav-wa-btn");
-  const navWaText = document.getElementById("nav-wa-text");
-  if (navWaBtn) navWaBtn.href = createWhatsAppUrl(companyData.whatsapp.number, companyData.whatsapp.defaultMessage[lang]);
-  if (navWaText) navWaText.textContent = t.nav.waButton;
-
-  // Update WhatsApp widget language
+  renderSharedHeader(lang, i18nData);
   updateWhatsAppWidgetLang(lang);
 
   // Breadcrumbs
-  const bcHome = document.getElementById("bc-home");
-  const bcCurrent = document.getElementById("bc-current");
-  if (bcHome) bcHome.textContent = cT.breadcrumbHome;
-  if (bcCurrent) bcCurrent.textContent = cT.breadcrumbContact;
+  setSafeText("bc-home", cT.breadcrumbHome);
+  setSafeText("bc-current", cT.breadcrumbContact);
 }
 
 /**
@@ -91,13 +63,12 @@ function renderHero() {
   const lang = PageState.currentLang;
   const cT = i18nData[lang].contactPage;
 
-  const badgeEl = document.getElementById("hero-badge");
-  const titleEl = document.getElementById("hero-title");
-  const leadEl = document.getElementById("hero-lead");
-
-  if (badgeEl) badgeEl.textContent = cT.heroBadge;
-  if (titleEl) titleEl.textContent = cT.heroTitle;
-  if (leadEl) leadEl.textContent = cT.heroLead;
+  setSafeText("hero-badge", cT.heroBadge);
+  setSafeText("hero-title", cT.heroTitle);
+  setSafeText("hero-lead", cT.heroLead);
+  if (cT.hotlineRibbon) {
+    setSafeHtml("contact-hotline-text", cT.hotlineRibbon);
+  }
 }
 
 /**
@@ -325,47 +296,20 @@ function renderFaqAccordion() {
 function renderCTAAndFooter() {
   const lang = PageState.currentLang;
   const cT = i18nData[lang].contactPage;
-  const f = i18nData[lang].footer;
 
-  const ctaBadge = document.getElementById("cta-badge");
-  const ctaTitle = document.getElementById("cta-title");
-  const ctaDesc = document.getElementById("cta-desc");
-  const ctaWaBtn = document.getElementById("cta-wa-btn");
-  const ctaWaText = document.getElementById("cta-wa-text");
-  const ctaCatalogBtn = document.getElementById("cta-catalog-btn");
-  const ctaCatalogText = document.getElementById("cta-catalog-text");
-
-  if (ctaBadge) ctaBadge.textContent = cT.ctaBadge;
-  if (ctaTitle) ctaTitle.textContent = cT.ctaTitle;
-  if (ctaDesc) ctaDesc.textContent = cT.ctaDesc;
-  if (ctaWaText) ctaWaText.textContent = cT.ctaWaBtn;
-  if (ctaCatalogText) ctaCatalogText.textContent = cT.ctaCatalogBtn;
+  setSafeText("cta-badge", cT.ctaBadge);
+  setSafeText("cta-title", cT.ctaTitle);
+  setSafeText("cta-desc", cT.ctaDesc);
+  setSafeText("cta-wa-text", cT.ctaWaBtn);
+  setSafeText("cta-catalog-text", cT.ctaCatalogBtn);
 
   const ctaMsg = lang === "id"
     ? "Halo Tim Sales Engineer Relasi Sukses, saya memiliki beberapa pertanyaan seputar mesin industri dan ingin berkonsultasi lebih lanjut."
     : "Hello Relasi Sukses Sales Engineers, I have questions regarding industrial machinery and would like to consult further.";
-  if (ctaWaBtn) ctaWaBtn.href = createWhatsAppUrl(companyData.whatsapp.number, ctaMsg);
+  setSafeHref("cta-wa-btn", createWhatsAppUrl(companyData.whatsapp.number, ctaMsg));
 
-  // Footer
-  const aboutText = document.getElementById("footer-about-text");
-  const quickTitle = document.getElementById("footer-quicklinks-title");
-  const headTitle = document.getElementById("footer-head-title");
-  const headAddr = document.getElementById("footer-head-addr");
-  const branchTitle = document.getElementById("footer-branch-title");
-  const branchAddr = document.getElementById("footer-branch-addr");
-  const legalNotice = document.getElementById("footer-legal-notice");
-  const privacyLink = document.getElementById("footer-privacy-link");
-  const termsLink = document.getElementById("footer-terms-link");
-
-  if (aboutText) aboutText.textContent = f.about;
-  if (quickTitle) quickTitle.textContent = f.quickLinks;
-  if (headTitle) headTitle.textContent = f.headOffice;
-  if (headAddr) headAddr.textContent = f.headOfficeAddr;
-  if (branchTitle) branchTitle.textContent = f.branchOffice;
-  if (branchAddr) branchAddr.textContent = f.branchOfficeAddr;
-  if (legalNotice) legalNotice.textContent = f.legalNotice;
-  if (privacyLink) privacyLink.textContent = f.privacy;
-  if (termsLink) termsLink.textContent = f.terms;
+  // Shared standardized footer
+  renderSharedFooter(lang, i18nData);
 }
 
 /**
@@ -391,7 +335,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const selected = btn.dataset.lang;
       if (selected !== PageState.currentLang) {
         PageState.currentLang = selected;
-        localStorage.setItem("vectro_lang", selected);
+        setCurrentLanguage(selected);
         renderAll();
       }
     });

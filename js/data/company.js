@@ -9,7 +9,7 @@ export const companyData = {
   legalName: "PT Relasi Sukses Bersama",
   tagline: "Industrial Food Processing Machinery & Smart Packaging Systems",
   domain: "relasisukses.co.id",
-  email: "sales@relasisukses.co.id",
+  email: "info@relasisukses.co.id",
   established: 1986,
   
   // WhatsApp Contact Configuration
@@ -33,18 +33,12 @@ export const companyData = {
       facilities: ["Showroom 50+ Unit Demo", "Test Kitchen & Baking Lab", "Pusat Konsultasi Mesin"]
     },
     {
-      city: "Tangerang (Central Warehouse & Workshop)",
-      address: "Jl. Kavling DPR No. 05 Blok A, Tangerang, Banten 15141",
+      city: "Bekasi (Facility & Workshop)",
+      address: "Jln. Mawar 141, Mustika Sari, Mustika Jaya, Bekasi",
+      email: "info@relasisukses.co.id",
       phone: "+62 812-9525-4747",
-      hours: "Senin - Sabtu: 08.00 - 17.00 WIB",
-      facilities: ["Gudang Sparepart Sentral", "Bengkel Perakitan & Kalibrasi", "Ready-Stock Unit"]
-    },
-    {
-      city: "Surabaya (East Java Branch & Service Hub)",
-      address: "Komplek Rungkut Industri Megah Blok D-12, Jl. Raya Rungkut No. 88, Surabaya, Jawa Timur 60293",
-      phone: "+62 31 843 7200",
       hours: "Senin - Sabtu: 08.30 - 17.00 WIB",
-      facilities: ["Unit Demo Populer", "Workshop Reparasi & Bengkel Bubut", "Stok Fast-Moving Parts"]
+      facilities: ["Workshop Perakitan & Kalibrasi", "Depo Suku Cadang Resmi", "Pusat Pengiriman"]
     }
   ],
 
@@ -96,8 +90,8 @@ export const companyData = {
         en: "Can I test run the machine with my own recipe ingredients before purchasing?"
       },
       a: {
-        id: "Sangat bisa dan sangat kami anjurkan! Anda cukup jadwalkan kunjungan ke Test Kitchen Showroom kami di Arcade Business Center PIK Jakarta atau workshop Tangerang/Surabaya. Bawa adonan atau produk Anda, dan kita jalankan mesin bersama teknisi sampai Anda puas dengan hasilnya.",
-        en: "Absolutely, and we strongly encourage it! Simply schedule a visit to our Test Kitchen Showroom in Arcade Business Center PIK Jakarta or Tangerang/Surabaya workshop. Bring your dough or product, and run the machine alongside our engineers until satisfied."
+        id: "Sangat bisa dan sangat kami anjurkan! Anda cukup jadwalkan kunjungan ke Test Kitchen Showroom kami di Arcade Business Center PIK Jakarta atau workshop Bekasi. Bawa adonan atau produk Anda, dan kita jalankan mesin bersama teknisi sampai Anda puas dengan hasilnya.",
+        en: "Absolutely, and we strongly encourage it! Simply schedule a visit to our Test Kitchen Showroom in Arcade Business Center PIK Jakarta or Bekasi workshop. Bring your dough or product, and run the machine alongside our engineers until satisfied."
       }
     },
     {

@@ -1,16 +1,27 @@
 /**
- * VECTRO INDUSTRIAL - Articles & News Page Controller
+ * RELASI SUKSES (relasisukses.co.id) - Articles & News Page Controller
  * Clean Code Architecture: Reactive State, Dynamic Category Filtering, Keyword Search & WhatsApp Routing
  */
 
-import { articlesData } from "./data/articles.js";
-import { i18nData } from "./data/i18n.js";
-import { companyData } from "./data/company.js";
-import { updateWhatsAppWidgetLang } from "./components/whatsapp-widget.js";
+import { articlesData } from "./data/articles.js?v=4";
+import { i18nData } from "./data/i18n.js?v=4";
+import { companyData } from "./data/company.js?v=4";
+import { buildWhatsAppLink } from "./utils/whatsapp.js?v=4";
+import { 
+  getCurrentLanguage, 
+  setCurrentLanguage, 
+  setSafeText, 
+  setSafeHtml, 
+  setSafePlaceholder, 
+  setSafeHref, 
+  renderSharedHeader, 
+  renderSharedFooter 
+} from "./utils/dom.js?v=4";
+import { updateWhatsAppWidgetLang } from "./components/whatsapp-widget.js?v=4";
 
 // Page State
 const PageState = {
-  currentLang: localStorage.getItem("vectro_lang") || "id",
+  currentLang: getCurrentLanguage(),
   selectedCategory: "all",
   searchQuery: ""
 };
@@ -34,51 +45,12 @@ function renderHeaderAndNav() {
   const t = i18nData[lang];
   const artT = t.articlesPage;
 
-  // Language button active state
-  document.querySelectorAll(".lang-btn").forEach(btn => {
-    btn.classList.toggle("active", btn.dataset.lang === lang);
-  });
-
-  // Top Announcement
-  const annEl = document.getElementById("top-announcement-text");
-  if (annEl) {
-    annEl.textContent = lang === "id"
-      ? "Gudang Sparepart Sentral & Teknisi Siaga Se-Indonesia | Showroom Jakarta & Surabaya"
-      : "Central Domestic Spare Parts Hub & Active Support Across Indonesia | Jakarta & Surabaya Showrooms";
-  }
-
-  // Brand Subtitle
-  const brandTagEl = document.getElementById("nav-brand-tag");
-  if (brandTagEl) brandTagEl.textContent = t.nav.brandTag;
-
-  // Nav links
-  const navMap = {
-    "nav-link-home": t.nav.home,
-    "nav-link-showcase": t.nav.showcase,
-    "nav-link-about": t.nav.about || (lang === "id" ? "Tentang Kami" : "About Us"),
-    "nav-link-solutions": t.nav.solutions,
-    "nav-link-articles": t.nav.articles || (lang === "id" ? "Artikel" : "Articles / News"),
-    "nav-link-contact": t.nav.contact || (lang === "id" ? "Kontak & FAQ" : "Contact & FAQ")
-  };
-  for (const [id, label] of Object.entries(navMap)) {
-    const el = document.getElementById(id);
-    if (el) el.textContent = label;
-  }
-
-  // Nav WA Button
-  const navWaBtn = document.getElementById("nav-wa-btn");
-  const navWaText = document.getElementById("nav-wa-text");
-  if (navWaBtn) navWaBtn.href = createWhatsAppUrl(companyData.whatsapp.defaultMessage[lang]);
-  if (navWaText) navWaText.textContent = t.nav.waButton;
-
-  // Update WhatsApp widget language
+  renderSharedHeader(lang, i18nData);
   updateWhatsAppWidgetLang(lang);
 
   // Breadcrumbs
-  const bcHome = document.getElementById("bc-home");
-  const bcCurrent = document.getElementById("bc-current");
-  if (bcHome) bcHome.textContent = artT.breadcrumbHome;
-  if (bcCurrent) bcCurrent.textContent = artT.breadcrumbArticles;
+  setSafeText("bc-home", artT.breadcrumbHome);
+  setSafeText("bc-current", artT.breadcrumbArticles);
 }
 
 /**
@@ -223,47 +195,20 @@ function renderArticles() {
 function renderCTAAndFooter() {
   const lang = PageState.currentLang;
   const artT = i18nData[lang].articlesPage;
-  const f = i18nData[lang].footer;
 
-  const ctaBadge = document.getElementById("cta-badge");
-  const ctaTitle = document.getElementById("cta-title");
-  const ctaDesc = document.getElementById("cta-desc");
-  const ctaWaBtn = document.getElementById("cta-wa-btn");
-  const ctaWaText = document.getElementById("cta-wa-text");
-  const ctaCatalogBtn = document.getElementById("cta-catalog-btn");
-  const ctaCatalogText = document.getElementById("cta-catalog-text");
-
-  if (ctaBadge) ctaBadge.textContent = artT.ctaBadge;
-  if (ctaTitle) ctaTitle.textContent = artT.ctaTitle;
-  if (ctaDesc) ctaDesc.textContent = artT.ctaDesc;
-  if (ctaWaText) ctaWaText.textContent = artT.ctaWaBtn;
-  if (ctaCatalogText) ctaCatalogText.textContent = artT.ctaCatalogBtn;
+  setSafeText("cta-badge", artT.ctaBadge);
+  setSafeText("cta-title", artT.ctaTitle);
+  setSafeText("cta-desc", artT.ctaDesc);
+  setSafeText("cta-wa-text", artT.ctaWaBtn);
+  setSafeText("cta-catalog-text", artT.ctaCatalogBtn);
 
   const ctaMsg = lang === "id"
     ? "Halo Tim Sales Engineer Relasi Sukses, saya tertarik berkonsultasi mengenai rekomendasi mesin berdasarkan panduan artikel di website Relasi Sukses."
     : "Hello Relasi Sukses Sales Engineers, I would like to consult on machinery options based on the educational guides on your website.";
-  if (ctaWaBtn) ctaWaBtn.href = createWhatsAppUrl(ctaMsg);
+  setSafeHref("cta-wa-btn", buildWhatsAppLink({ lang, customMessage: ctaMsg }));
 
-  // Footer
-  const aboutText = document.getElementById("footer-about-text");
-  const quickTitle = document.getElementById("footer-quicklinks-title");
-  const headTitle = document.getElementById("footer-head-title");
-  const headAddr = document.getElementById("footer-head-addr");
-  const branchTitle = document.getElementById("footer-branch-title");
-  const branchAddr = document.getElementById("footer-branch-addr");
-  const legalNotice = document.getElementById("footer-legal-notice");
-  const privacyLink = document.getElementById("footer-privacy-link");
-  const termsLink = document.getElementById("footer-terms-link");
-
-  if (aboutText) aboutText.textContent = f.about;
-  if (quickTitle) quickTitle.textContent = f.quickLinks;
-  if (headTitle) headTitle.textContent = f.headOffice;
-  if (headAddr) headAddr.textContent = f.headOfficeAddr;
-  if (branchTitle) branchTitle.textContent = f.branchOffice;
-  if (branchAddr) branchAddr.textContent = f.branchOfficeAddr;
-  if (legalNotice) legalNotice.textContent = f.legalNotice;
-  if (privacyLink) privacyLink.textContent = f.privacy;
-  if (termsLink) termsLink.textContent = f.terms;
+  // Centralized shared footer rendering
+  renderSharedFooter(lang, i18nData);
 }
 
 /**
@@ -287,7 +232,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const selected = btn.dataset.lang;
       if (selected !== PageState.currentLang) {
         PageState.currentLang = selected;
-        localStorage.setItem("vectro_lang", selected);
+        setCurrentLanguage(selected);
         renderAll();
       }
     });

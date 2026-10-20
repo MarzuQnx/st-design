@@ -1,16 +1,27 @@
 /**
- * VECTRO INDUSTRIAL - Solutions & Production Simulator Controller
+ * RELASI SUKSES (relasisukses.co.id) - Solutions & Production Simulator Controller
  * Clean Code Architecture: Reactive Calculator Engine, i18n Re-rendering & Consultative WhatsApp Routing
  */
 
-import { solutionsData } from "./data/solutions.js";
-import { i18nData } from "./data/i18n.js";
-import { companyData } from "./data/company.js";
-import { updateWhatsAppWidgetLang } from "./components/whatsapp-widget.js";
+import { solutionsData } from "./data/solutions.js?v=4";
+import { i18nData } from "./data/i18n.js?v=4";
+import { companyData } from "./data/company.js?v=4";
+import { buildWhatsAppLink } from "./utils/whatsapp.js?v=4";
+import { 
+  getCurrentLanguage, 
+  setCurrentLanguage, 
+  setSafeText, 
+  setSafeHtml, 
+  setSafePlaceholder, 
+  setSafeHref, 
+  renderSharedHeader, 
+  renderSharedFooter 
+} from "./utils/dom.js?v=4";
+import { updateWhatsAppWidgetLang } from "./components/whatsapp-widget.js?v=4";
 
 // Page & Calculator Reactive State
 const PageState = {
-  currentLang: localStorage.getItem("vectro_lang") || "id",
+  currentLang: getCurrentLanguage(),
   calcSector: "bakery",
   calcScale: "umkm",
   calcPhase: "220V"
@@ -66,51 +77,12 @@ function renderHeaderAndNav() {
   const t = i18nData[lang];
   const solT = t.solutionsPage;
 
-  // Visual active toggle on language buttons
-  document.querySelectorAll(".lang-btn").forEach(btn => {
-    btn.classList.toggle("active", btn.dataset.lang === lang);
-  });
-
-  // Top Announcement
-  const annEl = document.getElementById("top-announcement-text");
-  if (annEl) {
-    annEl.textContent = lang === "id"
-      ? "Gudang Sparepart Sentral & Teknisi Siaga Se-Indonesia | Showroom Jakarta & Surabaya"
-      : "Central Domestic Spare Parts Hub & Active Support Across Indonesia | Jakarta & Surabaya Showrooms";
-  }
-
-  // Brand Subtitle
-  const brandTagEl = document.getElementById("nav-brand-tag");
-  if (brandTagEl) brandTagEl.textContent = t.nav.brandTag;
-
-  // Main Navigation links
-  const navMap = {
-    "nav-link-home": t.nav.home,
-    "nav-link-showcase": t.nav.showcase,
-    "nav-link-about": t.nav.about || (lang === "id" ? "Tentang Kami" : "About Us"),
-    "nav-link-solutions": t.nav.solutions,
-    "nav-link-articles": t.nav.articles || (lang === "id" ? "Artikel" : "Articles / News"),
-    "nav-link-contact": t.nav.contact
-  };
-  for (const [id, label] of Object.entries(navMap)) {
-    const el = document.getElementById(id);
-    if (el) el.textContent = label;
-  }
-
-  // Header WA Button
-  const navWaBtn = document.getElementById("nav-wa-btn");
-  const navWaText = document.getElementById("nav-wa-text");
-  if (navWaBtn) navWaBtn.href = createWhatsAppUrl(companyData.whatsapp.defaultMessage[lang]);
-  if (navWaText) navWaText.textContent = t.nav.waButton;
-
-  // Update WhatsApp widget language
+  renderSharedHeader(lang, i18nData);
   updateWhatsAppWidgetLang(lang);
 
   // Breadcrumbs
-  const bcHome = document.getElementById("bc-home");
-  const bcCurrent = document.getElementById("bc-current");
-  if (bcHome) bcHome.textContent = solT.breadcrumbHome;
-  if (bcCurrent) bcCurrent.textContent = solT.breadcrumbSolutions;
+  setSafeText("bc-home", solT.breadcrumbHome);
+  setSafeText("bc-current", solT.breadcrumbSolutions);
 }
 
 /**
@@ -168,7 +140,7 @@ function renderLifecycle() {
           <div>
             <div class="lifecycle-card-header">
               <span class="lifecycle-step-num">${st.stepNumber}</span>
-              <span class="lifecycle-phase-badge">${st.badge}</span>
+              <span class="lifecycle-phase-badge">${typeof st.badge === 'object' ? st.badge[lang] : st.badge}</span>
             </div>
             <div class="lifecycle-icon-wrap" aria-hidden="true">${iconSvg}</div>
             <h3 class="lifecycle-title">${st.title[lang]}</h3>
@@ -240,21 +212,21 @@ function renderCalculatorControls() {
           <div class="calc-scale-title">${solT.calcScaleUmkm}</div>
           <div class="calc-scale-sub">${scales.umkm.outputLabel[lang]}</div>
         </div>
-        <span class="badge-tag badge-gold">1-2 Operator</span>
+        <span class="badge-tag badge-gold">${lang === 'id' ? '1-2 Operator' : '1-2 Operators'}</span>
       </div>
       <div class="calc-scale-radio-card ${PageState.calcScale === 'medium' ? 'active' : ''}" data-scale="medium">
         <div>
           <div class="calc-scale-title">${solT.calcScaleMedium}</div>
           <div class="calc-scale-sub">${scales.medium.outputLabel[lang]}</div>
         </div>
-        <span class="badge-tag badge-blue">3-5 Operator</span>
+        <span class="badge-tag badge-blue">${lang === 'id' ? '3-5 Operator' : '3-5 Operators'}</span>
       </div>
       <div class="calc-scale-radio-card ${PageState.calcScale === 'factory' ? 'active' : ''}" data-scale="factory">
         <div>
           <div class="calc-scale-title">${solT.calcScaleFactory}</div>
           <div class="calc-scale-sub">${scales.factory.outputLabel[lang]}</div>
         </div>
-        <span class="badge-tag badge-green">Lini Otomatis</span>
+        <span class="badge-tag badge-green">${lang === 'id' ? 'Lini Otomatis' : 'Automated Line'}</span>
       </div>
     `;
   }
@@ -383,7 +355,7 @@ function renderWarranty() {
     gridEl.innerHTML = plans.map(p => `
       <article class="warranty-card">
         <div>
-          <span class="warranty-badge-pill">${p.badge}</span>
+          <span class="warranty-badge-pill">${typeof p.badge === 'object' ? p.badge[lang] : p.badge}</span>
           <h3 class="warranty-title">${p.title[lang]}</h3>
           <p class="warranty-coverage">${p.coverage[lang]}</p>
         </div>
@@ -406,48 +378,21 @@ function renderWarranty() {
 function renderCTAAndFooter() {
   const lang = PageState.currentLang;
   const solT = i18nData[lang].solutionsPage;
-  const f = i18nData[lang].footer;
 
   // CTA
-  const ctaBadge = document.getElementById("cta-badge");
-  const ctaTitle = document.getElementById("cta-title");
-  const ctaDesc = document.getElementById("cta-desc");
-  const ctaWaBtn = document.getElementById("cta-wa-btn");
-  const ctaWaText = document.getElementById("cta-wa-text");
-  const ctaCatalogBtn = document.getElementById("cta-catalog-btn");
-  const ctaCatalogText = document.getElementById("cta-catalog-text");
-
-  if (ctaBadge) ctaBadge.textContent = solT.ctaBadge;
-  if (ctaTitle) ctaTitle.textContent = solT.ctaTitle;
-  if (ctaDesc) ctaDesc.textContent = solT.ctaDesc;
-  if (ctaWaText) ctaWaText.textContent = solT.ctaWaBtn;
-  if (ctaCatalogText) ctaCatalogText.textContent = solT.ctaCatalogBtn;
+  setSafeText("cta-badge", solT.ctaBadge);
+  setSafeText("cta-title", solT.ctaTitle);
+  setSafeText("cta-desc", solT.ctaDesc);
+  setSafeText("cta-wa-text", solT.ctaWaBtn);
+  setSafeText("cta-catalog-text", solT.ctaCatalogBtn);
 
   const ctaMsg = lang === "id"
     ? "Halo Tim Relasi Sukses, saya tertarik berkonsultasi mengenai kesiapan daya listrik dan audit layout dapur usaha saya. Mohon arahannya."
     : "Hello Relasi Sukses Team, I am interested in consulting about our facility's electrical readiness and kitchen workflow layout.";
-  if (ctaWaBtn) ctaWaBtn.href = createWhatsAppUrl(ctaMsg);
+  setSafeHref("cta-wa-btn", createWhatsAppUrl(ctaMsg));
 
-  // Footer
-  const aboutText = document.getElementById("footer-about-text");
-  const quickTitle = document.getElementById("footer-quicklinks-title");
-  const headTitle = document.getElementById("footer-head-title");
-  const headAddr = document.getElementById("footer-head-addr");
-  const branchTitle = document.getElementById("footer-branch-title");
-  const branchAddr = document.getElementById("footer-branch-addr");
-  const legalNotice = document.getElementById("footer-legal-notice");
-  const privacyLink = document.getElementById("footer-privacy-link");
-  const termsLink = document.getElementById("footer-terms-link");
-
-  if (aboutText) aboutText.textContent = f.about;
-  if (quickTitle) quickTitle.textContent = f.quickLinks;
-  if (headTitle) headTitle.textContent = f.headOffice;
-  if (headAddr) headAddr.textContent = f.headOfficeAddr;
-  if (branchTitle) branchTitle.textContent = f.branchOffice;
-  if (branchAddr) branchAddr.textContent = f.branchOfficeAddr;
-  if (legalNotice) legalNotice.textContent = f.legalNotice;
-  if (privacyLink) privacyLink.textContent = f.privacy;
-  if (termsLink) termsLink.textContent = f.terms;
+  // Shared standardized footer
+  renderSharedFooter(lang, i18nData);
 }
 
 /**
@@ -473,7 +418,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const selected = btn.dataset.lang;
       if (selected !== PageState.currentLang) {
         PageState.currentLang = selected;
-        localStorage.setItem("vectro_lang", selected);
+        setCurrentLanguage(selected);
         renderAll();
       }
     });

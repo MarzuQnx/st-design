@@ -18,7 +18,12 @@
 html {
   font-size: 16px;
   scroll-behavior: smooth;
+  scroll-padding-top: 90px;
   -webkit-text-size-adjust: 100%;
+}
+
+section[id], [id] {
+  scroll-margin-top: 90px;
 }
 
 body {
@@ -281,12 +286,15 @@ p:last-child {
 }
 
 .nav-link {
+  display: inline-flex;
+  align-items: center;
   font-size: 0.9375rem;
   font-weight: 500;
   color: var(--text-secondary);
   transition: color var(--transition-fast);
   padding: 8px 4px;
   position: relative;
+  white-space: nowrap;
 }
 
 .nav-link:hover, .nav-link.active {
@@ -297,10 +305,11 @@ p:last-child {
   content: "";
   position: absolute;
   bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 2px;
+  left: 4px;
+  right: 4px;
+  height: 2.5px;
   background: var(--accent-gold);
+  border-radius: 2px;
 }
 
 .header-actions {
@@ -468,15 +477,110 @@ p:last-child {
 }
 
 /* -------------------------------------------------------------
-   HERO SECTION
+   HERO SECTION & BACKGROUND SLIDESHOW
 ------------------------------------------------------------- */
 .hero-section {
   position: relative;
   padding-top: var(--space-12);
   padding-bottom: var(--space-10);
-  background: linear-gradient(180deg, #F8EFE0 0%, var(--bg-page) 100%);
+  background: var(--bg-page);
   border-bottom: 1px solid var(--border-light);
   overflow: hidden;
+}
+
+/* Background Slideshow Layer */
+.hero-bg-slideshow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.hero-slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transition: opacity 1.2s cubic-bezier(0.4, 0, 0.2, 1), transform 9s cubic-bezier(0.25, 1, 0.5, 1);
+  transform: scale(1.06);
+}
+
+.hero-slide.active {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Warm Ivory High-Contrast Translucent Overlay */
+.hero-bg-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 247, 232, 0.94) 0%,
+    rgba(255, 247, 232, 0.88) 50%,
+    rgba(255, 247, 232, 0.78) 100%
+  );
+  backdrop-filter: blur(1.5px);
+}
+
+.hero-section .container {
+  position: relative;
+  z-index: 2;
+}
+
+.hero-slideshow-nav {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid var(--border-light);
+  padding: 6px 14px;
+  border-radius: var(--radius-pill);
+  box-shadow: var(--shadow-raised);
+  backdrop-filter: blur(8px);
+  margin-top: var(--space-4);
+  width: fit-content;
+  z-index: 3;
+}
+
+.slide-dot {
+  width: 22px;
+  height: 6px;
+  border-radius: var(--radius-pill);
+  background: var(--border-light);
+  transition: all var(--transition-fast);
+  cursor: pointer;
+  border: none;
+  padding: 0;
+}
+
+.slide-dot:hover {
+  background: var(--text-muted);
+}
+
+.slide-dot.active {
+  width: 36px;
+  background: var(--accent-gold);
+}
+
+.slide-label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-left: 6px;
 }
 
 .hero-grid {
@@ -1241,73 +1345,145 @@ p:last-child {
    HIGH-CONVERTING CTA BANNER
 ------------------------------------------------------------- */
 .cta-banner-section {
-  background: linear-gradient(135deg, var(--bg-page-dark) 0%, var(--bg-page) 100%);
-  border-top: 1px solid var(--border-light);
-  border-bottom: 1px solid var(--border-light);
-  padding: var(--space-12) 0;
+  background: var(--bg-page);
+  padding: clamp(40px, 6vw, 72px) 0;
   position: relative;
 }
 
 .cta-banner-box {
-  background: var(--brand-primary);
-  border: 1px solid var(--accent-gold-border);
+  background: linear-gradient(145deg, #1C3D31 0%, #294F40 55%, #18352A 100%);
+  border: 1px solid rgba(255, 138, 61, 0.45);
   border-radius: var(--radius-lg);
-  padding: var(--space-10) var(--space-8);
+  padding: clamp(34px, 5vw, 56px) clamp(20px, 4vw, 48px);
   text-align: center;
-  box-shadow: var(--shadow-raised);
+  box-shadow: 0 16px 40px rgba(26, 48, 39, 0.18), 0 0 0 1px rgba(255, 255, 255, 0.05);
   position: relative;
   overflow: hidden;
   color: #FFFFFF;
 }
 
-.cta-banner-box .cta-banner-title {
-  color: #FFFFFF;
-}
-
-.cta-banner-box .cta-banner-desc {
-  color: #E2ECE7;
-}
-
-.cta-banner-box .cta-office-hours {
-  color: #C0D6CB;
-}
-
+/* Full Tangerine top accent bar running 100% across with bright gradient */
 .cta-banner-box::before {
   content: "";
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
+  right: 0;
   height: 4px;
-  background: linear-gradient(90deg, var(--accent-gold) 0%, var(--accent-blue) 100%);
+  background: linear-gradient(90deg, #FF8A3D 0%, #FFB584 50%, #FF8A3D 100%);
+  box-shadow: 0 1px 8px rgba(255, 138, 61, 0.5);
 }
 
-.cta-banner-title {
-  font-family: var(--font-family-display);
-  font-size: 2.25rem;
+/* High-contrast badge on dark teal background */
+.cta-banner-box .badge-tag {
+  display: inline-flex;
+  align-items: center;
+  background: rgba(255, 138, 61, 0.25) !important;
+  color: #FFD1A9 !important;
+  border: 1.5px solid #FF8A3D !important;
+  padding: 6px 18px;
+  font-size: 0.8125rem;
   font-weight: 800;
-  color: var(--text-primary);
-  margin-bottom: var(--space-3);
+  letter-spacing: 0.08em;
+  border-radius: var(--radius-sm);
+  margin-bottom: var(--space-4);
+  text-transform: uppercase;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
 
-.cta-banner-desc {
-  font-size: 1.0625rem;
-  color: var(--text-secondary);
+.cta-banner-box .cta-banner-title {
+  font-family: var(--font-family-display);
+  font-size: clamp(1.65rem, 3.2vw, 2.35rem);
+  font-weight: 800;
+  color: #FFFFFF;
+  line-height: 1.25;
+  margin-bottom: var(--space-3);
+  text-wrap: balance;
+}
+
+.cta-banner-box .cta-banner-desc {
+  font-size: clamp(0.9375rem, 1.8vw, 1.0625rem);
+  color: #E2ECE7;
   max-width: 680px;
   margin: 0 auto var(--space-6) auto;
+  line-height: 1.65;
+  text-wrap: pretty;
 }
 
-.cta-banner-actions {
+.cta-banner-box .cta-banner-actions {
   display: flex;
   justify-content: center;
+  align-items: center;
   flex-wrap: wrap;
-  gap: var(--space-4);
-  margin-bottom: var(--space-4);
+  gap: 14px;
+  margin-bottom: var(--space-5);
 }
 
-.cta-office-hours {
+/* WhatsApp Button inside CTA Banner */
+.cta-banner-box .btn-wa {
+  background: #25D366;
+  color: #072612 !important;
+  font-weight: 700;
+  font-size: 0.9375rem;
+  padding: 13px 26px;
+  border-radius: var(--radius-sm);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  text-decoration: none;
+  border: none;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+  transition: all var(--transition-fast);
+}
+
+.cta-banner-box .btn-wa svg {
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
+}
+
+.cta-banner-box .btn-wa:hover {
+  background: #20BA5A;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+}
+
+/* SECONDARY GHOST BUTTON: Fixed contrast on dark teal background */
+.cta-banner-box .btn-ghost {
+  color: #FFF7E8 !important;
+  border: 1.5px solid rgba(255, 247, 232, 0.6) !important;
+  background: rgba(255, 247, 232, 0.08) !important;
+  font-size: 0.9375rem;
+  padding: 13px 26px;
+  font-weight: 600;
+  border-radius: var(--radius-sm);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.cta-banner-box .btn-ghost:hover {
+  background: #FFF7E8 !important;
+  color: #1A3027 !important;
+  border-color: #FFF7E8 !important;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(255, 247, 232, 0.25);
+}
+
+/* Office Hours Pill */
+.cta-banner-box .cta-office-hours {
+  display: inline-block;
   font-size: 0.8125rem;
-  color: var(--text-muted);
+  color: #C0D6CB;
+  background: rgba(0, 0, 0, 0.22);
+  padding: 6px 18px;
+  border-radius: var(--radius-pill);
+  border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 /* -------------------------------------------------------------
@@ -1741,6 +1917,33 @@ p:last-child {
   .stat-item:last-child {
     border-bottom: none;
     padding-bottom: 0;
+  }
+
+  .announcement-inner {
+    flex-direction: column;
+    text-align: center;
+    gap: 4px;
+    font-size: 0.75rem;
+  }
+
+  .cta-banner-box {
+    padding: 30px 16px !important;
+  }
+
+  .cta-banner-box .cta-banner-title {
+    font-size: 1.5rem !important;
+  }
+
+  .cta-banner-actions {
+    flex-direction: column;
+    width: 100%;
+    gap: 12px;
+  }
+
+  .cta-banner-actions .btn {
+    width: 100% !important;
+    min-height: 48px;
+    justify-content: center;
   }
 
   /* Safe bottom space to prevent floating WhatsApp overlap */

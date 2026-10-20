@@ -46,8 +46,8 @@ export const aboutData = {
         en: "Free Test Kitchen Recipe Runs"
       },
       desc: {
-        id: "Setiap adonan tepung dan kekentalan saus memiliki karakter unik. Di Test Kitchen Showroom kami di Jakarta dan Surabaya, Anda dipersilakan membawa bahan baku asli dan mencoba mesinnya langsung sampai puas.",
-        en: "Every dough recipe and sauce viscosity behaves uniquely. In our Jakarta & Surabaya test kitchens, bring your own ingredients and run the machines alongside our team until fully satisfied."
+        id: "Setiap adonan tepung dan kekentalan saus memiliki karakter unik. Di Test Kitchen Showroom kami di Jakarta dan workshop Bekasi, Anda dipersilakan membawa bahan baku asli dan mencoba mesinnya langsung sampai puas.",
+        en: "Every dough recipe and sauce viscosity behaves uniquely. In our Jakarta & Bekasi test kitchens, bring your own ingredients and run the machines alongside our team until fully satisfied."
       }
     },
     {
@@ -175,18 +175,18 @@ export const aboutData = {
       }
     },
     {
-      id: "fac-sby",
-      city: "Surabaya",
+      id: "fac-bks",
+      city: "Bekasi",
       title: {
-        id: "East Java Branch & Calibration Workshop",
-        en: "East Java Branch & Calibration Workshop"
+        id: "Kantor & Workshop Servis Bekasi",
+        en: "Bekasi Office & Service Workshop"
       },
-      address: "Komplek Rungkut Industri Megah Blok D-12, Jl. Raya Rungkut No. 88, Surabaya, Jawa Timur",
+      address: "Jln. Mawar 141, Mustika Sari, Mustika Jaya, Bekasi",
       highlights: [
-        { id: "Showroom unit terlaris untuk area Jawa Timur", en: "Dedicated demo unit staging for East Java regional clients" },
-        { id: "Bengkel bubut & kalibrasi presisi on-site", en: "Precision lathe & technical recalibration workshop on-site" },
-        { id: "Depo suku cadang fast-moving area timur", en: "Fast-moving spare parts regional depot" },
-        { id: "Tim teknisi siaga panggilan darurat pabrik", en: "Rapid emergency field service dispatch team" }
+        { id: "Workshop perakitan & rekayasa mesin presisi", en: "Machine assembly & precision engineering workshop" },
+        { id: "Depo suku cadang resmi ready-stock", en: "Official ready-stock spare parts depot" },
+        { id: "Pusat servis & kalibrasi teknis mesin", en: "Technical recalibration & maintenance service center" },
+        { id: "Tim teknisi siaga panggilan darurat", en: "Emergency field service engineering team" }
       ],
       openHours: {
         id: "Senin - Sabtu: 08.30 - 17.00 WIB",
@@ -237,8 +237,8 @@ export const aboutData = {
         en: "Empowering 1,000+ SMEs"
       },
       desc: {
-        id: "Meluncurkan lini mesin berdaya hemat 220V khusus UMKM dan membuka cabang representatif di Surabaya untuk mempercepat layanan servis di Jawa Timur.",
-        en: "Introduced high-efficiency 220V machinery tailored for culinary SMEs and established the Surabaya regional engineering hub."
+        id: "Meluncurkan lini mesin berdaya hemat 220V khusus UMKM dan memperluas fasilitas workshop Bekasi untuk mempercepat layanan servis & perakitan mesin.",
+        en: "Introduced high-efficiency 220V machinery tailored for culinary SMEs and expanded the Bekasi engineering & service workshop."
       }
     },
     {
