@@ -1,0 +1,41 @@
+# ======================================================================
+# Security Hardening & Server Protection - PT Relasi Sukses Bersama
+# ======================================================================
+
+# 1. Disable Directory Browsing / Index Listing
+Options -Indexes
+
+# 2. Block Access to Hidden Files & Folders (.git, .agents, .agent, .env, etc.)
+<IfModule mod_authz_core.c>
+    <FilesMatch "^\.">
+        Require all denied
+    </FilesMatch>
+</IfModule>
+
+# 3. Block Access to Sensitive Files, Scripts & Markdown Documents
+<IfModule mod_authz_core.c>
+    <FilesMatch "(?i:\.(bak|config|sql|ini|log|sh|ps1|inc|swp|dist|env|yml|yaml|md|jsonl|cff))$">
+        Require all denied
+    </FilesMatch>
+</IfModule>
+
+# 4. HTTP Security Headers
+<IfModule mod_headers.c>
+    # Prevent MIME-type sniffing
+    Header set X-Content-Type-Options "nosniff"
+
+    # Prevent Clickjacking (framing)
+    Header set X-Frame-Options "SAMEORIGIN"
+
+    # Legacy XSS Filter protection
+    Header set X-XSS-Protection "1; mode=block"
+
+    # Referrer Policy for outbound privacy
+    Header set Referrer-Policy "strict-origin-when-cross-origin"
+
+    # Restrict unnecessary browser device permissions
+    Header set Permissions-Policy "geolocation=(), camera=(), microphone=(), payment=()"
+
+    # Content Security Policy
+    Header set Content-Security-Policy "default-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://fonts.gstatic.com https://wa.me https://api.whatsapp.com; img-src 'self' data: https:; font-src 'self' data: https://fonts.gstatic.com;"
+</IfModule>

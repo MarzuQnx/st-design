@@ -1,0 +1,240 @@
+{
+  "families": [
+    "Helvetica Neue",
+    "Arial",
+    "Menlo"
+  ],
+  "scale": {
+    "heading-1": {
+      "fontFamily": "Helvetica Neue",
+      "fontSize": "130px",
+      "fontWeight": "700",
+      "lineHeight": null,
+      "source": "css"
+    },
+    "heading-2": {
+      "fontFamily": "Helvetica Neue",
+      "fontSize": "120px",
+      "fontWeight": "700",
+      "lineHeight": null,
+      "source": "css"
+    },
+    "heading-3": {
+      "fontFamily": "Helvetica Neue",
+      "fontSize": "76px",
+      "fontWeight": "700",
+      "lineHeight": null,
+      "source": "css"
+    },
+    "body": {
+      "fontFamily": "Arial",
+      "fontSize": "16px",
+      "fontWeight": "400",
+      "lineHeight": null,
+      "source": "css"
+    },
+    "caption": {
+      "fontFamily": "Arial",
+      "fontSize": "14px",
+      "fontWeight": "400",
+      "lineHeight": null,
+      "source": "css"
+    },
+    "code": {
+      "fontFamily": "Menlo",
+      "fontSize": "14px",
+      "fontWeight": "400",
+      "lineHeight": null,
+      "source": "css"
+    }
+  },
+  "fontFaces": [
+    {
+      "family": "Open Sans",
+      "src": "https://fonts.gstatic.com/s/opensans/v44/memQYaGs126MiZpBA-UFUIcVXSCEkx2cmqvXlWq8tWZ0Pw86hd0Rk5hkWVAexQ.ttf",
+      "format": "truetype",
+      "weight": "300"
+    },
+    {
+      "family": "Open Sans",
+      "src": "https://fonts.gstatic.com/s/opensans/v44/memQYaGs126MiZpBA-UFUIcVXSCEkx2cmqvXlWq8tWZ0Pw86hd0Rk8ZkWVAexQ.ttf",
+      "format": "truetype",
+      "weight": "400"
+    },
+    {
+      "family": "Open Sans",
+      "src": "https://fonts.gstatic.com/s/opensans/v44/memQYaGs126MiZpBA-UFUIcVXSCEkx2cmqvXlWq8tWZ0Pw86hd0RkxhjWVAexQ.ttf",
+      "format": "truetype",
+      "weight": "600"
+    },
+    {
+      "family": "Open Sans",
+      "src": "https://fonts.gstatic.com/s/opensans/v44/memQYaGs126MiZpBA-UFUIcVXSCEkx2cmqvXlWq8tWZ0Pw86hd0RkyFjWVAexQ.ttf",
+      "format": "truetype",
+      "weight": "700"
+    },
+    {
+      "family": "Open Sans",
+      "src": "https://fonts.gstatic.com/s/opensans/v44/memQYaGs126MiZpBA-UFUIcVXSCEkx2cmqvXlWq8tWZ0Pw86hd0Rk0ZjWVAexQ.ttf",
+      "format": "truetype",
+      "weight": "800"
+    },
+    {
+      "family": "Open Sans",
+      "src": "https://fonts.gstatic.com/s/opensans/v44/memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgsiH0B4gaVc.ttf",
+      "format": "truetype",
+      "weight": "300"
+    },
+    {
+      "family": "Open Sans",
+      "src": "https://fonts.gstatic.com/s/opensans/v44/memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgsjZ0B4gaVc.ttf",
+      "format": "truetype",
+      "weight": "400"
+    },
+    {
+      "family": "Open Sans",
+      "src": "https://fonts.gstatic.com/s/opensans/v44/memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgsgH1x4gaVc.ttf",
+      "format": "truetype",
+      "weight": "600"
+    },
+    {
+      "family": "Open Sans",
+      "src": "https://fonts.gstatic.com/s/opensans/v44/memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgsg-1x4gaVc.ttf",
+      "format": "truetype",
+      "weight": "700"
+    },
+    {
+      "family": "Open Sans",
+      "src": "https://fonts.gstatic.com/s/opensans/v44/memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgshZ1x4gaVc.ttf",
+      "format": "truetype",
+      "weight": "800"
+    },
+    {
+      "family": "Roboto",
+      "src": "https://fonts.gstatic.com/s/roboto/v51/KFOKCnqEu92Fr1Mu53ZEC9_Vu3r1gIhOszmOClHrs6ljXfMMLt_QuAj-lg.ttf",
+      "format": "truetype",
+      "weight": "300"
+    },
+    {
+      "family": "Roboto",
+      "src": "https://fonts.gstatic.com/s/roboto/v51/KFOKCnqEu92Fr1Mu53ZEC9_Vu3r1gIhOszmOClHrs6ljXfMMLoHQuAj-lg.ttf",
+      "format": "truetype",
+      "weight": "400"
+    },
+    {
+      "family": "Roboto",
+      "src": "https://fonts.gstatic.com/s/roboto/v51/KFOKCnqEu92Fr1Mu53ZEC9_Vu3r1gIhOszmOClHrs6ljXfMMLrPQuAj-lg.ttf",
+      "format": "truetype",
+      "weight": "500"
+    },
+    {
+      "family": "Roboto",
+      "src": "https://fonts.gstatic.com/s/roboto/v51/KFOKCnqEu92Fr1Mu53ZEC9_Vu3r1gIhOszmOClHrs6ljXfMMLmbXuAj-lg.ttf",
+      "format": "truetype",
+      "weight": "700"
+    },
+    {
+      "family": "Roboto",
+      "src": "https://fonts.gstatic.com/s/roboto/v51/KFOKCnqEu92Fr1Mu53ZEC9_Vu3r1gIhOszmOClHrs6ljXfMMLijXuAj-lg.ttf",
+      "format": "truetype",
+      "weight": "900"
+    },
+    {
+      "family": "Roboto",
+      "src": "https://fonts.gstatic.com/s/roboto/v51/KFOMCnqEu92Fr1ME7kSn66aGLdTylUAMQXC89YmC2DPNWuaabVmUiA8.ttf",
+      "format": "truetype",
+      "weight": "300"
+    },
+    {
+      "family": "Roboto",
+      "src": "https://fonts.gstatic.com/s/roboto/v51/KFOMCnqEu92Fr1ME7kSn66aGLdTylUAMQXC89YmC2DPNWubEbVmUiA8.ttf",
+      "format": "truetype",
+      "weight": "400"
+    },
+    {
+      "family": "Roboto",
+      "src": "https://fonts.gstatic.com/s/roboto/v51/KFOMCnqEu92Fr1ME7kSn66aGLdTylUAMQXC89YmC2DPNWub2bVmUiA8.ttf",
+      "format": "truetype",
+      "weight": "500"
+    },
+    {
+      "family": "Roboto",
+      "src": "https://fonts.gstatic.com/s/roboto/v51/KFOMCnqEu92Fr1ME7kSn66aGLdTylUAMQXC89YmC2DPNWuYjalmUiA8.ttf",
+      "format": "truetype",
+      "weight": "700"
+    },
+    {
+      "family": "Roboto",
+      "src": "https://fonts.gstatic.com/s/roboto/v51/KFOMCnqEu92Fr1ME7kSn66aGLdTylUAMQXC89YmC2DPNWuZtalmUiA8.ttf",
+      "format": "truetype",
+      "weight": "900"
+    },
+    {
+      "family": "Flaticon",
+      "src": "https://st.ourhtmldemo.com/new/Machinery/fonts/Flaticon.eot",
+      "format": "embedded-opentype",
+      "weight": "400"
+    },
+    {
+      "family": "Flaticon",
+      "src": "https://st.ourhtmldemo.com/new/Machinery/fonts/Flaticon.eot?#iefix",
+      "format": "truetype",
+      "weight": "400"
+    },
+    {
+      "family": "Flaticon",
+      "src": "https://st.ourhtmldemo.com/new/Machinery/fonts/Flaticon.woff",
+      "format": "woff",
+      "weight": "400"
+    },
+    {
+      "family": "Flaticon",
+      "src": "https://st.ourhtmldemo.com/new/Machinery/fonts/Flaticon.ttf",
+      "format": "truetype",
+      "weight": "400"
+    },
+    {
+      "family": "Flaticon",
+      "src": "https://st.ourhtmldemo.com/new/Machinery/fonts/Flaticon.svg#Flaticon",
+      "format": "truetype",
+      "weight": "400"
+    },
+    {
+      "family": "machinery-icon",
+      "src": "https://st.ourhtmldemo.com/new/Machinery/plugins/machinery-icons/fonts/machinery-icon.eot?ukbjz9",
+      "format": "truetype",
+      "weight": "400"
+    },
+    {
+      "family": "machinery-icon",
+      "src": "https://st.ourhtmldemo.com/new/Machinery/plugins/machinery-icons/fonts/machinery-icon.eot?ukbjz9#iefix",
+      "format": "truetype",
+      "weight": "400"
+    },
+    {
+      "family": "machinery-icon",
+      "src": "https://st.ourhtmldemo.com/new/Machinery/plugins/machinery-icons/fonts/machinery-icon.ttf?ukbjz9",
+      "format": "truetype",
+      "weight": "400"
+    },
+    {
+      "family": "machinery-icon",
+      "src": "https://st.ourhtmldemo.com/new/Machinery/plugins/machinery-icons/fonts/machinery-icon.woff?ukbjz9",
+      "format": "truetype",
+      "weight": "400"
+    },
+    {
+      "family": "machinery-icon",
+      "src": "https://st.ourhtmldemo.com/new/Machinery/plugins/machinery-icons/fonts/machinery-icon.svg?ukbjz9#machinery-icon",
+      "format": "truetype",
+      "weight": "400"
+    }
+  ],
+  "rules": {
+    "maxSizesPerScreen": 4,
+    "headingWeightRange": "600-700",
+    "bodyWeight": 400,
+    "lineHeightBody": 1.5,
+    "lineHeightHeading": 1.2
+  }
+}

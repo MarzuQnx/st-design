@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Katalog Mesin &amp; Sistem Pengemasan - Relasi Sukses</title>
+  <meta name="description" content="Katalog lengkap mesin industri pangan, peralatan bakery, pengolahan makanan, dan sistem pengemasan otomatis PT Relasi Sukses Bersama (relasisukses.co.id) dengan spesifikasi mendalam dan konsultasi sales engineering via WhatsApp.">
+
+  <!-- Google Fonts for High-Craft Industrial Sans-Serif Typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk:wght@500;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/products.css">
+  <link rel="stylesheet" href="css/whatsapp-widget.css">
+</head>
+<body>
+
+  <!-- Top Announcement Bar -->
+  <aside class="top-announcement" aria-label="Announcement">
+    <div class="container announcement-inner">
+      <div class="status-indicator">
+        <span class="status-dot"></span>
+        <span id="top-announcement-text">Gudang Sparepart Sentral &amp; Teknisi Siaga Se-Indonesia | Showroom Jakarta &amp; Surabaya</span>
+      </div>
+      <div style="display: flex; gap: 15px; align-items: center;">
+        <span>Hotline Engineering: <strong>+62 812-9525-4747</strong></span>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Site Header -->
+  <header class="site-header">
+    <div class="container header-main">
+      <a href="index.html" class="brand-logo" aria-label="Relasi Sukses Homepage">
+        <div class="logo-symbol">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+          </svg>
+        </div>
+        <div class="logo-text">
+          <span class="logo-title">RELASI SUKSES</span>
+          <span class="logo-subtitle">Industrial Machinery &amp; Automation</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Menu -->
+      <nav aria-label="Main Navigation">
+        <ul class="nav-menu" id="nav-menu">
+          <li><a href="index.html#home" class="nav-link" id="nav-link-home">Beranda</a></li>
+          <li><a href="products.html" class="nav-link active" id="nav-link-showcase">Katalog Mesin</a></li>
+          <li><a href="about.html" class="nav-link" id="nav-link-about">Tentang Kami</a></li>
+          <li><a href="solutions.html" class="nav-link" id="nav-link-solutions">Solusi Bisnis</a></li>
+          <li><a href="articles.html" class="nav-link" id="nav-link-articles">Artikel</a></li>
+          <li><a href="contact.html" class="nav-link" id="nav-link-contact">Kontak &amp; FAQ</a></li>
+        </ul>
+      </nav>
+
+      <!-- Language Switcher & Quick Contact Action -->
+      <div class="header-actions">
+        <div class="lang-toggle" role="group" aria-label="Language selection">
+          <button type="button" class="lang-btn active" data-lang="id" aria-label="Switch to Indonesian">ID</button>
+          <button type="button" class="lang-btn" data-lang="en" aria-label="Switch to English">EN</button>
+        </div>
+
+        <a id="nav-wa-btn" href="#" target="_blank" rel="noopener" class="btn btn-wa btn-sm">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.311.045-.698.034-1.85-.444-1.294-.537-2.13-1.849-2.196-1.936-.064-.087-.521-.692-.521-1.319 0-.626.326-.935.443-1.062.116-.127.255-.159.34-.159.085 0 .17.001.244.005.078.004.183-.029.287.218.106.254.361.88.393.945.032.064.053.14.01.223-.042.085-.064.138-.127.212-.064.074-.134.165-.192.222-.063.064-.13.133-.056.26.074.127.329.544.706.88.486.433.896.568 1.023.632.127.063.201.053.276-.032.074-.085.318-.371.403-.498.085-.127.17-.106.286-.064.116.043.742.35.869.414.127.064.212.095.244.148.031.053.031.307-.113.712z"/>
+          </svg>
+          <span id="nav-wa-text">Chat Sales Engineer</span>
+        </a>
+
+        <button type="button" class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Open mobile menu">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Interactive Breadcrumb Bar -->
+  <nav class="showcase-breadcrumb-bar" aria-label="Breadcrumb navigation">
+    <div class="container">
+      <ul class="breadcrumb-list" id="showcase-breadcrumbs">
+        <!-- Dynamically rendered by products-page.js -->
+      </ul>
+    </div>
+  </nav>
+
+  <main class="container section-padding">
+
+    <!-- ============================================================
+         LAYER 1: KATEGORI PRODUK
+         ============================================================ -->
+    <section id="layer-1-container" class="layer-container active-layer" aria-labelledby="layer1-title">
+      <div class="categories-header-block">
+        <span class="badge-tag badge-gold" id="layer1-badge">Layer 1 · Kategori Mesin</span>
+        <h1 class="section-heading" id="layer1-title" style="margin-top: 10px;">Kategori Mesin Industri Pangan &amp; Kemasan</h1>
+        <p class="section-subheading" id="layer1-subtitle">Pilih lini kategori di bawah untuk mengeksplorasi katalog mesin spesifik, atau lihat seluruh mesin sekaligus.</p>
+        
+        <div style="margin-top: 20px;">
+          <button type="button" class="btn btn-primary" id="layer1-all-btn">
+            Lihat Seluruh Mesin (10 Unit)
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Categories Grid -->
+      <div class="categories-grid" id="categories-grid">
+        <!-- Dynamically rendered by products-page.js -->
+      </div>
+    </section>
+
+    <!-- ============================================================
+         LAYER 2: LIST PRODUK DALAM KATEGORI
+         ============================================================ -->
+    <section id="layer-2-container" class="layer-container" aria-labelledby="layer2-cat-title">
+      <!-- Layer 2 Navigation Header -->
+      <div class="layer2-nav-header">
+        <button type="button" class="btn-back" id="layer2-back-btn">
+          ← Kembali ke Pilihan Kategori
+        </button>
+        <span class="badge-tag badge-blue" id="layer2-count-badge">8 Mesin</span>
+      </div>
+
+      <div style="margin-bottom: 25px;">
+        <h2 class="layer2-cat-title" id="layer2-cat-title">Peralatan Bakery &amp; Roti</h2>
+        <p class="layer2-cat-desc" id="layer2-cat-desc">Koleksi lengkap mesin pembuat roti untuk artisan bakery hingga pabrik skala besar.</p>
+      </div>
+
+      <!-- Search, Categories Pills & Sort Toolbar -->
+      <div class="layer2-toolbar">
+        <div class="layer2-search-box">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+          <input type="text" id="layer2-search-input" class="layer2-search-input" placeholder="Cari tipe / nama mesin dalam kategori ini...">
+        </div>
+
+        <div class="pill-buttons-wrap" id="layer2-cat-pills">
+          <!-- Populated by products-page.js -->
+        </div>
+
+        <div class="layer2-sort-wrap">
+          <span id="layer2-sort-label">Urutkan:</span>
+          <select id="layer2-sort-select" class="layer2-sort-select" aria-label="Sort by">
+            <option value="popular" id="layer2-sort-popular">Paling Diminati</option>
+            <option value="code" id="layer2-sort-code">Kode Model (A - Z)</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Product List Grid -->
+      <div class="showcase-grid" id="layer2-products-grid">
+        <!-- Dynamically rendered by products-page.js -->
+      </div>
+    </section>
+
+    <!-- ============================================================
+         LAYER 3: PRODUK DETAIL LENGKAP
+         ============================================================ -->
+    <section id="layer-3-container" class="layer-container" aria-labelledby="layer3-title">
+      <!-- Layer 3 Navigation Header -->
+      <div class="layer3-header-nav">
+        <button type="button" class="btn-back" id="layer3-back-btn">
+          ← Kembali ke Daftar Mesin
+        </button>
+        <span class="badge-tag badge-gold" id="layer3-popular-badge">Spesifikasi Lengkap</span>
+      </div>
+
+      <!-- Detail Hero Section -->
+      <div class="detail-hero-layout">
+        <!-- Visual Blueprint Card -->
+        <div class="detail-visual-box">
+          <div class="blueprint-header">
+            <span class="blueprint-code" id="layer3-code-badge">MODEL-001</span>
+            <span class="badge-tag badge-green">Ready Stock Demo Unit</span>
+          </div>
+
+          <div class="detail-main-art" id="layer3-visual-art">
+            <!-- Icon SVG inserted by JS -->
+          </div>
+
+          <div class="blueprint-specs-quick">
+            <div class="quick-spec-item">
+              <div class="quick-spec-label">Garansi Resmi</div>
+              <div class="quick-spec-val text-gold">2 Tahun Service + Parts</div>
+            </div>
+            <div class="quick-spec-item">
+              <div class="quick-spec-label">Standar Bahan</div>
+              <div class="quick-spec-val text-blue">SUS 304 Food Grade</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product Narrative & Primary CTAs -->
+        <div class="detail-info-box">
+          <h1 class="detail-product-title" id="layer3-title">Nama Mesin Industri</h1>
+          <p class="detail-product-tagline" id="layer3-tagline">Tagline keunggulan operasional mesin</p>
+          <p class="detail-product-desc" id="layer3-desc">Deskripsi mendalam mengenai cara kerja mesin dan manfaatnya bagi alur produksi Anda.</p>
+
+          <!-- Primary Direct WhatsApp Conversion Actions -->
+          <div class="detail-cta-row">
+            <a id="layer3-wa-quote-btn" href="#" target="_blank" rel="noopener" class="btn btn-wa">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.311.045-.698.034-1.85-.444-1.294-.537-2.13-1.849-2.196-1.936-.064-.087-.521-.692-.521-1.319 0-.626.326-.935.443-1.062.116-.127.255-.159.34-.159.085 0 .17.001.244.005.078.004.183-.029.287.218.106.254.361.88.393.945.032.064.053.14.01.223-.042.085-.064.138-.127.212-.064.074-.134.165-.192.222-.063.064-.13.133-.056.26.074.127.329.544.706.88.486.433.896.568 1.023.632.127.063.201.053.276-.032.074-.085.318-.371.403-.498.085-.127.17-.106.286-.064.116.043.742.35.869.414.127.064.212.095.244.148.031.053.031.307-.113.712z"/>
+              </svg>
+              Konsultasi Penawaran via WhatsApp
+            </a>
+
+            <a id="layer3-wa-demo-btn" href="#" target="_blank" rel="noopener" class="btn btn-ghost" style="border-color: var(--accent-gold); color: var(--accent-gold);">
+              Jadwalkan Demo Uji Coba Gratis
+            </a>
+          </div>
+
+          <!-- ROI & Value Highlight Box -->
+          <div class="roi-highlight-box">
+            <div class="roi-highlight-header">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"></circle>
+                <path d="M12 6v6l4 2"></path>
+              </svg>
+              <span id="layer3-roi-title">Kenapa Mesin Ini Menguntungkan Bisnis Anda?</span>
+            </div>
+            <p class="roi-highlight-text" id="layer3-roi-text">
+              Kalkulasi nilai tambah dan efisiensi tenaga kerja.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Technical Specifications Full Table -->
+      <section class="detail-specs-section">
+        <h3 class="detail-section-title" id="layer3-specs-table-title">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+            <line x1="3" y1="9" x2="21" y2="9"></line>
+            <line x1="9" y1="21" x2="9" y2="9"></line>
+          </svg>
+          Spesifikasi Teknis Detail
+        </h3>
+        <table class="detail-table">
+          <tbody id="layer3-specs-tbody">
+            <!-- Dynamically populated -->
+          </tbody>
+        </table>
+      </section>
+
+      <!-- Operational & Safety Features Grid -->
+      <section style="margin-bottom: 35px;">
+        <h3 class="detail-section-title" id="layer3-features-title">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+          </svg>
+          Fitur Unggulan Operasional
+        </h3>
+        <div class="detail-features-grid" id="layer3-features-grid">
+          <!-- Dynamically populated -->
+        </div>
+      </section>
+
+      <!-- Recommended Applications Box -->
+      <div style="background: #262626; border: 1px solid var(--border-light); padding: 20px; border-radius: 6px; margin-bottom: 35px;">
+        <h4 style="color: var(--accent-gold); font-size: 1rem; margin-bottom: 8px;">Rekomendasi Aplikasi Produk:</h4>
+        <p id="layer3-apps-content" style="color: var(--text-secondary); line-height: 1.6;"></p>
+      </div>
+
+      <!-- Companion Machinery in the Same Line -->
+      <section style="margin-bottom: 40px;">
+        <h3 class="detail-section-title" id="layer3-related-title">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="16 3 21 3 21 8"></polyline>
+            <line x1="4" y1="20" x2="21" y2="3"></line>
+            <polyline points="21 16 21 21 16 21"></polyline>
+            <line x1="15" y1="15" x2="21" y2="21"></line>
+            <line x1="4" y1="4" x2="9" y2="9"></line>
+          </svg>
+          Rekomendasi Mesin Terkait (Satu Alur Produksi)
+        </h3>
+        <div class="related-machines-grid" id="layer3-related-grid">
+          <!-- Dynamically populated with companion machinery -->
+        </div>
+      </section>
+
+      <!-- Direct Sales Engineer Contact Card -->
+      <div class="sales-engineer-banner">
+        <div class="sales-rep-info">
+          <div class="sales-rep-avatar">HW</div>
+          <div class="sales-rep-details">
+            <h4 id="layer3-direct-wa-title">Tertarik dengan Mesin Ini?</h4>
+            <p id="layer3-direct-wa-desc">Diskusikan resep, kebutuhan listrik tempat usaha Anda, atau jadwalkan uji coba mesin langsung bersama sales engineer kami.</p>
+          </div>
+        </div>
+
+        <a id="layer3-sales-rep-btn" href="#" target="_blank" rel="noopener" class="btn btn-wa">
+          Hubungi Sales Engineer (WA Langsung)
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 15px;">
+            <div class="logo-symbol" style="width: 36px; height: 36px;">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+              </svg>
+            </div>
+            <span class="logo-title" style="font-size: 1.15rem;">RELASI SUKSES</span>
+          </div>
+          <p style="line-height: 1.6; margin-bottom: 15px;">PT Relasi Sukses Bersama - Penyedia mesin industri pengolahan pangan, bakery equipment, dan sistem pengemasan otomatis terpercaya di Indonesia.</p>
+          <span class="badge-tag badge-gold">ISO 9001 Certified Supplier</span>
+        </div>
+
+        <div>
+          <div class="footer-col-title">Tautan Cepat</div>
+          <ul class="footer-links-list">
+            <li><a href="index.html#home">Beranda</a></li>
+            <li><a href="products.html">Katalog Mesin</a></li>
+            <li><a href="about.html">Tentang Kami</a></li>
+            <li><a href="solutions.html">Solusi Bisnis</a></li>
+            <li><a href="articles.html">Artikel</a></li>
+            <li><a href="contact.html">Kontak &amp; FAQ</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="footer-col-title">Showroom Jakarta</div>
+          <div class="footer-address-block">
+            <p>Arcade Business Center Lt. 6 Unit 6-03, Pantai Indah Kapuk (PIK), Jakarta Utara 14460</p>
+            <p style="margin-top: 5px; color: var(--accent-gold);">Telp: (021) 5596 8800</p>
+          </div>
+        </div>
+
+        <div>
+          <div class="footer-col-title">Cabang Surabaya</div>
+          <div class="footer-address-block">
+            <p>Komplek Rungkut Industri Megah Blok D-12, Surabaya, Jawa Timur 60293</p>
+            <p style="margin-top: 5px; color: var(--accent-gold);">Telp: (031) 843 7200</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom-bar">
+        <p>© 2026 PT Relasi Sukses Bersama (relasisukses.co.id). Seluruh hak cipta dilindungi. Didesain dengan standar presisi industri.</p>
+        <div style="display: flex; gap: 20px;">
+          <a href="#" class="text-muted" style="font-size: 0.8125rem;">Kebijakan Privasi</a>
+          <a href="#" class="text-muted" style="font-size: 0.8125rem;">Syarat Layanan</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Chatura-Standard Floating WhatsApp Widget -->
+  <div class="wa-widget" id="waWidget"></div>
+
+  <!-- Navigation & Showcase Application Logic Modules -->
+  <script src="js/nav.js?v=2"></script>
+  <script type="module" src="js/products-page.js?v=2"></script>
+</body>
+</html>

@@ -1,0 +1,303 @@
+/**
+ * ============================================================
+ * CHATURA-STANDARD WHATSAPP WIDGET COMPONENT
+ * Extracted & Standardized from Backend Chatura
+ * Default Production Component for Antigravity Web Applications
+ * ============================================================
+ */
+
+.wa-widget {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  z-index: 99999;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+body.overflow-hidden .wa-widget,
+.mobile-menu-open .wa-widget {
+  display: none !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+}
+
+/* --- Floating Circular Launcher Button --- */
+.wa-launcher {
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  background: #25D366;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 6px 28px rgba(37, 211, 102, 0.45);
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.wa-launcher:hover {
+  transform: scale(1.08);
+  box-shadow: 0 8px 36px rgba(37, 211, 102, 0.6);
+}
+
+.wa-launcher:active {
+  transform: scale(0.96);
+}
+
+.wa-launcher .wa-icon {
+  width: 28px;
+  height: 28px;
+  display: block;
+}
+
+/* --- Radiating Pulsing Ring Animation --- */
+.wa-pulse {
+  position: absolute;
+  inset: -4px;
+  border-radius: 50%;
+  border: 2px solid #25D366;
+  animation: wa-pulse-ring 2.2s cubic-bezier(0.24, 0, 0.38, 1) infinite;
+  pointer-events: none;
+}
+
+@keyframes wa-pulse-ring {
+  0% {
+    transform: scale(1);
+    opacity: 0.75;
+  }
+  100% {
+    transform: scale(1.55);
+    opacity: 0;
+  }
+}
+
+/* --- Popup Dialog Box --- */
+.wa-popup {
+  position: absolute;
+  bottom: 74px;
+  right: 0;
+  width: 350px;
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 16px 50px rgba(0, 0, 0, 0.22), 0 2px 10px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(14px) scale(0.95);
+  pointer-events: none;
+  transition: opacity 0.28s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.wa-popup.is-open {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  pointer-events: auto;
+}
+
+/* --- Dialog Header --- */
+.wa-header {
+  background: #075E54;
+  color: #ffffff;
+  padding: 18px 20px 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  position: relative;
+}
+
+.wa-header::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #25D366, #128C7E);
+}
+
+.wa-eyebrow {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #80e2a7;
+  margin: 0 0 4px 0;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.wa-eyebrow::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #25D366;
+  box-shadow: 0 0 6px #25D366;
+}
+
+.wa-title {
+  font-size: 17px;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0;
+  line-height: 1.25;
+}
+
+.wa-close {
+  background: rgba(255, 255, 255, 0.12);
+  border: none;
+  color: #ffffff;
+  cursor: pointer;
+  padding: 6px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s ease, transform 0.2s ease;
+  line-height: 0;
+}
+
+.wa-close:hover {
+  background: rgba(255, 255, 255, 0.25);
+  transform: scale(1.05);
+}
+
+/* --- Intro Text --- */
+.wa-intro {
+  padding: 14px 18px 12px;
+  font-size: 12.5px;
+  color: #555566;
+  line-height: 1.5;
+  margin: 0;
+  background: #fbfbfb;
+  border-bottom: 1px solid #ebebeb;
+}
+
+/* --- Department Routing Options --- */
+.wa-options {
+  padding: 10px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  background: #ffffff;
+  max-height: 320px;
+  overflow-y: auto;
+}
+
+.wa-option {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 12px;
+  border-radius: 12px;
+  text-decoration: none;
+  color: inherit;
+  transition: background 0.2s ease, transform 0.15s ease;
+  border: 1px solid transparent;
+}
+
+.wa-option:hover {
+  background: #f0faf4;
+  border-color: rgba(37, 211, 102, 0.2);
+  transform: translateX(2px);
+}
+
+.wa-option-icon {
+  flex-shrink: 0;
+  width: 42px;
+  height: 42px;
+  border-radius: 10px;
+  background: #e8f5ee;
+  color: #075E54;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.wa-option:hover .wa-option-icon {
+  background: #d4eedd;
+  transform: scale(1.05);
+}
+
+.wa-option-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.wa-option-content strong {
+  display: block;
+  font-size: 13.5px;
+  color: #1a1a2e;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.wa-option-content span {
+  display: block;
+  font-size: 11.5px;
+  color: #6c757d;
+  margin-top: 2px;
+  line-height: 1.35;
+}
+
+.wa-arrow {
+  font-size: 16px;
+  color: #25D366;
+  font-weight: 700;
+  flex-shrink: 0;
+  transition: transform 0.2s ease;
+}
+
+.wa-option:hover .wa-arrow {
+  transform: translateX(3px);
+}
+
+/* --- Bottom Operating Hours Notice --- */
+.wa-notice {
+  padding: 11px 18px;
+  background: #f8f9fa;
+  border-top: 1px solid #ebebeb;
+  font-size: 11px;
+  color: #777788;
+  text-align: center;
+}
+
+.wa-notice strong {
+  display: block;
+  color: #444455;
+  font-size: 9.5px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 2px;
+}
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 480px) {
+  .wa-widget {
+    bottom: 1rem;
+    right: 1rem;
+  }
+  .wa-launcher {
+    width: 50px;
+    height: 50px;
+  }
+  .wa-launcher svg {
+    width: 26px;
+    height: 26px;
+  }
+  .wa-popup {
+    width: calc(100vw - 2rem);
+    right: 0;
+    bottom: 60px;
+  }
+}

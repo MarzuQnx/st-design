@@ -1,0 +1,199 @@
+- generic [active] [ref=f5e1]:
+  - complementary "Announcement" [ref=f5e2]:
+    - generic [ref=f5e3]:
+      - generic [ref=f5e4]: Gudang Sparepart Sentral & Teknisi Siaga Se-Indonesia | Showroom Jakarta & Surabaya
+      - generic [ref=f5e8]:
+        - text: "Hotline Engineering:"
+        - strong [ref=f5e9]: +62 812-9525-4747
+  - banner [ref=f5e10]:
+    - generic [ref=f5e11]:
+      - link "Relasi Sukses Homepage" [ref=f5e12] [cursor=pointer]:
+        - /url: index.html
+        - generic [ref=f5e16]: RELASI SUKSES
+      - navigation "Main Navigation"
+      - generic [ref=f5e18]:
+        - group "Language selection" [ref=f5e19]:
+          - button "Switch to Indonesian" [ref=f5e20] [cursor=pointer]: ID
+          - button "Switch to English" [ref=f5e21] [cursor=pointer]: EN
+        - link [ref=f5e22] [cursor=pointer]:
+          - /url: https://wa.me/6281295254747?text=Halo%20Tim%20Relasi%20Sukses%2C%20saya%20tertarik%20berkonsultasi%20mengenai%20mesin%20industri%20makanan%20%26%20pengemasan%20untuk%20usaha%20saya.%20Mohon%20informasi%20katalog%20%26%20jadwal%20demo.
+        - button "Open mobile menu" [ref=f5e25] [cursor=pointer]
+  - navigation "Breadcrumb navigation" [ref=f5e27]:
+    - list [ref=f5e29]:
+      - listitem [ref=f5e30]:
+        - link "Beranda" [ref=f5e31] [cursor=pointer]:
+          - /url: index.html
+      - listitem [ref=f5e32]: /
+      - listitem [ref=f5e33]: Artikel & Wawasan Industri
+  - main [ref=f5e34]:
+    - generic [ref=f5e35]:
+      - generic [ref=f5e36]: Edukasi & Tips Praktis // Knowledge Center
+      - heading "Panduan Teknis, Tips Resep & Wawasan Otomasi Industri Pangan" [level=1] [ref=f5e37]
+      - paragraph [ref=f5e38]: Kumpulan artikel edukatif dari tim sales engineer dan konsultan kuliner Relasi Sukses untuk membantu Anda memilih mesin yang tepat, menjaga konsistensi rasa, dan mengoptimalkan efisiensi produksi.
+    - generic [ref=f5e39]:
+      - textbox "Search articles" [ref=f5e44]:
+        - /placeholder: "Cari artikel (cth: spiral mixer, nitrogen gas, daya 220V, nastar)..."
+      - generic [ref=f5e45]:
+        - button "Semua Topik" [ref=f5e46] [cursor=pointer]
+        - button "Bakery & Adonan Roti" [ref=f5e47] [cursor=pointer]
+        - button "Teknologi Kemasan" [ref=f5e48] [cursor=pointer]
+        - button "Pengolahan & Pastry" [ref=f5e49] [cursor=pointer]
+        - button "Kelistrikan & Dapur" [ref=f5e50] [cursor=pointer]
+    - generic [ref=f5e51]:
+      - article [ref=f5e52]:
+        - generic [ref=f5e53]:
+          - generic [ref=f5e54]:
+            - generic [ref=f5e55]: Bakery & Adonan Roti
+            - generic [ref=f5e56]: 14 Oktober 2026 • 5 Menit Baca
+          - 'heading "Panduan Memilih Spiral Mixer: Kenapa Kapasitas 20L vs 60L Sangat Menentukan Tekstur Roti Anda" [level=3] [ref=f5e57]'
+          - paragraph [ref=f5e58]: Kunci roti empuk dan berserat halus bukan hanya ragi, melainkan pencegahan kenaikan suhu adonan (friction factor) saat proses pengadukan cepat. Pelajari cara menghitung kapasitas mangkuk agar motor mixer tidak overheat.
+          - generic [ref=f5e59]:
+            - generic [ref=f5e60]: "Poin Kunci Engineering:"
+            - list [ref=f5e61]:
+              - listitem [ref=f5e62]: • Mangkuk spiral mixer harus terisi minimal 30% dan maksimal 80% dari kapasitas total untuk pembentukan gluten optimal.
+              - listitem [ref=f5e63]: • Sistem dual-speed motor mempermudah transisi dari tahap hidrasi tepung ke pemekaran serat gluten elastis.
+        - generic [ref=f5e64]:
+          - generic [ref=f5e65]:
+            - text: "Oleh:"
+            - strong [ref=f5e66]: Ir. Hendra Wijaya (Lead Bakery Engineer)
+          - link "Diskusi Topik Ini (WA)" [ref=f5e67] [cursor=pointer]:
+            - /url: https://wa.me/6281295254747?text=Halo%20Pak%20Hendra%2C%20saya%20membaca%20artikel%20tentang%20pemilihan%20Spiral%20Mixer%20dan%20ingin%20konsultasi%20kapasitas%20mixer%20yang%20cocok%20untuk%20resep%20adonan%20saya.
+      - article [ref=f5e71]:
+        - generic [ref=f5e72]:
+          - generic [ref=f5e73]:
+            - generic [ref=f5e74]: Teknologi Kemasan
+            - generic [ref=f5e75]: 02 Oktober 2026 • 6 Menit Baca
+          - heading "Mengatasi Keripik Melempem & Bocor Halus dengan Teknologi Gas Flushing Nitrogen" [level=3] [ref=f5e76]
+          - paragraph [ref=f5e77]: Banyak produsen snack mengeluhkan keripik cepat tengik di rak ritel. Menghilangkan oksigen dan menggantinya dengan 99% gas nitrogen inert adalah standar emas memperpanjang masa simpan hingga 12 bulan tanpa bahan kimia pengawet.
+          - generic [ref=f5e78]:
+            - generic [ref=f5e79]: "Poin Kunci Engineering:"
+            - list [ref=f5e80]:
+              - listitem [ref=f5e81]: • Gas flushing melindungi snack rapuh dari benturan fisik selama proses distribusi kargo antarpulau.
+              - listitem [ref=f5e82]: • Teflon sealing band berkualitas tinggi menjamin kerapatan segel tanpa kerutan mikro (micro-pinholes).
+        - generic [ref=f5e83]:
+          - generic [ref=f5e84]:
+            - text: "Oleh:"
+            - strong [ref=f5e85]: Bambang S., S.T. (Packaging Specialist)
+          - link "Diskusi Topik Ini (WA)" [ref=f5e86] [cursor=pointer]:
+            - /url: https://wa.me/6281295254747?text=Halo%20Pak%20Bambang%2C%20saya%20membaca%20artikel%20tentang%20teknologi%20Gas%20Flushing%20Nitrogen%20dan%20ingin%20konsultasi%20mesin%20sealer%20kemasan%20untuk%20produk%20snack%20saya.
+      - article [ref=f5e90]:
+        - generic [ref=f5e91]:
+          - generic [ref=f5e92]:
+            - generic [ref=f5e93]: Pengolahan & Pastry
+            - generic [ref=f5e94]: 18 September 2026 • 4 Menit Baca
+          - heading "Rahasia Presisi Gramatur Isian Nastar, Mochi & Bakpia (±0.5 Gram) Tanpa Kulit Robek" [level=3] [ref=f5e95]
+          - paragraph [ref=f5e96]: Pencetakan manual kue berisian sering menyebabkan variasi berat dan kulit meledak saat dioven. Mesin encrusting otomatis modern menggunakan screw ganda berkecepatan variabel yang menjaga kelembutan tekstur selai dan adonan kulit.
+          - generic [ref=f5e97]:
+            - generic [ref=f5e98]: "Poin Kunci Engineering:"
+            - list [ref=f5e99]:
+              - listitem [ref=f5e100]: • Rasio perbandingan kulit dan isian dapat disesuaikan bebas mulai dari 20:80 hingga 80:20.
+              - listitem [ref=f5e101]: • Kapasitas hingga 60 - 100 butir per menit menghemat tenaga kerja hingga 4 orang di dapur persiapan.
+        - generic [ref=f5e102]:
+          - generic [ref=f5e103]:
+            - text: "Oleh:"
+            - strong [ref=f5e104]: Chef Maya Santoso (Pastry & Food Consultant)
+          - link "Diskusi Topik Ini (WA)" [ref=f5e105] [cursor=pointer]:
+            - /url: https://wa.me/6281295254747?text=Halo%20Chef%20Maya%2C%20saya%20membaca%20artikel%20tentang%20mesin%20Encrusting%20otomatis%20dan%20ingin%20konsultasi%20cetak%20isian%20kue%20untuk%20produk%20pastry%20usaha%20saya.
+      - article [ref=f5e109]:
+        - generic [ref=f5e110]:
+          - generic [ref=f5e111]:
+            - generic [ref=f5e112]: Kelistrikan & Dapur
+            - generic [ref=f5e113]: 05 September 2026 • 7 Menit Baca
+          - 'heading "Checklist Daya Listrik 220V vs 380V: Apa yang Wajib Dipersiapkan Sebelum Membeli Mesin Industri?" [level=3] [ref=f5e114]'
+          - paragraph [ref=f5e115]: Salah satu penyebab mesin industri mangkrak adalah ketidaksiapan daya listrik atau kabel instalasi yang terlalu kecil. Simak panduan praktis menghitung total Ampere, pembagian MCB, dan pentingnya grounding di bawah 2 Ohm.
+          - generic [ref=f5e116]:
+            - generic [ref=f5e117]: "Poin Kunci Engineering:"
+            - list [ref=f5e118]:
+              - listitem [ref=f5e119]: • Oven deck gas hanya membutuhkan daya listrik rendah (~100-300 Watt) karena sumber panas utama berasal dari gas LPG.
+              - listitem [ref=f5e120]: • Motor 3-Phase 380V menawarkan efisiensi torsi lebih tinggi dan masa pakai motor yang jauh lebih panjang untuk pemakaian di atas 8 jam nonstop.
+        - generic [ref=f5e121]:
+          - generic [ref=f5e122]:
+            - text: "Oleh:"
+            - strong [ref=f5e123]: Tim Engineering Relasi Sukses
+          - link "Diskusi Topik Ini (WA)" [ref=f5e124] [cursor=pointer]:
+            - /url: https://wa.me/6281295254747?text=Halo%20Tim%20Engineering%20Relasi%20Sukses%2C%20saya%20ingin%20konsultasi%20mengenai%20kesiapan%20daya%20listrik%20tempat%20usaha%20saya%20berdasarkan%20artikel%20checklist%20kelistrikan%20yang%20saya%20baca.
+  - generic [ref=f5e130]:
+    - generic [ref=f5e131]: Punya Topik Khusus yang Ingin Ditanyakan?
+    - heading "Ingin Konsultasi Langsung Mengenai Resep atau Mesin Anda?" [level=2] [ref=f5e132]
+    - paragraph [ref=f5e133]: Tim sales engineer kami siap berdialog santai dan memberikan rekomendasi teknis yang sesuai dengan target bisnis Anda.
+    - generic [ref=f5e134]:
+      - link "Konsultasi Teknis via WhatsApp" [ref=f5e135] [cursor=pointer]:
+        - /url: https://wa.me/6281295254747?text=Halo%20Tim%20Sales%20Engineer%20Relasi%20Sukses%2C%20saya%20tertarik%20berkonsultasi%20mengenai%20rekomendasi%20mesin%20berdasarkan%20panduan%20artikel%20di%20website%20Relasi%20Sukses.
+      - link "Eksplorasi Katalog Mesin" [ref=f5e139] [cursor=pointer]:
+        - /url: products.html
+  - contentinfo [ref=f5e143]:
+    - generic [ref=f5e144]:
+      - generic [ref=f5e145]:
+        - generic [ref=f5e146]:
+          - generic [ref=f5e147]: RELASI SUKSES
+          - paragraph [ref=f5e152]: Penyedia mesin industri pengolahan pangan, bakery equipment, dan sistem pengemasan otomatis terpercaya di Indonesia.
+          - generic [ref=f5e153]: ISO 9001 Certified Supplier
+        - generic [ref=f5e154]:
+          - generic [ref=f5e155]: Tautan Cepat
+          - list [ref=f5e156]:
+            - listitem [ref=f5e157]:
+              - link "Beranda" [ref=f5e158] [cursor=pointer]:
+                - /url: index.html#home
+            - listitem [ref=f5e159]:
+              - link "Katalog Mesin" [ref=f5e160] [cursor=pointer]:
+                - /url: products.html
+            - listitem [ref=f5e161]:
+              - link "Tentang Kami" [ref=f5e162] [cursor=pointer]:
+                - /url: about.html
+            - listitem [ref=f5e163]:
+              - link "Solusi Bisnis" [ref=f5e164] [cursor=pointer]:
+                - /url: solutions.html
+            - listitem [ref=f5e165]:
+              - link "Artikel" [ref=f5e166] [cursor=pointer]:
+                - /url: articles.html
+            - listitem [ref=f5e167]:
+              - link "Kontak & FAQ" [ref=f5e168] [cursor=pointer]:
+                - /url: contact.html
+        - generic [ref=f5e169]:
+          - generic [ref=f5e170]: Kantor Pusat & Showroom Jakarta (PIK)
+          - generic [ref=f5e171]:
+            - paragraph [ref=f5e172]: Arcade Business Center Lt. 6 Unit 6-03, Jl. Pantai Indah Utara 2 Kav. C1, Pantai Indah Kapuk, Jakarta Utara
+            - paragraph [ref=f5e173]: "Telp: (021) 5596 8800"
+        - generic [ref=f5e174]:
+          - generic [ref=f5e175]: Kantor Cabang Surabaya
+          - generic [ref=f5e176]:
+            - paragraph [ref=f5e177]: Kawasan Rungkut Industri Megah Blok D-12, Surabaya, Jawa Timur
+            - paragraph [ref=f5e178]: "Telp: (031) 843 7200"
+      - generic [ref=f5e179]:
+        - paragraph [ref=f5e180]: © 2026 PT Relasi Sukses Bersama (relasisukses.co.id). Seluruh hak cipta dilindungi. Didesain dengan standar presisi industri.
+        - generic [ref=f5e181]:
+          - link "Kebijakan Privasi" [ref=f5e182] [cursor=pointer]:
+            - /url: "#"
+          - link "Syarat Layanan" [ref=f5e183] [cursor=pointer]:
+            - /url: "#"
+  - generic [ref=f5e184]:
+    - button "Chat via WhatsApp" [ref=f5e185] [cursor=pointer]
+    - dialog [aria-hidden]:
+      - generic:
+        - generic:
+          - paragraph: RELASI SUKSES SUPPORT
+          - heading [level=2]: Ada yang bisa kami bantu?
+        - button
+      - paragraph: Pilih divisi yang sesuai dengan kebutuhan Anda untuk terhubung langsung dengan tim kami via WhatsApp.
+      - generic:
+        - link:
+          - /url: https://wa.me/6281295254747?text=Halo%20Sales%20Consultant%20Relasi%20Sukses%2C%20saya%20tertarik%20berkonsultasi%20mengenai%20mesin%20industri%20makanan%20%26%20kemasan.%20Mohon%20informasi%20rekomendasi%20%26%20penawaran%20harga.
+          - generic:
+            - strong: Konsultasi & Penawaran Mesin
+            - generic: Kapasitas produksi, spesifikasi & penawaran
+          - generic [aria-hidden]: →
+        - link:
+          - /url: https://wa.me/6281295254747?text=Halo%20Tim%20Teknis%20Relasi%20Sukses%2C%20saya%20membutuhkan%20bantuan%20servis%20teknis%20%2F%20ketersediaan%20sparepart%20untuk%20mesin%20pabrik%20saya.
+          - generic:
+            - strong: Servis Teknis & Suku Cadang
+            - generic: Teknisi siaga, kalibrasi & pengiriman sparepart
+          - generic [aria-hidden]: →
+        - link:
+          - /url: https://wa.me/6281295254747?text=Halo%20Relasi%20Sukses%2C%20saya%20ingin%20menjadwalkan%20kunjungan%20%26%20uji%20coba%20resep%20di%20Test%20Kitchen%20Showroom%20PIK.
+          - generic:
+            - strong: Trial Resep di Test Kitchen
+            - generic: Uji coba adonan langsung di Showroom PIK JKT & SBY
+          - generic [aria-hidden]: →
+      - generic:
+        - strong: JAM OPERASIONAL KONSULTASI
+        - text: Senin – Sabtu, 08.00 – 17.30 WIB

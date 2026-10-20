@@ -1,0 +1,111 @@
+/**
+ * Design Tokens - RELASI SUKSES (PT Relasi Sukses Bersama)
+ * Color Combo Layout:
+ * - Background: Warm Ivory (#FFF7E8)
+ * - Primary: Sky Blue / Spruce Teal (#315C4C)
+ * - Secondary: Tangerine (#FF8A3D)
+ */
+:root {
+  /* Core Layout Backgrounds */
+  --bg-page: #FFF7E8;                 /* Warm Ivory base */
+  --bg-page-dark: #F5EBD7;            /* Deep Warm Ivory for alternate sections & footer */
+  --bg-surface: #FFFFFF;              /* Crisp White card surface */
+  --bg-surface-elevated: #FFFDF9;     /* Elevated Warm White */
+  --bg-surface-hover: #FFF1DB;        /* Warm Ivory Hover tint */
+  --bg-input: #FFFFFF;                /* Form input background */
+
+  /* Text Colors (Engineered for AA+ High-Contrast on Warm Ivory) */
+  --text-primary: #1A3027;            /* Deep Forest Slate */
+  --text-secondary: #315C4C;          /* Primary Sky Blue / Spruce Teal */
+  --text-muted: #627A6F;              /* Muted Slate-Teal */
+  --text-dim: #8BA196;                /* Subtle text */
+
+  /* Primary Brand: Sky Blue / Spruce Teal (#315C4C) */
+  --brand-primary: #315C4C;
+  --brand-primary-hover: #244539;
+  --brand-primary-soft: rgba(49, 92, 76, 0.10);
+  --brand-primary-border: rgba(49, 92, 76, 0.25);
+
+  /* Secondary: Tangerine (#FF8A3D) */
+  --accent-gold: #FF8A3D;             /* Tangerine */
+  --accent-gold-hover: #E87428;
+  --accent-gold-soft: rgba(255, 138, 61, 0.12);
+  --accent-gold-border: rgba(255, 138, 61, 0.35);
+
+  --accent-secondary: #FF8A3D;
+  --accent-secondary-hover: #E87428;
+  --accent-secondary-soft: rgba(255, 138, 61, 0.12);
+  --accent-secondary-border: rgba(255, 138, 61, 0.35);
+
+  --accent-blue: #315C4C;
+  --accent-blue-soft: rgba(49, 92, 76, 0.12);
+
+  --accent-green: #2E7D32;
+  --accent-green-bright: #25D366;
+  --accent-green-soft: rgba(37, 211, 102, 0.12);
+
+  --accent-danger: #D32F2F;
+
+  /* Borders & Dividers */
+  --border-light: #E5D7BF;
+  --border-subtle: #EFE4D0;
+  --border-focus: #315C4C;
+
+  /* Shadows (Adapted for Light Theme Warm Ivory) */
+  --shadow-flat: 0 1px 3px rgba(49, 92, 76, 0.08);
+  --shadow-raised: 0 4px 16px rgba(49, 92, 76, 0.08);
+  --shadow-card-hover: 0 12px 28px rgba(49, 92, 76, 0.14), 0 0 12px rgba(255, 138, 61, 0.25);
+  --shadow-floating: 0 16px 36px rgba(49, 92, 76, 0.16);
+  --shadow-overlay: 0px 14px 45px rgba(26, 48, 39, 0.35);
+
+  /* Spacing (5px Base Grid) */
+  --space-1: 5px;
+  --space-2: 10px;
+  --space-3: 15px;
+  --space-4: 20px;
+  --space-5: 25px;
+  --space-6: 30px;
+  --space-7: 35px;
+  --space-8: 40px;
+  --space-10: 50px;
+  --space-12: 60px;
+  --space-16: 80px;
+
+  /* Border Radius */
+  --radius-sm: 4px;
+  --radius-md: 6px;
+  --radius-lg: 10px;
+  --radius-pill: 9999px;
+
+  /* Typography Families */
+  --font-family-display: "Familjen Grotesk", "Plus Jakarta Sans", "Helvetica Neue", Arial, sans-serif;
+  --font-family-body: "Inter", "Helvetica Neue", Arial, sans-serif;
+  --font-family-mono: "Menlo", monospace;
+
+  /* Fluid Typography Scale (Smoothly adapts across 360px - 1440px viewport) */
+  --font-size-xs: clamp(0.7rem, 0.66rem + 0.18vw, 0.75rem);       /* 11.2px - 12px */
+  --font-size-sm: clamp(0.8125rem, 0.78rem + 0.18vw, 0.875rem);   /* 13px - 14px */
+  --font-size-base: clamp(0.9375rem, 0.89rem + 0.25vw, 1.0625rem); /* 15px - 17px */
+  --font-size-md: clamp(1.0625rem, 1rem + 0.35vw, 1.25rem);       /* 17px - 20px */
+  --font-size-lg: clamp(1.25rem, 1.15rem + 0.55vw, 1.5rem);       /* 20px - 24px */
+  --font-size-xl: clamp(1.45rem, 1.3rem + 0.85vw, 1.875rem);      /* 23.2px - 30px */
+  --font-size-2xl: clamp(1.75rem, 1.48rem + 1.4vw, 2.375rem);     /* 28px - 38px */
+  --font-size-3xl: clamp(2rem, 1.62rem + 2vw, 2.875rem);          /* 32px - 46px */
+  --font-size-hero: clamp(2.15rem, 1.65rem + 2.8vw, 3.65rem);     /* 34.4px - 58.4px */
+
+  /* Proportional Line Heights (Vertical Rhythm) */
+  --line-height-tight: 1.18;
+  --line-height-heading: 1.28;
+  --line-height-body: 1.65;
+  --line-height-relaxed: 1.78;
+
+  /* Fluid Section & Vertical Rhythm Spacing */
+  --space-section: clamp(40px, 5.5vw, 80px);
+  --space-section-hero: clamp(48px, 7vw, 100px);
+  --space-paragraph-gap: clamp(14px, 1.2vw, 20px);
+
+  /* Max Container Width */
+  --container-max: 1399px;
+  --transition-fast: 180ms cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-normal: 250ms cubic-bezier(0.16, 1, 0.3, 1);
+}

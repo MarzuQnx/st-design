@@ -1,0 +1,502 @@
+- generic [active] [ref=f3e1]:
+  - complementary "Announcement" [ref=f3e2]:
+    - generic [ref=f3e3]:
+      - generic [ref=f3e4]: Gudang Sparepart Sentral & Teknisi Siaga Se-Indonesia | Showroom Jakarta & Surabaya
+      - generic [ref=f3e8]:
+        - text: "Hotline Engineering:"
+        - strong [ref=f3e9]: +62 812-9525-4747
+  - banner [ref=f3e10]:
+    - generic [ref=f3e11]:
+      - link "Relasi Sukses Homepage" [ref=f3e12] [cursor=pointer]:
+        - /url: "#home"
+        - generic [ref=f3e16]: RELASI SUKSES
+      - navigation "Main Navigation"
+      - generic [ref=f3e18]:
+        - group "Language selection" [ref=f3e19]:
+          - button "Switch to Indonesian" [ref=f3e20] [cursor=pointer]: ID
+          - button "Switch to English" [ref=f3e21] [cursor=pointer]: EN
+        - link "Chat Sales Engineer" [ref=f3e22] [cursor=pointer]:
+          - /url: https://wa.me/6281295254747?text=Halo%20Tim%20Relasi%20Sukses%2C%20saya%20tertarik%20berkonsultasi%20mengenai%20mesin%20industri%20makanan%20%26%20pengemasan%20untuk%20usaha%20saya.%20Mohon%20informasi%20katalog%20%26%20jadwal%20demo.
+        - button "Open mobile menu" [ref=f3e23] [cursor=pointer]
+  - main [ref=f3e25]:
+    - generic [ref=f3e27]:
+      - generic [ref=f3e28]:
+        - generic [ref=f3e29]:
+          - generic [ref=f3e30]: Partner Mesin Industri Pangan & Kemasan Terpercaya
+          - heading "Otomasi Produksi Jadi Jauh Lebih Mudah & Efisien." [level=1] [ref=f3e32]
+          - paragraph [ref=f3e33]: Dari UMKM naik kelas hingga pabrik skala besar. Kami bantu bisnis kuliner Anda memproduksi lebih cepat, konsisten, dan higienis dengan dukungan teknisi siap hadir.
+          - generic [ref=f3e34]:
+            - link "Eksplor Mesin & Minta Penawaran" [ref=f3e35] [cursor=pointer]:
+              - /url: products.html
+            - link "Konsultasi Alur Produksi (WA)" [ref=f3e36] [cursor=pointer]:
+              - /url: https://wa.me/6281295254747?text=Halo%20Tim%20Relasi%20Sukses%2C%20saya%20tertarik%20berkonsultasi%20mengenai%20mesin%20industri%20makanan%20%26%20pengemasan%20untuk%20usaha%20saya.%20Mohon%20informasi%20katalog%20%26%20jadwal%20demo.
+        - generic [ref=f3e38]:
+          - generic [ref=f3e39]:
+            - generic [ref=f3e40]: RELASI SUKSES // SPEC-2026.04
+            - generic [ref=f3e41]: Ready Stock Demo Unit
+          - generic [ref=f3e50]:
+            - generic [ref=f3e51]:
+              - generic [ref=f3e52]: Efisiensi Output
+              - generic [ref=f3e53]: +340% / Batch
+            - generic [ref=f3e54]:
+              - generic [ref=f3e55]: Standar Bahan
+              - generic [ref=f3e56]: SUS 304 Food Grade
+      - generic [ref=f3e57]:
+        - generic [ref=f3e58]:
+          - generic [ref=f3e59]: 40+ Tahun
+          - generic [ref=f3e60]: Pengalaman di Industri Pangan
+        - generic [ref=f3e61]:
+          - generic [ref=f3e62]: 1.200+
+          - generic [ref=f3e63]: Mesin Beroperasi di Indonesia
+        - generic [ref=f3e64]:
+          - generic [ref=f3e65]: 100%
+          - generic [ref=f3e66]: Ketersediaan Sparepart Resmi
+        - generic [ref=f3e67]:
+          - generic [ref=f3e68]: 24/7
+          - generic [ref=f3e69]: Dukungan Teknisi On-Site
+    - generic [ref=f3e71]:
+      - generic [ref=f3e72]:
+        - generic [ref=f3e73]: Marketplace Showcase
+        - heading "Cari Mesin Sesuai Kebutuhan Bisnis Anda" [level=2] [ref=f3e74]
+        - paragraph [ref=f3e75]: Filter berdasarkan kapasitas usaha atau kategori produk. Tanpa ribet, langsung konsultasikan dengan tim ahli.
+      - generic [ref=f3e76]:
+        - textbox "Search machinery" [ref=f3e81]:
+          - /placeholder: "Cari nama mesin (cth: Mixer Roti, Sachet Packing, Oven Deck)..."
+        - generic [ref=f3e82]:
+          - generic [ref=f3e84]:
+            - button "Semua Kategori" [ref=f3e85] [cursor=pointer]
+            - button "Peralatan Bakery & Roti" [ref=f3e86] [cursor=pointer]
+            - button "Pengolahan Makanan" [ref=f3e87] [cursor=pointer]
+            - button "Mesin Pengemas (Packaging)" [ref=f3e88] [cursor=pointer]
+            - button "Lini Produksi Otomatis" [ref=f3e89] [cursor=pointer]
+          - generic [ref=f3e90]:
+            - generic [ref=f3e91]: "Skala Usaha:"
+            - generic [ref=f3e92]:
+              - button "Semua Skala" [ref=f3e93] [cursor=pointer]
+              - button "UMKM & Kitchen Studio" [ref=f3e94] [cursor=pointer]
+              - button "Komersial Menengah" [ref=f3e95] [cursor=pointer]
+              - button "Pabrik / Industri Berat" [ref=f3e96] [cursor=pointer]
+        - generic [ref=f3e97]:
+          - generic [ref=f3e98]: Menampilkan 10 mesin pilihan siap uji coba.
+          - generic [ref=f3e99]: ✓ Free Konsultasi Resep & Uji Coba Bahan Baku
+      - generic [ref=f3e100]:
+        - article [ref=f3e101]:
+          - generic [ref=f3e102]:
+            - generic [ref=f3e103]:
+              - generic [ref=f3e104]: VK-SP60
+              - generic [ref=f3e105]: Terlaris di Toko Roti
+            - generic "Lihat Detail Spek" [ref=f3e106] [cursor=pointer]
+            - heading "Heavy Duty Spiral Dough Mixer 60L" [level=3] [ref=f3e114]
+            - paragraph [ref=f3e115]: Adonan kalis sempurna hanya dalam 12 menit tanpa merusak gluten.
+            - generic [ref=f3e116]:
+              - generic [ref=f3e117]:
+                - generic [ref=f3e118]: "Kapasitas Tepung:"
+                - generic [ref=f3e119]: 25 - 30 kg tepung kering
+              - generic [ref=f3e120]:
+                - generic [ref=f3e121]: "Kapasitas Adonan:"
+                - generic [ref=f3e122]: Up to 50 kg adonan basah
+              - generic [ref=f3e123]:
+                - generic [ref=f3e124]: "Daya Listrik:"
+                - generic [ref=f3e125]: 2.2 kW / 380V (3 Phase) / 220V Opsional
+            - generic [ref=f3e126]:
+              - strong [ref=f3e127]: "Cocok untuk:"
+              - text: Roti Manis, Baguette, Donat Lembut, Pizza Crust, dan Roti Tawar.
+          - generic [ref=f3e128]:
+            - generic [ref=f3e129]:
+              - button "Lihat Detail Spek" [ref=f3e130] [cursor=pointer]
+              - link "Tanya Penawaran via WA" [ref=f3e134] [cursor=pointer]:
+                - /url: https://wa.me/6281295254747?text=Halo%20Sales%20Engineer%20Relasi%20Sukses%2C%20saya%20tertarik%20dengan%20mesin%20*Heavy%20Duty%20Spiral%20Dough%20Mixer%2060L*%20(Tipe%3A%20VK-SP60).%20Tolong%20kirimkan%20penawaran%20spesifikasi%20%26%20konsultasi%20daya%20listrik%20untuk%20tempat%20usaha%20saya.
+            - generic [ref=f3e137]: Garansi 2 Tahun + Free Training
+        - article [ref=f3e140]:
+          - generic [ref=f3e141]:
+            - generic [ref=f3e142]:
+              - generic [ref=f3e143]: VO-DK36
+              - generic [ref=f3e144]: Panas Merata & Hemat Gas
+            - generic "Lihat Detail Spek" [ref=f3e145] [cursor=pointer]
+            - heading "Industrial Gas Deck Oven 3 Deck 6 Loyang" [level=3] [ref=f3e156]
+            - paragraph [ref=f3e157]: Pengapian digital independen tiap deck untuk hasil panggangan keemasan.
+            - generic [ref=f3e158]:
+              - generic [ref=f3e159]:
+                - generic [ref=f3e160]: "Kapasitas Loyang:"
+                - generic [ref=f3e161]: 6 Loyang standar (40 x 60 cm)
+              - generic [ref=f3e162]:
+                - generic [ref=f3e163]: "Rentang Suhu:"
+                - generic [ref=f3e164]: 20°C - 400°C Digital Control
+              - generic [ref=f3e165]:
+                - generic [ref=f3e166]: "Konsumsi Gas:"
+                - generic [ref=f3e167]: LPG 0.45 kg/jam (Super Irit)
+            - generic [ref=f3e168]:
+              - strong [ref=f3e169]: "Cocok untuk:"
+              - text: Bolu Gulung, Pastry Puff, Roti Sisir, Chiffon Cake, dan Roti Sobek.
+          - generic [ref=f3e170]:
+            - generic [ref=f3e171]:
+              - button "Lihat Detail Spek" [ref=f3e172] [cursor=pointer]
+              - link "Tanya Penawaran via WA" [ref=f3e176] [cursor=pointer]:
+                - /url: https://wa.me/6281295254747?text=Halo%20Sales%20Engineer%20Relasi%20Sukses%2C%20saya%20tertarik%20dengan%20mesin%20*Industrial%20Gas%20Deck%20Oven%203%20Deck%206%20Loyang*%20(Tipe%3A%20VO-DK36).%20Tolong%20kirimkan%20penawaran%20spesifikasi%20%26%20konsultasi%20daya%20listrik%20untuk%20tempat%20usaha%20saya.
+            - generic [ref=f3e179]: Garansi 2 Tahun + Free Training
+        - article [ref=f3e182]:
+          - generic [ref=f3e183]:
+            - generic [ref=f3e184]:
+              - generic [ref=f3e185]: VB-PR16
+              - generic [ref=f3e186]: Kontrol Suhu & Kelembaban
+            - generic "Lihat Detail Spek" [ref=f3e187] [cursor=pointer]
+            - heading "Automatic Dough Proofer 16 Trays" [level=3] [ref=f3e198]
+            - paragraph [ref=f3e199]: Fermentasi adonan mengembang optimal dengan kelembaban digital otomatis.
+            - generic [ref=f3e200]:
+              - generic [ref=f3e201]:
+                - generic [ref=f3e202]: "Kapasitas Loyang:"
+                - generic [ref=f3e203]: 16 Loyang (40 x 60 cm)
+              - generic [ref=f3e204]:
+                - generic [ref=f3e205]: "Rentang Kelembaban:"
+                - generic [ref=f3e206]: 60% - 95% RH Digital
+              - generic [ref=f3e207]:
+                - generic [ref=f3e208]: "Rentang Suhu:"
+                - generic [ref=f3e209]: Ruang - 50°C
+            - generic [ref=f3e210]:
+              - strong [ref=f3e211]: "Cocok untuk:"
+              - text: Roti Manis, Donat, Baguette, Croissant Proofing, dan Roti Tawar.
+          - generic [ref=f3e212]:
+            - generic [ref=f3e213]:
+              - button "Lihat Detail Spek" [ref=f3e214] [cursor=pointer]
+              - link "Tanya Penawaran via WA" [ref=f3e218] [cursor=pointer]:
+                - /url: https://wa.me/6281295254747?text=Halo%20Sales%20Engineer%20Relasi%20Sukses%2C%20saya%20tertarik%20dengan%20mesin%20*Automatic%20Dough%20Proofer%2016%20Trays*%20(Tipe%3A%20VB-PR16).%20Tolong%20kirimkan%20penawaran%20spesifikasi%20%26%20konsultasi%20daya%20listrik%20untuk%20tempat%20usaha%20saya.
+            - generic [ref=f3e221]: Garansi 2 Tahun + Free Training
+        - article [ref=f3e224]:
+          - generic [ref=f3e225]:
+            - generic [ref=f3e226]:
+              - generic [ref=f3e227]: VP-FL350
+              - generic [ref=f3e228]: High Speed Packaging
+            - generic "Lihat Detail Spek" [ref=f3e229] [cursor=pointer]
+            - heading "Automatic Horizontal Flow Wrapping Machine" [level=3] [ref=f3e237]
+            - paragraph [ref=f3e238]: Bungkus hingga 180 pcs per menit dengan segel kedap udara rapat.
+            - generic [ref=f3e239]:
+              - generic [ref=f3e240]:
+                - generic [ref=f3e241]: "Kecepatan Kemas:"
+                - generic [ref=f3e242]: 40 - 180 kemasan / menit (Adjustable)
+              - generic [ref=f3e243]:
+                - generic [ref=f3e244]: "Lebar Plastik Film:"
+                - generic [ref=f3e245]: Maksimal 350 mm
+              - generic [ref=f3e246]:
+                - generic [ref=f3e247]: "Panjang Kemasan:"
+                - generic [ref=f3e248]: 65 - 330 mm (Digital Touchscreen Setup)
+            - generic [ref=f3e249]:
+              - strong [ref=f3e250]: "Cocok untuk:"
+              - text: Roti Satuan, Kue Lapis, Biskuit, Cokelat Bar, Masker, dan Mochi Kemasan.
+          - generic [ref=f3e251]:
+            - generic [ref=f3e252]:
+              - button "Lihat Detail Spek" [ref=f3e253] [cursor=pointer]
+              - link "Tanya Penawaran via WA" [ref=f3e257] [cursor=pointer]:
+                - /url: https://wa.me/6281295254747?text=Halo%20Sales%20Engineer%20Relasi%20Sukses%2C%20saya%20tertarik%20dengan%20mesin%20*Automatic%20Horizontal%20Flow%20Wrapping%20Machine*%20(Tipe%3A%20VP-FL350).%20Tolong%20kirimkan%20penawaran%20spesifikasi%20%26%20konsultasi%20daya%20listrik%20untuk%20tempat%20usaha%20saya.
+            - generic [ref=f3e260]: Garansi 2 Tahun + Free Training
+        - article [ref=f3e263]:
+          - generic [ref=f3e264]:
+            - generic [ref=f3e265]:
+              - generic [ref=f3e266]: VP-DY200
+              - generic [ref=f3e267]: Stand Up Pouch Spesialis
+            - generic "Lihat Detail Spek" [ref=f3e268] [cursor=pointer]
+            - heading "Rotary Premade Pouch & Doypack Packing Machine" [level=3] [ref=f3e275]
+            - paragraph [ref=f3e276]: Isi otomatis cairan, biji-bijian, maupun serbuk ke kantong standing pouch.
+            - generic [ref=f3e277]:
+              - generic [ref=f3e278]:
+                - generic [ref=f3e279]: "Kecepatan Kerja:"
+                - generic [ref=f3e280]: 25 - 55 kantong / menit
+              - generic [ref=f3e281]:
+                - generic [ref=f3e282]: "Ukuran Kantong:"
+                - generic [ref=f3e283]: Lebar 100 - 210 mm, Panjang 100 - 350 mm
+              - generic [ref=f3e284]:
+                - generic [ref=f3e285]: "Tipe Kemasan:"
+                - generic [ref=f3e286]: Stand-Up Pouch, Ziplock, Gusset Bag, Kraft Paper
+            - generic [ref=f3e287]:
+              - strong [ref=f3e288]: "Cocok untuk:"
+              - text: Biji Kopi, Keripik Buah, Bubuk Susu, Saus Sambal, Granola, dan Frozen Meatball.
+          - generic [ref=f3e289]:
+            - generic [ref=f3e290]:
+              - button "Lihat Detail Spek" [ref=f3e291] [cursor=pointer]
+              - link "Tanya Penawaran via WA" [ref=f3e295] [cursor=pointer]:
+                - /url: https://wa.me/6281295254747?text=Halo%20Sales%20Engineer%20Relasi%20Sukses%2C%20saya%20tertarik%20dengan%20mesin%20*Rotary%20Premade%20Pouch%20%26%20Doypack%20Packing%20Machine*%20(Tipe%3A%20VP-DY200).%20Tolong%20kirimkan%20penawaran%20spesifikasi%20%26%20konsultasi%20daya%20listrik%20untuk%20tempat%20usaha%20saya.
+            - generic [ref=f3e298]: Garansi 2 Tahun + Free Training
+        - article [ref=f3e301]:
+          - generic [ref=f3e302]:
+            - generic [ref=f3e303]:
+              - generic [ref=f3e304]: VP-VS420
+              - generic [ref=f3e305]: Kemas Snack & Butiran
+            - generic "Lihat Detail Spek" [ref=f3e306] [cursor=pointer]
+            - heading "Vertical Form Fill Seal (VFFS) Packaging Machine" [level=3] [ref=f3e314]
+            - paragraph [ref=f3e315]: Membentuk kantong dari gulungan plastik, menimbang, dan menyegel otomatis.
+            - generic [ref=f3e316]:
+              - generic [ref=f3e317]:
+                - generic [ref=f3e318]: "Kecepatan Kemas:"
+                - generic [ref=f3e319]: 20 - 70 kantong / menit
+              - generic [ref=f3e320]:
+                - generic [ref=f3e321]: "Lebar Maksimal Kantong:"
+                - generic [ref=f3e322]: 200 mm (Panjang hingga 300 mm)
+              - generic [ref=f3e323]:
+                - generic [ref=f3e324]: "Daya Listrik:"
+                - generic [ref=f3e325]: 2.8 kW / 220V 50Hz
+            - generic [ref=f3e326]:
+              - strong [ref=f3e327]: "Cocok untuk:"
+              - text: Keripik Singkong, Makaroni Pedas, Kacang Goreng, Permen, dan Beras 1kg.
+          - generic [ref=f3e328]:
+            - generic [ref=f3e329]:
+              - button "Lihat Detail Spek" [ref=f3e330] [cursor=pointer]
+              - link "Tanya Penawaran via WA" [ref=f3e334] [cursor=pointer]:
+                - /url: https://wa.me/6281295254747?text=Halo%20Sales%20Engineer%20Relasi%20Sukses%2C%20saya%20tertarik%20dengan%20mesin%20*Vertical%20Form%20Fill%20Seal%20(VFFS)%20Packaging%20Machine*%20(Tipe%3A%20VP-VS420).%20Tolong%20kirimkan%20penawaran%20spesifikasi%20%26%20konsultasi%20daya%20listrik%20untuk%20tempat%20usaha%20saya.
+            - generic [ref=f3e337]: Garansi 2 Tahun + Free Training
+        - article [ref=f3e340]:
+          - generic [ref=f3e341]:
+            - generic [ref=f3e342]:
+              - generic [ref=f3e343]: VM-EN500
+              - generic [ref=f3e344]: Multifungsi Kue & Snack
+            - generic "Lihat Detail Spek" [ref=f3e345] [cursor=pointer]
+            - heading "Automatic Encrusting & Filling Forming Machine" [level=3] [ref=f3e352]
+            - paragraph [ref=f3e353]: Cetak nastar, bakpia, mochi, dan meatball dengan isian pasta presisi.
+            - generic [ref=f3e354]:
+              - generic [ref=f3e355]:
+                - generic [ref=f3e356]: "Kapasitas Output:"
+                - generic [ref=f3e357]: 20 - 100 pcs / menit (Hingga 6.000 pcs/jam)
+              - generic [ref=f3e358]:
+                - generic [ref=f3e359]: "Rentang Berat Produk:"
+                - generic [ref=f3e360]: 10 gram - 180 gram per pcs
+              - generic [ref=f3e361]:
+                - generic [ref=f3e362]: "Rasio Isian : Kulit:"
+                - generic [ref=f3e363]: Dapat diatur bebas dari 1:9 hingga 9:1
+            - generic [ref=f3e364]:
+              - strong [ref=f3e365]: "Cocok untuk:"
+              - text: Nastar Nanas, Bakpia Pathok, Mochi Isi Cokelat, Mooncake, Coxinha, dan Bakso Keju.
+          - generic [ref=f3e366]:
+            - generic [ref=f3e367]:
+              - button "Lihat Detail Spek" [ref=f3e368] [cursor=pointer]
+              - link "Tanya Penawaran via WA" [ref=f3e372] [cursor=pointer]:
+                - /url: https://wa.me/6281295254747?text=Halo%20Sales%20Engineer%20Relasi%20Sukses%2C%20saya%20tertarik%20dengan%20mesin%20*Automatic%20Encrusting%20%26%20Filling%20Forming%20Machine*%20(Tipe%3A%20VM-EN500).%20Tolong%20kirimkan%20penawaran%20spesifikasi%20%26%20konsultasi%20daya%20listrik%20untuk%20tempat%20usaha%20saya.
+            - generic [ref=f3e375]: Garansi 2 Tahun + Free Training
+        - article [ref=f3e378]:
+          - generic [ref=f3e379]:
+            - generic [ref=f3e380]:
+              - generic [ref=f3e381]: VC-MX200
+              - generic [ref=f3e382]: Solusi Masak Selai & Rendang
+            - generic "Lihat Detail Spek" [ref=f3e383] [cursor=pointer]
+            - heading "Planetary Stirred Gas Cooking Mixer 200L" [level=3] [ref=f3e389]
+            - paragraph [ref=f3e390]: Aduk selai buah, dodol, dan pasta bumbu otomatis tanpa takut gosong.
+            - generic [ref=f3e391]:
+              - generic [ref=f3e392]:
+                - generic [ref=f3e393]: "Kapasitas Volume:"
+                - generic [ref=f3e394]: 200 Liter (Efektif aduk 150 kg)
+              - generic [ref=f3e395]:
+                - generic [ref=f3e396]: "Metode Pemanas:"
+                - generic [ref=f3e397]: Gas LPG Burner Tekanan Tinggi / Steam Opsional
+              - generic [ref=f3e398]:
+                - generic [ref=f3e399]: "Pengaduk (Scraper):"
+                - generic [ref=f3e400]: PTFE Teflon Tahan Panas hingga 280°C
+            - generic [ref=f3e401]:
+              - strong [ref=f3e402]: "Cocok untuk:"
+              - text: Selai Nanas & Stroberi, Sambal Kemasan, Dodol, Pasta Kacang Merah, dan Rendang Daging.
+          - generic [ref=f3e403]:
+            - generic [ref=f3e404]:
+              - button "Lihat Detail Spek" [ref=f3e405] [cursor=pointer]
+              - link "Tanya Penawaran via WA" [ref=f3e409] [cursor=pointer]:
+                - /url: https://wa.me/6281295254747?text=Halo%20Sales%20Engineer%20Relasi%20Sukses%2C%20saya%20tertarik%20dengan%20mesin%20*Planetary%20Stirred%20Gas%20Cooking%20Mixer%20200L*%20(Tipe%3A%20VC-MX200).%20Tolong%20kirimkan%20penawaran%20spesifikasi%20%26%20konsultasi%20daya%20listrik%20untuk%20tempat%20usaha%20saya.
+            - generic [ref=f3e412]: Garansi 2 Tahun + Free Training
+        - article [ref=f3e415]:
+          - generic [ref=f3e416]:
+            - generic [ref=f3e417]:
+              - generic [ref=f3e418]: VL-BD1200
+              - generic [ref=f3e419]: Pabrik Skala Otomatis
+            - generic "Lihat Detail Spek" [ref=f3e420] [cursor=pointer]
+            - heading "Fully Automated Toast & Sweet Bread Line" [level=3] [ref=f3e431]
+            - paragraph [ref=f3e432]: Lini lengkap dari pembagi adonan, rolling, proofing, hingga baking.
+            - generic [ref=f3e433]:
+              - generic [ref=f3e434]:
+                - generic [ref=f3e435]: "Kapasitas Produksi:"
+                - generic [ref=f3e436]: 1.200 - 3.600 adonan roti / jam
+              - generic [ref=f3e437]:
+                - generic [ref=f3e438]: "Akurasi Pembagi:"
+                - generic [ref=f3e439]: ±1.5 gram (Presisi tinggi non-oil system)
+              - generic [ref=f3e440]:
+                - generic [ref=f3e441]: "Sistem Kendali:"
+                - generic [ref=f3e442]: Integrated Central SCADA / Siemens S7-1200 PLC
+            - generic [ref=f3e443]:
+              - strong [ref=f3e444]: "Cocok untuk:"
+              - text: Pabrik Roti Tawar Kemasan, Pabrik Burger Bun Cepat Saji, dan Hotdog Bun.
+          - generic [ref=f3e445]:
+            - generic [ref=f3e446]:
+              - button "Lihat Detail Spek" [ref=f3e447] [cursor=pointer]
+              - link "Tanya Penawaran via WA" [ref=f3e451] [cursor=pointer]:
+                - /url: https://wa.me/6281295254747?text=Halo%20Sales%20Engineer%20Relasi%20Sukses%2C%20saya%20tertarik%20dengan%20mesin%20*Fully%20Automated%20Toast%20%26%20Sweet%20Bread%20Line*%20(Tipe%3A%20VL-BD1200).%20Tolong%20kirimkan%20penawaran%20spesifikasi%20%26%20konsultasi%20daya%20listrik%20untuk%20tempat%20usaha%20saya.
+            - generic [ref=f3e454]: Garansi 2 Tahun + Free Training
+        - article [ref=f3e457]:
+          - generic [ref=f3e458]:
+            - generic [ref=f3e459]:
+              - generic [ref=f3e460]: VS-DS520
+              - generic [ref=f3e461]: Wajib untuk Croissant & Pastry
+            - generic "Lihat Detail Spek" [ref=f3e462] [cursor=pointer]
+            - heading "Commercial Reversible Tabletop Dough Sheeter" [level=3] [ref=f3e469]
+            - paragraph [ref=f3e470]: Pipihkan adonan pastry & croissant dengan ketebalan presisi 0.5 - 38 mm.
+            - generic [ref=f3e471]:
+              - generic [ref=f3e472]:
+                - generic [ref=f3e473]: "Lebar Sabuk Konveyor:"
+                - generic [ref=f3e474]: 500 mm (Panjang total 2.000 mm)
+              - generic [ref=f3e475]:
+                - generic [ref=f3e476]: "Ketebalan Gilingan:"
+                - generic [ref=f3e477]: 0.5 mm - 38 mm (Dapat disetel akurat)
+              - generic [ref=f3e478]:
+                - generic [ref=f3e479]: "Daya Listrik:"
+                - generic [ref=f3e480]: 550 Watt / 220V 1 Phase (Sangat ramah listrik)
+            - generic [ref=f3e481]:
+              - strong [ref=f3e482]: "Cocok untuk:"
+              - text: Croissant, Danish Pastry, Puff Pastry, Pie Crust, Kulit Pangsit, dan Fondant.
+          - generic [ref=f3e483]:
+            - generic [ref=f3e484]:
+              - button "Lihat Detail Spek" [ref=f3e485] [cursor=pointer]
+              - link "Tanya Penawaran via WA" [ref=f3e489] [cursor=pointer]:
+                - /url: https://wa.me/6281295254747?text=Halo%20Sales%20Engineer%20Relasi%20Sukses%2C%20saya%20tertarik%20dengan%20mesin%20*Commercial%20Reversible%20Tabletop%20Dough%20Sheeter*%20(Tipe%3A%20VS-DS520).%20Tolong%20kirimkan%20penawaran%20spesifikasi%20%26%20konsultasi%20daya%20listrik%20untuk%20tempat%20usaha%20saya.
+            - generic [ref=f3e492]: Garansi 2 Tahun + Free Training
+    - generic [ref=f3e496]:
+      - generic [ref=f3e497]:
+        - generic [ref=f3e498]: Pendekatan Marketing 5.0
+        - heading "Bukan Sekadar Jual Mesin, Kami Partner Pertumbuhan Bisnis Anda" [level=2] [ref=f3e499]
+        - paragraph [ref=f3e500]: Kami percaya teknologi terbaik adalah yang mempermudah manusia bekerja lebih tenang, menghemat biaya operasional, dan melipatgandakan omzet secara nyata.
+      - generic [ref=f3e501]:
+        - generic [ref=f3e502]:
+          - heading "Audit Alur Produksi Gratis" [level=3] [ref=f3e507]
+          - paragraph [ref=f3e508]: Belum yakin mesin mana yang pas? Ceritakan resep, target harian, dan daya listrik tempat Anda. Kami hitungkan spesifikasi yang paling efisien.
+        - generic [ref=f3e509]:
+          - heading "Uji Coba & Demo Mesin Langsung" [level=3] [ref=f3e514]
+          - paragraph [ref=f3e515]: Bawa bahan baku resep Anda ke showroom kami di Jakarta atau Surabaya. Uji coba mesinnya sampai Anda puas dengan tekstur dan hasil kemasannya.
+        - generic [ref=f3e516]:
+          - heading "Instalasi & Training Karyawan" [level=3] [ref=f3e520]
+          - paragraph [ref=f3e521]: Teknisi kami datang langsung ke tempat Anda, menyetel mesin, dan melatih staf operasional hingga mahir dan paham prosedur maintenance.
+        - generic [ref=f3e522]:
+          - heading "Jaminan Sparepart & Service On-Site" [level=3] [ref=f3e527]
+          - paragraph [ref=f3e528]: Mesin mogok = omzet berhenti. Gudang sparepart kami di Indonesia siap kirim cepat dan tim teknisi siaga panggilan darurat.
+    - generic [ref=f3e530]:
+      - generic [ref=f3e531]:
+        - generic [ref=f3e532]: Kisah Sukses Mitra
+        - heading "Mendampingi Pertumbuhan Ratusan Pengusaha Kuliner" [level=2] [ref=f3e533]
+        - paragraph [ref=f3e534]: Dengarkan langsung cerita bagaimana otomasi mesin mengubah efisiensi bisnis mereka.
+      - generic [ref=f3e535]:
+        - generic [ref=f3e536]:
+          - paragraph [ref=f3e549]: "\"Dulu sebelum pakai mesin dari Relasi Sukses, adonan roti kami sering bantat kalau karyawan kecapekan menguleni manual. Begitu pakai Spiral Mixer 60L dan Oven Deck mereka, kapasitas naik 4x lipat dalam sebulan. Yang paling tenang, teknisinya ramah banget ngajarin staf dapur kami sampai lancar.\""
+          - generic [ref=f3e550]:
+            - generic [ref=f3e551]: RS
+            - generic [ref=f3e552]:
+              - heading "Hj. Ratna Sukowati" [level=4] [ref=f3e553]
+              - paragraph [ref=f3e554]: Founder & Owner · Roti Manis Nusantara (Semarang)
+              - generic [ref=f3e555]: "Unit: Spiral Mixer 60L & Deck Oven 3 Deck"
+        - generic [ref=f3e556]:
+          - paragraph [ref=f3e569]: "\"Tantangan terbesar snack kami adalah segel kemasan yang bocor halus sehingga keripik melempem. Flow wrapper dari Relasi Sukses menyelesaikan masalah ini 100%. Kemasan kami jadi sangat rapi, kedap udara, dan sekarang tembus rak ritel modern nasional.\""
+          - generic [ref=f3e570]:
+            - generic [ref=f3e571]: KC
+            - generic [ref=f3e572]:
+              - heading "Kevin Christian" [level=4] [ref=f3e573]
+              - paragraph [ref=f3e574]: Operations Director · Kencana Snack & Chips (Malang)
+              - generic [ref=f3e575]: "Unit: Automatic Horizontal Flow Wrapper VP-FL350"
+        - generic [ref=f3e576]:
+          - paragraph [ref=f3e589]: "\"Bikin mochi dan bakpia butuh gramatur isian yang presisi agar kulitnya tidak bocor saat dipanggang. Mesin Encrusting Relasi Sukses presisi sampai 0.5 gram! Hemat tenaga kerja, higienitas terjaga, dan kami bisa ekspor pesanan dengan standar ketat.\""
+          - generic [ref=f3e590]:
+            - generic [ref=f3e591]: EK
+            - generic [ref=f3e592]:
+              - heading "Dra. Elvira Kusuma" [level=4] [ref=f3e593]
+              - paragraph [ref=f3e594]: Production Lead · Mochi Heritage Pastry (Bandung)
+              - generic [ref=f3e595]: "Unit: Encrusting Machine VM-EN500"
+    - generic [ref=f3e597]:
+      - generic [ref=f3e598]:
+        - generic [ref=f3e599]: FAQ & Jawaban Cepat
+        - heading "Pertanyaan yang Sering Diajukan Pemilik Usaha" [level=2] [ref=f3e600]
+        - paragraph [ref=f3e601]: Informasi transparan seputar uji coba mesin, kelistrikan, garansi, dan pengiriman.
+      - generic [ref=f3e602]:
+        - generic [ref=f3e603]:
+          - button "Apakah saya bisa mencoba uji coba mesin dengan resep saya sendiri sebelum beli?" [ref=f3e604] [cursor=pointer]
+          - paragraph [ref=f3e609]: Sangat bisa dan sangat kami anjurkan! Anda cukup jadwalkan kunjungan ke Test Kitchen Showroom kami di Arcade Business Center PIK Jakarta atau workshop Tangerang/Surabaya. Bawa adonan atau produk Anda, dan kita jalankan mesin bersama teknisi sampai Anda puas dengan hasilnya.
+        - button "Bagaimana jika daya listrik tempat usaha saya masih 220V 1 Phase (bukan 380V)?" [ref=f3e611] [cursor=pointer]
+        - button "Apakah ada garansi resmi dan bagaimana ketersediaan suku cadang (sparepart)?" [ref=f3e616] [cursor=pointer]
+        - button "Bagaimana pengiriman ke luar pulau Jawa?" [ref=f3e621] [cursor=pointer]
+    - generic [ref=f3e627]:
+      - generic [ref=f3e628]: Ngobrol Santai Dulu Aja
+      - heading "Punya Rencana Buka Cabang atau Upgrade Kapasitas Pabrik?" [level=2] [ref=f3e629]
+      - paragraph [ref=f3e630]: Tim sales engineer kami siap bantu rekomendasi mesin yang tepat dengan budget yang efisien. Tanpa paksaan, murni diskusi solusi.
+      - generic [ref=f3e631]:
+        - link "Hubungi Sales Engineering via WhatsApp" [ref=f3e632] [cursor=pointer]:
+          - /url: https://wa.me/6281295254747?text=Halo%20Tim%20Relasi%20Sukses%2C%20saya%20tertarik%20berkonsultasi%20mengenai%20mesin%20industri%20makanan%20%26%20pengemasan%20untuk%20usaha%20saya.%20Mohon%20informasi%20katalog%20%26%20jadwal%20demo.
+        - button "Download Brosur & Ringkasan Spek (PDF)" [ref=f3e633] [cursor=pointer]
+      - generic [ref=f3e634]: "Respon Cepat: Setiap Hari Pukul 08.00 - 20.00 WIB"
+  - contentinfo [ref=f3e635]:
+    - generic [ref=f3e636]:
+      - generic [ref=f3e637]:
+        - generic [ref=f3e638]:
+          - generic [ref=f3e639]: RELASI SUKSES
+          - paragraph [ref=f3e644]: Penyedia mesin industri pengolahan pangan, bakery equipment, dan sistem pengemasan otomatis terpercaya di Indonesia.
+          - generic [ref=f3e645]: ISO 9001 Certified Supplier
+        - generic [ref=f3e646]:
+          - generic [ref=f3e647]: Tautan Cepat
+          - list [ref=f3e648]:
+            - listitem [ref=f3e649]:
+              - link "Beranda" [ref=f3e650] [cursor=pointer]:
+                - /url: "#home"
+            - listitem [ref=f3e651]:
+              - link "Katalog Mesin" [ref=f3e652] [cursor=pointer]:
+                - /url: products.html
+            - listitem [ref=f3e653]:
+              - link "Tentang Kami" [ref=f3e654] [cursor=pointer]:
+                - /url: about.html
+            - listitem [ref=f3e655]:
+              - link "Solusi Bisnis" [ref=f3e656] [cursor=pointer]:
+                - /url: solutions.html
+            - listitem [ref=f3e657]:
+              - link "Artikel" [ref=f3e658] [cursor=pointer]:
+                - /url: articles.html
+            - listitem [ref=f3e659]:
+              - link "Kontak & FAQ" [ref=f3e660] [cursor=pointer]:
+                - /url: contact.html
+        - generic [ref=f3e661]:
+          - generic [ref=f3e662]: Kantor Pusat & Showroom Jakarta (PIK)
+          - generic [ref=f3e663]:
+            - paragraph [ref=f3e664]: Arcade Business Center Lt. 6 Unit 6-03, Jl. Pantai Indah Utara 2 Kav. C1, Pantai Indah Kapuk, Jakarta Utara 14460
+            - paragraph [ref=f3e665]: "Telp: (021) 5596 8800"
+        - generic [ref=f3e666]:
+          - generic [ref=f3e667]: Kantor Cabang Surabaya
+          - generic [ref=f3e668]:
+            - paragraph [ref=f3e669]: Jl. Kavling DPR No. 05 Blok A, Tangerang, Banten 15141
+            - paragraph [ref=f3e670]: "Telp: (031) 843 7200"
+          - generic [ref=f3e671]:
+            - generic [ref=f3e672]: Kontak & Layanan Cepat
+            - paragraph [ref=f3e673]:
+              - text: "WhatsApp:"
+              - strong [ref=f3e674]: +62 812-9525-4747
+      - generic [ref=f3e675]:
+        - paragraph [ref=f3e676]: © 2026 PT Relasi Sukses Bersama (relasisukses.co.id). Seluruh hak cipta dilindungi. Didesain dengan standar presisi industri.
+        - generic [ref=f3e677]:
+          - link "Kebijakan Privasi" [ref=f3e678] [cursor=pointer]:
+            - /url: "#"
+          - link "Syarat Layanan" [ref=f3e679] [cursor=pointer]:
+            - /url: "#"
+  - generic [ref=f3e680]:
+    - button "Chat via WhatsApp" [ref=f3e681] [cursor=pointer]
+    - dialog [aria-hidden]:
+      - generic:
+        - generic:
+          - paragraph: RELASI SUKSES SUPPORT
+          - heading [level=2]: Ada yang bisa kami bantu?
+        - button
+      - paragraph: Pilih divisi yang sesuai dengan kebutuhan Anda untuk terhubung langsung dengan tim kami via WhatsApp.
+      - generic:
+        - link:
+          - /url: https://wa.me/6281295254747?text=Halo%20Sales%20Consultant%20Relasi%20Sukses%2C%20saya%20tertarik%20berkonsultasi%20mengenai%20mesin%20industri%20makanan%20%26%20kemasan.%20Mohon%20informasi%20rekomendasi%20%26%20penawaran%20harga.
+          - generic:
+            - strong: Konsultasi & Penawaran Mesin
+            - generic: Kapasitas produksi, spesifikasi & penawaran
+          - generic [aria-hidden]: →
+        - link:
+          - /url: https://wa.me/6281295254747?text=Halo%20Tim%20Teknis%20Relasi%20Sukses%2C%20saya%20membutuhkan%20bantuan%20servis%20teknis%20%2F%20ketersediaan%20sparepart%20untuk%20mesin%20pabrik%20saya.
+          - generic:
+            - strong: Servis Teknis & Suku Cadang
+            - generic: Teknisi siaga, kalibrasi & pengiriman sparepart
+          - generic [aria-hidden]: →
+        - link:
+          - /url: https://wa.me/6281295254747?text=Halo%20Relasi%20Sukses%2C%20saya%20ingin%20menjadwalkan%20kunjungan%20%26%20uji%20coba%20resep%20di%20Test%20Kitchen%20Showroom%20PIK.
+          - generic:
+            - strong: Trial Resep di Test Kitchen
+            - generic: Uji coba adonan langsung di Showroom PIK JKT & SBY
+          - generic [aria-hidden]: →
+      - generic:
+        - strong: JAM OPERASIONAL KONSULTASI
+        - text: Senin – Sabtu, 08.00 – 17.30 WIB

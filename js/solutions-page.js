@@ -1,0 +1,530 @@
+/**
+ * VECTRO INDUSTRIAL - Solutions & Production Simulator Controller
+ * Clean Code Architecture: Reactive Calculator Engine, i18n Re-rendering & Consultative WhatsApp Routing
+ */
+
+import { solutionsData } from "./data/solutions.js";
+import { i18nData } from "./data/i18n.js";
+import { companyData } from "./data/company.js";
+import { updateWhatsAppWidgetLang } from "./components/whatsapp-widget.js";
+
+// Page & Calculator Reactive State
+const PageState = {
+  currentLang: localStorage.getItem("vectro_lang") || "id",
+  calcSector: "bakery",
+  calcScale: "umkm",
+  calcPhase: "220V"
+};
+
+// SVG Icons Map for Lifecycle & Calculator
+const iconsMap = {
+  audit: `
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+      <polyline points="14 2 14 8 20 8"></polyline>
+      <line x1="16" y1="13" x2="8" y2="13"></line>
+      <line x1="16" y1="17" x2="8" y2="17"></line>
+      <polyline points="10 9 9 9 8 9"></polyline>
+    </svg>
+  `,
+  testRun: `
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M4.5 3h15M6 3v16a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V3"></path>
+      <path d="M6 14h12"></path>
+      <path d="M10 9a2 2 0 1 0 4 0"></path>
+    </svg>
+  `,
+  installation: `
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path>
+    </svg>
+  `,
+  support: `
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+      <path d="m9 12 2 2 4-4"></path>
+    </svg>
+  `
+};
+
+/**
+ * Builds WhatsApp URLs with custom pre-filled texts
+ */
+function createWhatsAppUrl(message) {
+  const phone = companyData.whatsapp.number;
+  const encodedText = encodeURIComponent(message || companyData.whatsapp.defaultMessage[PageState.currentLang]);
+  return `https://wa.me/${phone}?text=${encodedText}`;
+}
+
+/**
+ * -------------------------------------------------------------
+ * 1. RENDER HEADER, BREADCRUMBS & NAVIGATION
+ * -------------------------------------------------------------
+ */
+function renderHeaderAndNav() {
+  const lang = PageState.currentLang;
+  const t = i18nData[lang];
+  const solT = t.solutionsPage;
+
+  // Visual active toggle on language buttons
+  document.querySelectorAll(".lang-btn").forEach(btn => {
+    btn.classList.toggle("active", btn.dataset.lang === lang);
+  });
+
+  // Top Announcement
+  const annEl = document.getElementById("top-announcement-text");
+  if (annEl) {
+    annEl.textContent = lang === "id"
+      ? "Gudang Sparepart Sentral & Teknisi Siaga Se-Indonesia | Showroom Jakarta & Surabaya"
+      : "Central Domestic Spare Parts Hub & Active Support Across Indonesia | Jakarta & Surabaya Showrooms";
+  }
+
+  // Brand Subtitle
+  const brandTagEl = document.getElementById("nav-brand-tag");
+  if (brandTagEl) brandTagEl.textContent = t.nav.brandTag;
+
+  // Main Navigation links
+  const navMap = {
+    "nav-link-home": t.nav.home,
+    "nav-link-showcase": t.nav.showcase,
+    "nav-link-about": t.nav.about || (lang === "id" ? "Tentang Kami" : "About Us"),
+    "nav-link-solutions": t.nav.solutions,
+    "nav-link-articles": t.nav.articles || (lang === "id" ? "Artikel" : "Articles / News"),
+    "nav-link-contact": t.nav.contact
+  };
+  for (const [id, label] of Object.entries(navMap)) {
+    const el = document.getElementById(id);
+    if (el) el.textContent = label;
+  }
+
+  // Header WA Button
+  const navWaBtn = document.getElementById("nav-wa-btn");
+  const navWaText = document.getElementById("nav-wa-text");
+  if (navWaBtn) navWaBtn.href = createWhatsAppUrl(companyData.whatsapp.defaultMessage[lang]);
+  if (navWaText) navWaText.textContent = t.nav.waButton;
+
+  // Update WhatsApp widget language
+  updateWhatsAppWidgetLang(lang);
+
+  // Breadcrumbs
+  const bcHome = document.getElementById("bc-home");
+  const bcCurrent = document.getElementById("bc-current");
+  if (bcHome) bcHome.textContent = solT.breadcrumbHome;
+  if (bcCurrent) bcCurrent.textContent = solT.breadcrumbSolutions;
+}
+
+/**
+ * -------------------------------------------------------------
+ * 2. RENDER HERO SECTION
+ * -------------------------------------------------------------
+ */
+function renderHero() {
+  const lang = PageState.currentLang;
+  const solT = i18nData[lang].solutionsPage;
+
+  const badgeEl = document.getElementById("hero-badge");
+  const titleEl = document.getElementById("hero-title");
+  const leadEl = document.getElementById("hero-lead");
+  const auditBtnText = document.getElementById("hero-cta-audit-text");
+  const waBtn = document.getElementById("hero-cta-wa");
+  const waBtnText = document.getElementById("hero-cta-wa-text");
+
+  if (badgeEl) badgeEl.textContent = solT.heroBadge;
+  if (titleEl) titleEl.textContent = solT.heroTitle;
+  if (leadEl) leadEl.textContent = solT.heroLead;
+  if (auditBtnText) auditBtnText.textContent = solT.heroCtaAudit;
+  if (waBtnText) waBtnText.textContent = solT.heroCtaWa;
+
+  const heroWaMsg = lang === "id"
+    ? "Halo Tim Sales Engineer Relasi Sukses, saya ingin berdiskusi mengenai audit alur produksi dan kesiapan daya listrik tempat usaha saya. Mohon infonya."
+    : "Hello Relasi Sukses Sales Engineering Team, I would like to consult about workflow audits and electrical readiness for my food production facility.";
+  if (waBtn) waBtn.href = createWhatsAppUrl(heroWaMsg);
+}
+
+/**
+ * -------------------------------------------------------------
+ * 3. RENDER 4-STAGE PARTNERSHIP LIFECYCLE
+ * -------------------------------------------------------------
+ */
+function renderLifecycle() {
+  const lang = PageState.currentLang;
+  const solT = i18nData[lang].solutionsPage;
+  const stages = solutionsData.lifecycleStages;
+
+  const badgeEl = document.getElementById("lifecycle-badge");
+  const titleEl = document.getElementById("lifecycle-title");
+  const subtitleEl = document.getElementById("lifecycle-subtitle");
+  const gridEl = document.getElementById("lifecycle-grid");
+
+  if (badgeEl) badgeEl.textContent = solT.lifecycleBadge;
+  if (titleEl) titleEl.textContent = solT.lifecycleTitle;
+  if (subtitleEl) subtitleEl.textContent = solT.lifecycleSubtitle;
+
+  if (gridEl) {
+    gridEl.innerHTML = stages.map(st => {
+      const iconSvg = iconsMap[st.icon] || iconsMap.audit;
+      return `
+        <article class="lifecycle-card">
+          <div>
+            <div class="lifecycle-card-header">
+              <span class="lifecycle-step-num">${st.stepNumber}</span>
+              <span class="lifecycle-phase-badge">${st.badge}</span>
+            </div>
+            <div class="lifecycle-icon-wrap" aria-hidden="true">${iconSvg}</div>
+            <h3 class="lifecycle-title">${st.title[lang]}</h3>
+            <div class="lifecycle-tagline">${st.tagline[lang]}</div>
+            <p class="lifecycle-desc">${st.desc[lang]}</p>
+          </div>
+          <div class="lifecycle-deliverable-box">
+            <span class="lifecycle-deliverable-label">${solT.deliverableLabel}</span>
+            <div class="lifecycle-deliverable-text">${st.keyDeliverable[lang]}</div>
+          </div>
+        </article>
+      `;
+    }).join("");
+  }
+}
+
+/**
+ * -------------------------------------------------------------
+ * 4. RENDER & UPDATE INTERACTIVE CALCULATOR
+ * -------------------------------------------------------------
+ */
+function renderCalculatorControls() {
+  const lang = PageState.currentLang;
+  const solT = i18nData[lang].solutionsPage;
+  const rules = solutionsData.calculatorRules;
+
+  // Labels
+  const badgeEl = document.getElementById("calc-badge");
+  const titleEl = document.getElementById("calc-title");
+  const subtitleEl = document.getElementById("calc-subtitle");
+  const indLabel = document.getElementById("calc-industry-label");
+  const scaleLabel = document.getElementById("calc-scale-label");
+  const powerLabel = document.getElementById("calc-power-label");
+  const btn220 = document.getElementById("btn-power-220");
+  const btn380 = document.getElementById("btn-power-380");
+
+  if (badgeEl) badgeEl.textContent = solT.calcBadge;
+  if (titleEl) titleEl.textContent = solT.calcTitle;
+  if (subtitleEl) subtitleEl.textContent = solT.calcSubtitle;
+  if (indLabel) indLabel.textContent = solT.calcIndustryLabel;
+  if (scaleLabel) scaleLabel.textContent = solT.calcScaleLabel;
+  if (powerLabel) powerLabel.textContent = solT.calcPowerLabel;
+  if (btn220) btn220.textContent = solT.calcPower220;
+  if (btn380) btn380.textContent = solT.calcPower380;
+
+  // Update Power Buttons visual state
+  if (btn220) btn220.classList.toggle("active", PageState.calcPhase === "220V");
+  if (btn380) btn380.classList.toggle("active", PageState.calcPhase === "380V");
+
+  // Render Sector Pills
+  const pillsWrap = document.getElementById("calc-sector-pills");
+  if (pillsWrap) {
+    pillsWrap.innerHTML = rules.sectors.map(sec => `
+      <button type="button" class="calc-sector-btn ${PageState.calcSector === sec.id ? 'active' : ''}" data-sector="${sec.id}">
+        ${sec.title[lang]}
+      </button>
+    `).join("");
+  }
+
+  // Render Scale Radio Options
+  const scaleWrap = document.getElementById("calc-scale-options");
+  if (scaleWrap) {
+    const currentSectorData = rules.sectors.find(s => s.id === PageState.calcSector) || rules.sectors[0];
+    const scales = currentSectorData.scales;
+
+    scaleWrap.innerHTML = `
+      <div class="calc-scale-radio-card ${PageState.calcScale === 'umkm' ? 'active' : ''}" data-scale="umkm">
+        <div>
+          <div class="calc-scale-title">${solT.calcScaleUmkm}</div>
+          <div class="calc-scale-sub">${scales.umkm.outputLabel[lang]}</div>
+        </div>
+        <span class="badge-tag badge-gold">1-2 Operator</span>
+      </div>
+      <div class="calc-scale-radio-card ${PageState.calcScale === 'medium' ? 'active' : ''}" data-scale="medium">
+        <div>
+          <div class="calc-scale-title">${solT.calcScaleMedium}</div>
+          <div class="calc-scale-sub">${scales.medium.outputLabel[lang]}</div>
+        </div>
+        <span class="badge-tag badge-blue">3-5 Operator</span>
+      </div>
+      <div class="calc-scale-radio-card ${PageState.calcScale === 'factory' ? 'active' : ''}" data-scale="factory">
+        <div>
+          <div class="calc-scale-title">${solT.calcScaleFactory}</div>
+          <div class="calc-scale-sub">${scales.factory.outputLabel[lang]}</div>
+        </div>
+        <span class="badge-tag badge-green">Lini Otomatis</span>
+      </div>
+    `;
+  }
+}
+
+/**
+ * Calculates and updates the Live Blueprint Result Card
+ */
+function updateCalculatorResult() {
+  const lang = PageState.currentLang;
+  const solT = i18nData[lang].solutionsPage;
+  const rules = solutionsData.calculatorRules;
+
+  const currentSector = rules.sectors.find(s => s.id === PageState.calcSector) || rules.sectors[0];
+  const scaleData = currentSector.scales[PageState.calcScale] || currentSector.scales.umkm;
+
+  // Metric Elements
+  const headerEl = document.getElementById("calc-result-header");
+  const statusBadge = document.getElementById("calc-status-badge");
+  const powerVal = document.getElementById("metric-power-val");
+  const powerLbl = document.getElementById("metric-power-lbl");
+  const laborVal = document.getElementById("metric-labor-val");
+  const laborLbl = document.getElementById("metric-labor-lbl");
+  const boostVal = document.getElementById("metric-boost-val");
+  const boostLbl = document.getElementById("metric-boost-lbl");
+  const packTitle = document.getElementById("calc-package-title");
+  const machineList = document.getElementById("calc-machine-list");
+  const alertBox = document.getElementById("calc-advisory-alert");
+  const waDiscussBtn = document.getElementById("calc-wa-discuss-btn");
+  const waDiscussText = document.getElementById("calc-wa-discuss-text");
+
+  if (headerEl) headerEl.textContent = solT.calcResultHeader;
+  if (powerLbl) powerLbl.textContent = solT.calcResultPowerEst;
+  if (laborLbl) laborLbl.textContent = solT.calcResultLaborSaving;
+  if (boostLbl) boostLbl.textContent = solT.calcResultCapacityBoost;
+  if (packTitle) packTitle.textContent = solT.calcResultPackTitle;
+  if (waDiscussText) waDiscussText.textContent = solT.calcWaDiscussBtn;
+
+  if (powerVal) powerVal.textContent = `${scaleData.totalPowerKw} kW`;
+  if (laborVal) laborVal.textContent = scaleData.laborReductionPct;
+  if (boostVal) boostVal.textContent = scaleData.batchOutputBoost;
+
+  // Render Machine Combination
+  if (machineList) {
+    machineList.innerHTML = scaleData.recommendedMachines.map(m => `
+      <li class="calc-machine-item">
+        <span class="calc-machine-name">${m.name}</span>
+        <span class="calc-machine-power">${m.power}</span>
+      </li>
+    `).join("");
+  }
+
+  // Compatibility & Electrical Advisory Logic
+  const is220VSelected = PageState.calcPhase === "220V";
+  const isScaleFactory = PageState.calcScale === "factory";
+
+  if (isScaleFactory && is220VSelected) {
+    // Advisory Warning: Industrial capacity on 220V
+    if (statusBadge) {
+      statusBadge.className = "calc-status-badge calc-status-advisory";
+      statusBadge.textContent = lang === "id" ? "Perlu Konsultasi Inverter / 380V" : "Inverter / 380V Advisory";
+    }
+    if (alertBox) {
+      alertBox.style.display = "block";
+      alertBox.innerHTML = `
+        <div style="font-weight: 700; color: var(--accent-gold); margin-bottom: 4px;">
+          ⚠ ${solT.calcResultEngineeringTitle}
+        </div>
+        <p>${solT.calcResultAlert220}</p>
+        <div style="margin-top: 6px; font-style: italic; color: var(--text-muted); font-size: 0.75rem;">
+          ${scaleData.engineeringNote[lang]}
+        </div>
+      `;
+    }
+  } else {
+    // Compatible
+    if (statusBadge) {
+      statusBadge.className = "calc-status-badge calc-status-compatible";
+      statusBadge.textContent = lang === "id" ? "Kelistrikan Kompatibel" : "Power Compatible";
+    }
+    if (alertBox) {
+      alertBox.style.display = "block";
+      const statusNote = is220VSelected ? solT.calcResultOk220 : solT.calcResultOk380;
+      alertBox.innerHTML = `
+        <div style="font-weight: 700; color: var(--accent-green-bright); margin-bottom: 4px;">
+          ✓ ${solT.calcResultEngineeringTitle}
+        </div>
+        <p>${statusNote}</p>
+        <div style="margin-top: 6px; font-style: italic; color: var(--text-muted); font-size: 0.75rem;">
+          ${scaleData.engineeringNote[lang]}
+        </div>
+      `;
+    }
+  }
+
+  // Pre-filled WhatsApp link with the current calculator parameters
+  const sectorName = currentSector.title[lang];
+  const scaleName = PageState.calcScale.toUpperCase();
+  const waMsg = lang === "id"
+    ? `Halo Tim Sales Engineer Relasi Sukses, saya telah menggunakan simulator kapasitas untuk sektor *${sectorName}* (Skala: ${scaleName}, Sumber Listrik: ${PageState.calcPhase}, Total Daya: ${scaleData.totalPowerKw} kW). Saya ingin mendiskusikan rekomendasi mesin dan audit layout dapur ini.`
+    : `Hello Relasi Sukses Sales Engineers, I tested your capacity simulator for *${sectorName}* (Scale: ${scaleName}, Power: ${PageState.calcPhase}, Est. Load: ${scaleData.totalPowerKw} kW). I would like to discuss this machinery configuration and arrange an on-site audit.`;
+
+  if (waDiscussBtn) waDiscussBtn.href = createWhatsAppUrl(waMsg);
+}
+
+/**
+ * -------------------------------------------------------------
+ * 5. RENDER WARRANTY & SLA SECTION
+ * -------------------------------------------------------------
+ */
+function renderWarranty() {
+  const lang = PageState.currentLang;
+  const solT = i18nData[lang].solutionsPage;
+  const plans = solutionsData.protectionPlans;
+
+  const badgeEl = document.getElementById("warranty-badge");
+  const titleEl = document.getElementById("warranty-title");
+  const subtitleEl = document.getElementById("warranty-subtitle");
+  const gridEl = document.getElementById("warranty-grid");
+
+  if (badgeEl) badgeEl.textContent = solT.warrantyBadge;
+  if (titleEl) titleEl.textContent = solT.warrantyTitle;
+  if (subtitleEl) subtitleEl.textContent = solT.warrantySubtitle;
+
+  if (gridEl) {
+    gridEl.innerHTML = plans.map(p => `
+      <article class="warranty-card">
+        <div>
+          <span class="warranty-badge-pill">${p.badge}</span>
+          <h3 class="warranty-title">${p.title[lang]}</h3>
+          <p class="warranty-coverage">${p.coverage[lang]}</p>
+        </div>
+        <div class="warranty-highlight-box">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <polyline points="20 6 9 17 4 12"></polyline>
+          </svg>
+          <span>${p.highlight[lang]}</span>
+        </div>
+      </article>
+    `).join("");
+  }
+}
+
+/**
+ * -------------------------------------------------------------
+ * 6. RENDER CTA BANNER & FOOTER
+ * -------------------------------------------------------------
+ */
+function renderCTAAndFooter() {
+  const lang = PageState.currentLang;
+  const solT = i18nData[lang].solutionsPage;
+  const f = i18nData[lang].footer;
+
+  // CTA
+  const ctaBadge = document.getElementById("cta-badge");
+  const ctaTitle = document.getElementById("cta-title");
+  const ctaDesc = document.getElementById("cta-desc");
+  const ctaWaBtn = document.getElementById("cta-wa-btn");
+  const ctaWaText = document.getElementById("cta-wa-text");
+  const ctaCatalogBtn = document.getElementById("cta-catalog-btn");
+  const ctaCatalogText = document.getElementById("cta-catalog-text");
+
+  if (ctaBadge) ctaBadge.textContent = solT.ctaBadge;
+  if (ctaTitle) ctaTitle.textContent = solT.ctaTitle;
+  if (ctaDesc) ctaDesc.textContent = solT.ctaDesc;
+  if (ctaWaText) ctaWaText.textContent = solT.ctaWaBtn;
+  if (ctaCatalogText) ctaCatalogText.textContent = solT.ctaCatalogBtn;
+
+  const ctaMsg = lang === "id"
+    ? "Halo Tim Relasi Sukses, saya tertarik berkonsultasi mengenai kesiapan daya listrik dan audit layout dapur usaha saya. Mohon arahannya."
+    : "Hello Relasi Sukses Team, I am interested in consulting about our facility's electrical readiness and kitchen workflow layout.";
+  if (ctaWaBtn) ctaWaBtn.href = createWhatsAppUrl(ctaMsg);
+
+  // Footer
+  const aboutText = document.getElementById("footer-about-text");
+  const quickTitle = document.getElementById("footer-quicklinks-title");
+  const headTitle = document.getElementById("footer-head-title");
+  const headAddr = document.getElementById("footer-head-addr");
+  const branchTitle = document.getElementById("footer-branch-title");
+  const branchAddr = document.getElementById("footer-branch-addr");
+  const legalNotice = document.getElementById("footer-legal-notice");
+  const privacyLink = document.getElementById("footer-privacy-link");
+  const termsLink = document.getElementById("footer-terms-link");
+
+  if (aboutText) aboutText.textContent = f.about;
+  if (quickTitle) quickTitle.textContent = f.quickLinks;
+  if (headTitle) headTitle.textContent = f.headOffice;
+  if (headAddr) headAddr.textContent = f.headOfficeAddr;
+  if (branchTitle) branchTitle.textContent = f.branchOffice;
+  if (branchAddr) branchAddr.textContent = f.branchOfficeAddr;
+  if (legalNotice) legalNotice.textContent = f.legalNotice;
+  if (privacyLink) privacyLink.textContent = f.privacy;
+  if (termsLink) termsLink.textContent = f.terms;
+}
+
+/**
+ * Master Render
+ */
+function renderAll() {
+  renderHeaderAndNav();
+  renderHero();
+  renderLifecycle();
+  renderCalculatorControls();
+  updateCalculatorResult();
+  renderWarranty();
+  renderCTAAndFooter();
+}
+
+/**
+ * Initialization & Event Listeners
+ */
+document.addEventListener("DOMContentLoaded", () => {
+  // 1. Language Toggle
+  document.querySelectorAll(".lang-btn").forEach(btn => {
+    btn.addEventListener("click", () => {
+      const selected = btn.dataset.lang;
+      if (selected !== PageState.currentLang) {
+        PageState.currentLang = selected;
+        localStorage.setItem("vectro_lang", selected);
+        renderAll();
+      }
+    });
+  });
+
+  // 2. Calculator Sector Delegation
+  const sectorContainer = document.getElementById("calc-sector-pills");
+  if (sectorContainer) {
+    sectorContainer.addEventListener("click", (e) => {
+      const btn = e.target.closest(".calc-sector-btn");
+      if (btn && btn.dataset.sector) {
+        PageState.calcSector = btn.dataset.sector;
+        renderCalculatorControls();
+        updateCalculatorResult();
+      }
+    });
+  }
+
+  // 3. Calculator Scale Delegation
+  const scaleContainer = document.getElementById("calc-scale-options");
+  if (scaleContainer) {
+    scaleContainer.addEventListener("click", (e) => {
+      const card = e.target.closest(".calc-scale-radio-card");
+      if (card && card.dataset.scale) {
+        PageState.calcScale = card.dataset.scale;
+        renderCalculatorControls();
+        updateCalculatorResult();
+      }
+    });
+  }
+
+  // 4. Calculator Power Switches
+  const btn220 = document.getElementById("btn-power-220");
+  const btn380 = document.getElementById("btn-power-380");
+
+  if (btn220) {
+    btn220.addEventListener("click", () => {
+      PageState.calcPhase = "220V";
+      renderCalculatorControls();
+      updateCalculatorResult();
+    });
+  }
+
+  if (btn380) {
+    btn380.addEventListener("click", () => {
+      PageState.calcPhase = "380V";
+      renderCalculatorControls();
+      updateCalculatorResult();
+    });
+  }
+
+  // Run Initial Render
+  renderAll();
+});

@@ -1,0 +1,195 @@
+- generic [active] [ref=f3e1]:
+  - complementary "Announcement" [ref=f3e2]:
+    - generic [ref=f3e3]:
+      - generic [ref=f3e4]: Gudang Sparepart Sentral & Teknisi Siaga Se-Indonesia | Showroom Jakarta & Surabaya
+      - generic [ref=f3e8]:
+        - text: "Hotline Engineering:"
+        - strong [ref=f3e9]: +62 812-9525-4747
+  - banner [ref=f3e10]:
+    - generic [ref=f3e11]:
+      - link "Relasi Sukses Homepage" [ref=f3e12] [cursor=pointer]:
+        - /url: index.html
+        - generic [ref=f3e16]: RELASI SUKSES
+      - navigation "Main Navigation"
+      - generic [ref=f3e18]:
+        - group "Language selection" [ref=f3e19]:
+          - button "Switch to Indonesian" [ref=f3e20] [cursor=pointer]: ID
+          - button "Switch to English" [ref=f3e21] [cursor=pointer]: EN
+        - link [ref=f3e22] [cursor=pointer]:
+          - /url: https://wa.me/6281295254747?text=Halo%20Tim%20Relasi%20Sukses%2C%20saya%20tertarik%20berkonsultasi%20mengenai%20mesin%20industri%20makanan%20%26%20pengemasan%20untuk%20usaha%20saya.%20Mohon%20informasi%20katalog%20%26%20jadwal%20demo.
+        - button "Open mobile menu" [ref=f3e25] [cursor=pointer]
+  - navigation "Breadcrumb navigation" [ref=f3e27]:
+    - list [ref=f3e29]:
+      - listitem [ref=f3e30]:
+        - link "Beranda" [ref=f3e31] [cursor=pointer]:
+          - /url: index.html
+      - listitem [ref=f3e32]: /
+      - listitem [ref=f3e33]: Katalog Mesin
+  - main [ref=f3e34]:
+    - region [ref=f3e35]:
+      - generic [ref=f3e36]:
+        - generic [ref=f3e37]: Layer 1 · Kategori Mesin
+        - heading "Kategori Mesin Industri Pangan & Kemasan" [level=1] [ref=f3e38]
+        - paragraph [ref=f3e39]: Pilih lini kategori di bawah untuk mengeksplorasi katalog mesin spesifik, atau lihat seluruh mesin sekaligus.
+        - button "Lihat Seluruh Mesin (10 Unit)" [ref=f3e41] [cursor=pointer]
+      - generic [ref=f3e42]:
+        - article [ref=f3e43] [cursor=pointer]:
+          - generic [ref=f3e44]:
+            - generic [ref=f3e45]: Solusi Roti & Pastry
+            - heading "Peralatan Bakery & Toko Roti" [level=3] [ref=f3e53]
+            - paragraph [ref=f3e54]: Dari mixer adonan lembut, oven gas hemat bakar, hingga mesin pelapis pastry renyah.
+            - paragraph [ref=f3e55]: Koleksi lengkap mesin pembuat roti untuk artisan bakery, toko roti modern, kafe pastry, hingga pabrik roti berskala besar. Menghasilkan adonan kalis lebih cepat dengan tekstur pori-pori roti yang lembut dan seragam.
+            - generic [ref=f3e56]:
+              - generic [ref=f3e57]:
+                - generic [ref=f3e58]: Unit Tersedia
+                - generic [ref=f3e59]: 4 Mesin Siap Uji Coba
+              - generic [ref=f3e60]:
+                - generic [ref=f3e61]: Standar Higienis
+                - generic [ref=f3e62]: SUS 304 Food Grade
+            - generic [ref=f3e63]:
+              - generic [ref=f3e64]: "Aplikasi Produk Umum:"
+              - generic [ref=f3e65]:
+                - generic [ref=f3e66]: Roti Manis & Roti Tawar
+                - generic [ref=f3e67]: Croissant & Danish Pastry
+                - generic [ref=f3e68]: Cake, Bolu & Brownies
+                - generic [ref=f3e69]: Donat & Pizza Base
+          - button "Buka Katalog Kategori" [ref=f3e70]
+        - article [ref=f3e74] [cursor=pointer]:
+          - generic [ref=f3e75]:
+            - generic [ref=f3e76]: Segel Kedap & Ritel Standar
+            - heading "Mesin Pengemas & Packaging Otomatis" [level=3] [ref=f3e84]
+            - paragraph [ref=f3e85]: Bungkus satuan maupun kantong standing pouch berkecepatan tinggi dengan hasil higienis.
+            - paragraph [ref=f3e86]: Solusi kemasan modern untuk melindungi kesegaran makanan, mencegah jamur, dan meningkatkan nilai jual produk di rak supermarket. Tersedia opsi pengisian gas nitrogen (gas flushing) dan printer tanggal kadaluarsa.
+            - generic [ref=f3e87]:
+              - generic [ref=f3e88]:
+                - generic [ref=f3e89]: Unit Tersedia
+                - generic [ref=f3e90]: 3 Mesin Siap Uji Coba
+              - generic [ref=f3e91]:
+                - generic [ref=f3e92]: Standar Higienis
+                - generic [ref=f3e93]: SUS 304 / HACCP Ready
+            - generic [ref=f3e94]:
+              - generic [ref=f3e95]: "Aplikasi Produk Umum:"
+              - generic [ref=f3e96]:
+                - generic [ref=f3e97]: Roti Satuan & Biskuit
+                - generic [ref=f3e98]: Standing Pouch Keripik & Biji Kopi
+                - generic [ref=f3e99]: Sachet Saus & Minuman Serbuk
+                - generic [ref=f3e100]: Frozen Food & Bakso Beku
+          - button "Buka Katalog Kategori" [ref=f3e101]
+        - article [ref=f3e105] [cursor=pointer]:
+          - generic [ref=f3e106]:
+            - generic [ref=f3e107]: Otomasi Isian & Pengolahan
+            - heading "Mesin Pengolahan Makanan & Snack" [level=3] [ref=f3e114]
+            - paragraph [ref=f3e115]: Cetak kue berisian presisi, kuali masak aduk otomatis, dan pencampur bumbu konsisten.
+            - paragraph [ref=f3e116]: Memangkas ketergantungan tenaga kerja manual yang melelahkan dalam membentuk kue berisian (nastar, mochi, bakpia) dan memasak selai/bumbu tanpa gosong. Gramatur isian terkontrol presisi hingga hitungan gram.
+            - generic [ref=f3e117]:
+              - generic [ref=f3e118]:
+                - generic [ref=f3e119]: Unit Tersedia
+                - generic [ref=f3e120]: 2 Mesin Siap Uji Coba
+              - generic [ref=f3e121]:
+                - generic [ref=f3e122]: Standar Higienis
+                - generic [ref=f3e123]: SUS 304 Solid 3mm
+            - generic [ref=f3e124]:
+              - generic [ref=f3e125]: "Aplikasi Produk Umum:"
+              - generic [ref=f3e126]:
+                - generic [ref=f3e127]: Nastar, Mochi & Bakpia
+                - generic [ref=f3e128]: Selai Nanas, Dodol & Saus
+                - generic [ref=f3e129]: Bakso Daging & Nugget
+                - generic [ref=f3e130]: Mooncake & Pastry Isi Daging
+          - button "Buka Katalog Kategori" [ref=f3e131]
+        - article [ref=f3e135] [cursor=pointer]:
+          - generic [ref=f3e136]:
+            - generic [ref=f3e137]: Pabrik Terintegrasi
+            - heading "Lini Produksi Pabrik Otomatis" [level=3] [ref=f3e148]
+            - paragraph [ref=f3e149]: Sistem alur produksi terintegrasi penuh dari pembagian adonan sampai keluar oven.
+            - paragraph [ref=f3e150]: Solusi terpadu turnkey untuk perusahaan makanan yang ingin memproduksi ribuan produk per jam secara kontinu. Dilengkapi kendali PLC terpusat, sensor pemantau kecepatan otomatis, dan standar keamanan internasional.
+            - generic [ref=f3e151]:
+              - generic [ref=f3e152]:
+                - generic [ref=f3e153]: Unit Tersedia
+                - generic [ref=f3e154]: 1 Mesin Siap Uji Coba
+              - generic [ref=f3e155]:
+                - generic [ref=f3e156]: Standar Higienis
+                - generic [ref=f3e157]: CE Marked / ISO 9001
+            - generic [ref=f3e158]:
+              - generic [ref=f3e159]: "Aplikasi Produk Umum:"
+              - generic [ref=f3e160]:
+                - generic [ref=f3e161]: Pabrik Roti Tawar Kemasan
+                - generic [ref=f3e162]: Pabrik Burger Bun Cepat Saji
+                - generic [ref=f3e163]: Lini Biskuit & Cookies
+                - generic [ref=f3e164]: Lini Croissant Laminated Otomatis
+          - button "Buka Katalog Kategori" [ref=f3e165]
+  - contentinfo [ref=f3e169]:
+    - generic [ref=f3e170]:
+      - generic [ref=f3e171]:
+        - generic [ref=f3e172]:
+          - generic [ref=f3e173]: RELASI SUKSES
+          - paragraph [ref=f3e178]: PT Relasi Sukses Bersama - Penyedia mesin industri pengolahan pangan, bakery equipment, dan sistem pengemasan otomatis terpercaya di Indonesia.
+          - generic [ref=f3e179]: ISO 9001 Certified Supplier
+        - generic [ref=f3e180]:
+          - generic [ref=f3e181]: Tautan Cepat
+          - list [ref=f3e182]:
+            - listitem [ref=f3e183]:
+              - link "Beranda" [ref=f3e184] [cursor=pointer]:
+                - /url: index.html#home
+            - listitem [ref=f3e185]:
+              - link "Katalog Mesin" [ref=f3e186] [cursor=pointer]:
+                - /url: products.html
+            - listitem [ref=f3e187]:
+              - link "Tentang Kami" [ref=f3e188] [cursor=pointer]:
+                - /url: about.html
+            - listitem [ref=f3e189]:
+              - link "Solusi Bisnis" [ref=f3e190] [cursor=pointer]:
+                - /url: solutions.html
+            - listitem [ref=f3e191]:
+              - link "Artikel" [ref=f3e192] [cursor=pointer]:
+                - /url: articles.html
+            - listitem [ref=f3e193]:
+              - link "Kontak & FAQ" [ref=f3e194] [cursor=pointer]:
+                - /url: contact.html
+        - generic [ref=f3e195]:
+          - generic [ref=f3e196]: Showroom Jakarta
+          - generic [ref=f3e197]:
+            - paragraph [ref=f3e198]: Arcade Business Center Lt. 6 Unit 6-03, Pantai Indah Kapuk (PIK), Jakarta Utara 14460
+            - paragraph [ref=f3e199]: "Telp: (021) 5596 8800"
+        - generic [ref=f3e200]:
+          - generic [ref=f3e201]: Cabang Surabaya
+          - generic [ref=f3e202]:
+            - paragraph [ref=f3e203]: Komplek Rungkut Industri Megah Blok D-12, Surabaya, Jawa Timur 60293
+            - paragraph [ref=f3e204]: "Telp: (031) 843 7200"
+      - generic [ref=f3e205]:
+        - paragraph [ref=f3e206]: © 2026 PT Relasi Sukses Bersama (relasisukses.co.id). Seluruh hak cipta dilindungi. Didesain dengan standar presisi industri.
+        - generic [ref=f3e207]:
+          - link "Kebijakan Privasi" [ref=f3e208] [cursor=pointer]:
+            - /url: "#"
+          - link "Syarat Layanan" [ref=f3e209] [cursor=pointer]:
+            - /url: "#"
+  - generic [ref=f3e210]:
+    - button "Chat via WhatsApp" [ref=f3e211] [cursor=pointer]
+    - dialog [aria-hidden]:
+      - generic:
+        - generic:
+          - paragraph: RELASI SUKSES SUPPORT
+          - heading [level=2]: Ada yang bisa kami bantu?
+        - button
+      - paragraph: Pilih divisi yang sesuai dengan kebutuhan Anda untuk terhubung langsung dengan tim kami via WhatsApp.
+      - generic:
+        - link:
+          - /url: https://wa.me/6281295254747?text=Halo%20Sales%20Consultant%20Relasi%20Sukses%2C%20saya%20tertarik%20berkonsultasi%20mengenai%20mesin%20industri%20makanan%20%26%20kemasan.%20Mohon%20informasi%20rekomendasi%20%26%20penawaran%20harga.
+          - generic:
+            - strong: Konsultasi & Penawaran Mesin
+            - generic: Kapasitas produksi, spesifikasi & penawaran
+          - generic [aria-hidden]: →
+        - link:
+          - /url: https://wa.me/6281295254747?text=Halo%20Tim%20Teknis%20Relasi%20Sukses%2C%20saya%20membutuhkan%20bantuan%20servis%20teknis%20%2F%20ketersediaan%20sparepart%20untuk%20mesin%20pabrik%20saya.
+          - generic:
+            - strong: Servis Teknis & Suku Cadang
+            - generic: Teknisi siaga, kalibrasi & pengiriman sparepart
+          - generic [aria-hidden]: →
+        - link:
+          - /url: https://wa.me/6281295254747?text=Halo%20Relasi%20Sukses%2C%20saya%20ingin%20menjadwalkan%20kunjungan%20%26%20uji%20coba%20resep%20di%20Test%20Kitchen%20Showroom%20PIK.
+          - generic:
+            - strong: Trial Resep di Test Kitchen
+            - generic: Uji coba adonan langsung di Showroom PIK JKT & SBY
+          - generic [aria-hidden]: →
+      - generic:
+        - strong: JAM OPERASIONAL KONSULTASI
+        - text: Senin – Sabtu, 08.00 – 17.30 WIB
