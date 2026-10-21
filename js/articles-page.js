@@ -3,10 +3,10 @@
  * Clean Code Architecture: Reactive State, Dynamic Category Filtering, Keyword Search & WhatsApp Routing
  */
 
-import { articlesData } from "./data/articles.js?v=4";
-import { i18nData } from "./data/i18n.js?v=4";
-import { companyData } from "./data/company.js?v=4";
-import { buildWhatsAppLink } from "./utils/whatsapp.js?v=4";
+import { articlesData } from "./data/articles.js?v=5";
+import { i18nData } from "./data/i18n.js?v=5";
+import { companyData } from "./data/company.js?v=5";
+import { buildWhatsAppLink } from "./utils/whatsapp.js?v=5";
 import { 
   getCurrentLanguage, 
   setCurrentLanguage, 
@@ -16,8 +16,8 @@ import {
   setSafeHref, 
   renderSharedHeader, 
   renderSharedFooter 
-} from "./utils/dom.js?v=4";
-import { updateWhatsAppWidgetLang } from "./components/whatsapp-widget.js?v=4";
+} from "./utils/dom.js?v=5";
+import { updateWhatsAppWidgetLang } from "./components/whatsapp-widget.js?v=5";
 
 // Page State
 const PageState = {
@@ -176,9 +176,7 @@ function renderArticles() {
             <strong>${item.author}</strong>
           </div>
           <a href="${waUrl}" target="_blank" rel="noopener" class="article-wa-btn">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.311.045-.698.034-1.85-.444-1.294-.537-2.13-1.849-2.196-1.936-.064-.087-.521-.692-.521-1.319 0-.626.326-.935.443-1.062.116-.127.255-.159.34-.159.085 0 .17.001.244.005.078.004.183-.029.287.218.106.254.361.88.393.945.032.064.053.14.01.223-.042.085-.064.138-.127.212-.064.074-.134.165-.192.222-.063.064-.13.133-.056.26.074.127.329.544.706.88.486.433.896.568 1.023.632.127.063.201.053.276-.032.074-.085.318-.371.403-.498.085-.127.17-.106.286-.064.116.043.742.35.869.414.127.064.212.095.244.148.031.053.031.307-.113.712z"/>
-            </svg>
+            <i class="ri-whatsapp-fill"></i>
             <span>${lang === "id" ? "Diskusi Topik Ini (WA)" : "Discuss with Engineer"}</span>
           </a>
         </div>

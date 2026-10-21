@@ -6,12 +6,12 @@
  * - Layer 3: Comprehensive Product Detail View & Companion Machinery
  */
 
-import { i18nData } from "./data/i18n.js?v=4";
-import { categoriesData } from "./data/categories.js?v=4";
-import { productsData } from "./data/products.js?v=4";
-import { companyData } from "./data/company.js?v=4";
-import { machineIcons } from "./data/icons.js?v=4";
-import { buildWhatsAppLink } from "./utils/whatsapp.js?v=4";
+import { i18nData } from "./data/i18n.js?v=5";
+import { categoriesData } from "./data/categories.js?v=5";
+import { productsData } from "./data/products.js?v=5";
+import { companyData } from "./data/company.js?v=5";
+import { machineIcons } from "./data/icons.js?v=5";
+import { buildWhatsAppLink } from "./utils/whatsapp.js?v=5";
 import { 
   getCurrentLanguage, 
   setCurrentLanguage, 
@@ -21,8 +21,8 @@ import {
   setSafeHref, 
   renderSharedHeader, 
   renderSharedFooter 
-} from "./utils/dom.js?v=4";
-import { updateWhatsAppWidgetLang } from "./components/whatsapp-widget.js?v=4";
+} from "./utils/dom.js?v=5";
+import { updateWhatsAppWidgetLang } from "./components/whatsapp-widget.js?v=5";
 
 // Page State
 const PageState = {
@@ -180,14 +180,22 @@ function renderLayer1() {
   if (!grid) return;
 
   grid.innerHTML = categoriesData.map(cat => {
-    const iconSvg = machineIcons[cat.typeIcon] || machineIcons.mixer;
+    const categoryRemixIcons = {
+      catBakery: "ri-bread-line",
+      catPackaging: "ri-box-3-line",
+      catProcessing: "ri-blender-line",
+      catLines: "ri-node-tree"
+    };
+    const catIconClass = categoryRemixIcons[cat.id] || "ri-settings-3-line";
     const machineCount = productsData.filter(p => p.category === cat.id).length;
 
     return `
       <article class="category-card" data-category="${cat.id}">
         <div>
           <div class="cat-card-header">
-            <div class="cat-icon-symbol">${iconSvg}</div>
+            <div class="cat-icon-symbol">
+              <i class="${catIconClass}"></i>
+            </div>
             <span class="badge-tag badge-gold">${cat.badge[lang]}</span>
           </div>
 
@@ -367,8 +375,12 @@ function renderLayer2() {
           </div>
 
           <div class="product-thumbnail-area trigger-detail" style="cursor: pointer;" title="${prodT.viewDetail}">
-            <div class="art-grid"></div>
-            <div class="product-thumb-svg">${iconSvg}</div>
+            ${item.image ? `
+              <img src="${item.image}" alt="${item.title[lang]}" class="product-thumb-img" loading="lazy" />
+            ` : `
+              <div class="art-grid"></div>
+              <div class="product-thumb-svg">${iconSvg}</div>
+            `}
           </div>
 
           <h3 class="product-title trigger-detail" style="cursor: pointer;">${item.title[lang]}</h3>
@@ -392,24 +404,17 @@ function renderLayer2() {
         <div>
           <div class="card-actions-row">
             <button type="button" class="btn btn-ghost btn-sm trigger-detail" data-id="${item.id}">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
-                <circle cx="12" cy="12" r="3"></circle>
-              </svg>
-              ${prodT.viewDetail}
+              <i class="ri-eye-line"></i>
+              <span>${prodT.viewDetail}</span>
             </button>
             <a href="${waQuoteUrl}" target="_blank" rel="noopener" class="btn btn-wa btn-sm">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.311.045-.698.034-1.85-.444-1.294-.537-2.13-1.849-2.196-1.936-.064-.087-.521-.692-.521-1.319 0-.626.326-.935.443-1.062.116-.127.255-.159.34-.159.085 0 .17.001.244.005.078.004.183-.029.287.218.106.254.361.88.393.945.032.064.053.14.01.223-.042.085-.064.138-.127.212-.064.074-.134.165-.192.222-.063.064-.13.133-.056.26.074.127.329.544.706.88.486.433.896.568 1.023.632.127.063.201.053.276-.032.074-.085.318-.371.403-.498.085-.127.17-.106.286-.064.116.043.742.35.869.414.127.064.212.095.244.148.031.053.031.307-.113.712z"/>
-              </svg>
-              ${prodT.ctaQuote}
+              <i class="ri-whatsapp-fill"></i>
+              <span>${prodT.ctaQuote}</span>
             </a>
           </div>
           <div class="card-guarantee-note">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-            </svg>
-            ${prodT.guarantee}
+            <i class="ri-shield-check-line"></i>
+            <span>${prodT.guarantee}</span>
           </div>
         </div>
       </article>
@@ -462,20 +467,30 @@ function renderLayer3(product) {
   setSafeText("layer3-tagline", product.tagline[lang]);
   setSafeText("layer3-desc", product.description[lang]);
 
-  // Visual Icon
+  // Visual Icon or Photograph
   const visualArt = document.getElementById("layer3-visual-art");
-  if (visualArt) visualArt.innerHTML = iconSvg;
+  if (visualArt) {
+    if (product.image) {
+      visualArt.innerHTML = `
+        <div style="position: relative; width: 100%; height: 100%; min-height: 280px; display: flex; align-items: center; justify-content: center; overflow: hidden; border-radius: var(--radius-sm);">
+          <img src="${product.image}" alt="${product.title[lang]}" class="layer3-visual-img" />
+        </div>
+      `;
+    } else {
+      visualArt.innerHTML = iconSvg;
+    }
+  }
 
   // Primary Action Buttons
   const waQuoteBtn = document.getElementById("layer3-wa-quote-btn");
   if (waQuoteBtn) {
-    waQuoteBtn.textContent = t.layer3WaQuoteBtn;
+    waQuoteBtn.innerHTML = `<i class="ri-whatsapp-fill"></i> <span>${t.layer3WaQuoteBtn}</span>`;
     waQuoteBtn.href = createWALink(product, "quote");
   }
 
   const waDemoBtn = document.getElementById("layer3-wa-demo-btn");
   if (waDemoBtn) {
-    waDemoBtn.textContent = t.layer3WaDemoBtn;
+    waDemoBtn.innerHTML = `<i class="ri-calendar-check-line"></i> <span>${t.layer3WaDemoBtn}</span>`;
     waDemoBtn.href = createWALink(product, "demo");
   }
 
@@ -489,9 +504,7 @@ function renderLayer3(product) {
   if (featuresGrid) {
     featuresGrid.innerHTML = product.features.map(f => `
       <div class="feature-pill-card">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-          <polyline points="20 6 9 17 4 12"></polyline>
-        </svg>
+        <i class="ri-checkbox-circle-fill text-gold" style="font-size: 1.15rem;"></i>
         <span class="feature-pill-text">${f[lang]}</span>
       </div>
     `).join("");
@@ -525,14 +538,19 @@ function renderLayer3(product) {
           <span class="badge-tag badge-gold">${rel.badge[lang]}</span>
         </div>
         <div class="product-thumbnail-area" style="height: 120px; cursor: pointer;">
-          <div class="product-thumb-svg" style="width: 60px; height: 60px;">
-            ${machineIcons[rel.typeIcon] || machineIcons.mixer}
-          </div>
+          ${rel.image ? `
+            <img src="${rel.image}" alt="${rel.title[lang]}" class="product-thumb-img" loading="lazy" />
+          ` : `
+            <div class="product-thumb-svg" style="width: 60px; height: 60px;">
+              ${machineIcons[rel.typeIcon] || machineIcons.mixer}
+            </div>
+          `}
         </div>
         <h4 style="font-size: 1.1rem; color: var(--text-primary); margin-bottom: 6px;">${rel.title[lang]}</h4>
         <p style="font-size: 0.8125rem; color: var(--text-muted); margin-bottom: 12px;">${rel.tagline[lang]}</p>
         <button type="button" class="btn btn-ghost btn-sm rel-drill-btn" style="width: 100%;" data-id="${rel.id}">
-          ${lang === 'id' ? 'Buka Detail Mesin Ini →' : 'View This Machine →'}
+          <i class="ri-arrow-right-line"></i>
+          <span>${lang === 'id' ? 'Buka Detail Mesin Ini' : 'View This Machine'}</span>
         </button>
       </div>
     `).join("");

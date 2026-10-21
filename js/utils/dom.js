@@ -137,8 +137,11 @@ export function renderSharedFooter(lang, i18nData) {
   setSafeText("footer-legal-text", f.legalNotice);
   setSafeText("footer-legal-notice", f.legalNotice);
   setSafeText("footer-terms-link", f.terms);
+  setSafeHref("footer-terms-link", "terms.html");
   setSafeText("footer-privacy-link", f.privacy);
+  setSafeHref("footer-privacy-link", "privacy.html");
   setSafeText("footer-getintouch-link", lang === "id" ? "Hubungi Kami" : "Get in Touch");
+  setSafeHref("footer-getintouch-link", "contact.html");
 
   // Footer nav links
   const footerNavLinks = {

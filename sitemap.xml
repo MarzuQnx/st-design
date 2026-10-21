@@ -62,4 +62,24 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://relasisukses.co.id/contact.html" />
   </url>
 
+  <!-- 7. Terms of Service -->
+  <url>
+    <loc>https://relasisukses.co.id/terms.html</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="id" href="https://relasisukses.co.id/terms.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://relasisukses.co.id/terms.html" />
+  </url>
+
+  <!-- 8. Privacy Policy -->
+  <url>
+    <loc>https://relasisukses.co.id/privacy.html</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="id" href="https://relasisukses.co.id/privacy.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://relasisukses.co.id/privacy.html" />
+  </url>
+
 </urlset>

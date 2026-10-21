@@ -3,10 +3,10 @@
  * Clean Code Architecture: Reactive Calculator Engine, i18n Re-rendering & Consultative WhatsApp Routing
  */
 
-import { solutionsData } from "./data/solutions.js?v=4";
-import { i18nData } from "./data/i18n.js?v=4";
-import { companyData } from "./data/company.js?v=4";
-import { buildWhatsAppLink } from "./utils/whatsapp.js?v=4";
+import { solutionsData } from "./data/solutions.js?v=5";
+import { i18nData } from "./data/i18n.js?v=5";
+import { companyData } from "./data/company.js?v=5";
+import { buildWhatsAppLink } from "./utils/whatsapp.js?v=5";
 import { 
   getCurrentLanguage, 
   setCurrentLanguage, 
@@ -16,8 +16,8 @@ import {
   setSafeHref, 
   renderSharedHeader, 
   renderSharedFooter 
-} from "./utils/dom.js?v=4";
-import { updateWhatsAppWidgetLang } from "./components/whatsapp-widget.js?v=4";
+} from "./utils/dom.js?v=5";
+import { updateWhatsAppWidgetLang } from "./components/whatsapp-widget.js?v=5";
 
 // Page & Calculator Reactive State
 const PageState = {
@@ -27,35 +27,12 @@ const PageState = {
   calcPhase: "220V"
 };
 
-// SVG Icons Map for Lifecycle & Calculator
+// Icons Map for Lifecycle & Calculator using Remix Icon glyphs
 const iconsMap = {
-  audit: `
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-      <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-      <polyline points="14 2 14 8 20 8"></polyline>
-      <line x1="16" y1="13" x2="8" y2="13"></line>
-      <line x1="16" y1="17" x2="8" y2="17"></line>
-      <polyline points="10 9 9 9 8 9"></polyline>
-    </svg>
-  `,
-  testRun: `
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-      <path d="M4.5 3h15M6 3v16a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V3"></path>
-      <path d="M6 14h12"></path>
-      <path d="M10 9a2 2 0 1 0 4 0"></path>
-    </svg>
-  `,
-  installation: `
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-      <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path>
-    </svg>
-  `,
-  support: `
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-      <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
-      <path d="m9 12 2 2 4-4"></path>
-    </svg>
-  `
+  audit: `<i class="ri-file-search-line"></i>`,
+  testRun: `<i class="ri-flask-line"></i>`,
+  installation: `<i class="ri-tools-line"></i>`,
+  support: `<i class="ri-shield-check-line"></i>`
 };
 
 /**
@@ -360,9 +337,7 @@ function renderWarranty() {
           <p class="warranty-coverage">${p.coverage[lang]}</p>
         </div>
         <div class="warranty-highlight-box">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-            <polyline points="20 6 9 17 4 12"></polyline>
-          </svg>
+          <i class="ri-check-line" style="color: var(--accent-gold); font-size: 1rem; margin-right: 4px;"></i>
           <span>${p.highlight[lang]}</span>
         </div>
       </article>

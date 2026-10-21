@@ -50,7 +50,8 @@ export const productsData = [
     },
     relatedProductIds: ["vec-bakery-02", "vec-umkm-01"],
     accentColor: "#f7c02d",
-    typeIcon: "mixer"
+    typeIcon: "mixer",
+    image: "images/products/spiral-mixer.jpg"
   },
   {
     id: "vec-bakery-02",
@@ -97,53 +98,55 @@ export const productsData = [
     },
     relatedProductIds: ["vec-bakery-01", "vec-pack-01"],
     accentColor: "#2098d1",
-    typeIcon: "oven"
+    typeIcon: "oven",
+    image: "images/products/gas-deck-oven.jpg"
   },
   {
     id: "vec-bakery-03",
-    modelCode: "VB-PR16",
+    modelCode: "VS-ST520",
     category: "catBakery",
     scale: "scaleMedium",
     popular: false,
     badge: {
-      id: "Kontrol Suhu & Kelembaban",
-      en: "Precision Humidity Control"
+      id: "Ketebalan Presisi & Halus",
+      en: "Precision Pastry Sheeter"
     },
     title: {
-      id: "Automatic Dough Proofer 16 Trays",
-      en: "16-Tray Automatic Dough Proofer"
+      id: "Automatic Reversible Dough Sheeter 520mm",
+      en: "520mm Automatic Reversible Dough Sheeter"
     },
     tagline: {
-      id: "Fermentasi adonan mengembang optimal dengan kelembaban digital otomatis.",
-      en: "Optimal dough fermentation with micro-controlled thermal humidity circulation."
+      id: "Ratakan adonan croissant & puff pastry dengan ketebalan mikron presisi.",
+      en: "Uniform micro-precision sheeting for croissants, Danish & puff pastry."
     },
     description: {
-      id: "Lemari pengembang adonan profesional dengan sirkulasi udara hangat dan uap air mikro. Mencegah kulit adonan kering dan memastikan ragi bekerja konsisten sepanjang tahun.",
-      en: "Commercial proofing cabinet featuring convective warm air circulation and fine atomized steam. Prevents crust drying and stabilizes fermentation cycles year-round."
+      id: "Mesin pengeroll adonan bolak-balik otomatis dengan sabuk konveyor food-grade dan rol stainless steel krom keras. Menjamin lapisan mentega dan adonan tidak pecah saat proses laminasi.",
+      en: "Heavy-duty reversible dough sheeter equipped with hard-chrome stainless steel rollers and food-grade synthetic conveyor belts. Ensures unbroken butter-dough lamination."
     },
     specs: [
-      { label: { id: "Kapasitas Loyang", en: "Tray Capacity" }, value: "16 Loyang (40 x 60 cm)" },
-      { label: { id: "Rentang Kelembaban", en: "Humidity Range" }, value: "60% - 95% RH Digital" },
-      { label: { id: "Rentang Suhu", en: "Temperature Range" }, value: "Ruang - 50°C" },
-      { label: { id: "Daya Listrik", en: "Power Rating" }, value: "1.8 kW / 220V 1 Phase" },
-      { label: { id: "Material Dinding", en: "Wall Insulation" }, value: "Double Wall Polyurethane Foam + SUS 304" }
+      { label: { id: "Lebar Sabuk Konveyor", en: "Conveyor Belt Width" }, value: "520 mm" },
+      { label: { id: "Panjang Meja Kerja", en: "Table Length" }, value: "2.000 mm (Bisa Dilipat)" },
+      { label: { id: "Rentang Ketebalan", en: "Thickness Range" }, value: "0.5 - 38 mm (Dapat Disesuaikan)" },
+      { label: { id: "Daya Listrik", en: "Motor Power" }, value: "0.75 kW / 220V atau 380V" },
+      { label: { id: "Material Rol", en: "Roller Material" }, value: "Hard Chrome SUS 304 Food Grade" }
     ],
     suitableFor: {
-      id: "Roti Manis, Donat, Baguette, Croissant Proofing, dan Roti Tawar.",
-      en: "Sweet bread, donuts, artisan baguettes, croissants, and loaf breads."
+      id: "Croissant, Danishes, Puff Pastry, Pie Crust, Kulit Bakpia, dan Fondant.",
+      en: "Croissants, Danish pastries, puff pastries, pie dough, and laminated dough."
     },
     features: [
-      { id: "Pemanas tubular stainless dengan tangki air terintegrasi", en: "Stainless tubular heater element with integrated water reservoir" },
-      { id: "Pintu kaca full-view memudahkan inspeksi tanpa membuka pintu", en: "Full-view observation glass door for inspection without humidity loss" },
-      { id: "Hemat daya dan siap operasional non-stop 24 jam", en: "Energy-efficient thermal insulation designed for 24/7 continuous operation" }
+      { id: "Meja konveyor dapat dilipat tegak menghemat ruang saat tidak digunakan", en: "Foldable conveyor bed for space-saving kitchen footprint when idle" },
+      { id: "Sistem tuas pengatur ketebalan instan dengan pengunci presisi", en: "Instant thickness adjustment lever with micro-calibrated position lock" },
+      { id: "Pelindung keselamatan otomatis mematikan mesin saat diangkat", en: "Safety guard auto-stop interlock switch on both roller entries" }
     ],
     roiHighlight: {
-      id: "Memangkas waktu fermentasi hingga 40% dan mengeliminasi risiko roti bantat akibat cuaca dingin.",
-      en: "Cuts proofing cycle duration by up to 40% and eliminates ruined batches caused by cold rainy weather."
+      id: "Menggantikan 3 jam kerja laminasi manual dengan tangan, mencegah adonan mentega meleleh, dan memastikan hasil panggangan flaky berlapis sempurna.",
+      en: "Replaces 3 hours of grueling manual hand rolling, prevents butter melting, and guarantees textbook flaky multi-layer puffing."
     },
     relatedProductIds: ["vec-bakery-01", "vec-bakery-02"],
     accentColor: "#3c763d",
-    typeIcon: "oven"
+    typeIcon: "sheeter",
+    image: "images/products/dough-sheeter.jpg"
   },
   {
     id: "vec-pack-01",
@@ -190,7 +193,8 @@ export const productsData = [
     },
     relatedProductIds: ["vec-bakery-02", "vec-proc-01"],
     accentColor: "#f7c02d",
-    typeIcon: "wrapper"
+    typeIcon: "wrapper",
+    image: "images/products/flow-wrapping-machine.jpg"
   },
   {
     id: "vec-pack-02",
@@ -237,7 +241,8 @@ export const productsData = [
     },
     relatedProductIds: ["vec-proc-02", "vec-pack-01"],
     accentColor: "#3c763d",
-    typeIcon: "pouch"
+    typeIcon: "pouch",
+    image: "images/products/rotary-doypack-machine.jpg"
   },
   {
     id: "vec-pack-03",
@@ -282,7 +287,8 @@ export const productsData = [
     },
     relatedProductIds: ["vec-pack-01", "vec-proc-02"],
     accentColor: "#2098d1",
-    typeIcon: "wrapper"
+    typeIcon: "wrapper",
+    image: "images/products/vffs-packaging-machine.jpg"
   },
   {
     id: "vec-proc-01",
@@ -329,7 +335,8 @@ export const productsData = [
     },
     relatedProductIds: ["vec-bakery-02", "vec-pack-01"],
     accentColor: "#f7c02d",
-    typeIcon: "encrusting"
+    typeIcon: "encrusting",
+    image: "images/products/encrusting-machine.jpg"
   },
   {
     id: "vec-proc-02",
@@ -376,7 +383,8 @@ export const productsData = [
     },
     relatedProductIds: ["vec-proc-01", "vec-pack-02"],
     accentColor: "#3c763d",
-    typeIcon: "pot"
+    typeIcon: "pot",
+    image: "images/products/planetary-cooking-mixer.jpg"
   },
   {
     id: "vec-lines-01",
@@ -423,7 +431,8 @@ export const productsData = [
     },
     relatedProductIds: ["vec-bakery-01", "vec-pack-01"],
     accentColor: "#f7c02d",
-    typeIcon: "conveyor"
+    typeIcon: "conveyor",
+    image: "images/products/automated-bread-line.jpg"
   },
   {
     id: "vec-umkm-01",
@@ -469,6 +478,7 @@ export const productsData = [
     },
     relatedProductIds: ["vec-bakery-01", "vec-bakery-02"],
     accentColor: "#2098d1",
-    typeIcon: "sheeter"
+    typeIcon: "sheeter",
+    image: "images/products/tabletop-dough-sheeter.jpg"
   }
 ];

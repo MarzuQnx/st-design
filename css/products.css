@@ -62,6 +62,7 @@
     opacity: 0;
     transform: translateY(12px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -152,9 +153,14 @@
   height: 32px;
 }
 
+.cat-icon-symbol i {
+  font-size: 1.85rem;
+  line-height: 1;
+}
+
 .cat-title {
   font-family: var(--font-family-display);
-  font-size: 1.25rem;
+  font-size: 1.55rem;
   font-weight: 700;
   color: var(--text-primary);
   line-height: 1.25;
@@ -507,7 +513,8 @@
   border-collapse: collapse;
 }
 
-.detail-table th, .detail-table td {
+.detail-table th,
+.detail-table td {
   padding: 12px 16px;
   text-align: left;
   border-bottom: 1px solid var(--border-subtle);
@@ -617,6 +624,7 @@
    RESPONSIVENESS (Adaptive 4-col -> 3-col -> 2-col -> 1-col)
 ------------------------------------------------------------- */
 @media (max-width: 1200px) {
+
   .categories-grid,
   .showcase-grid,
   #layer2-products-grid {
@@ -628,12 +636,14 @@
   .detail-hero-layout {
     grid-template-columns: 1fr;
   }
+
   .detail-product-title {
     font-size: 2rem;
   }
 }
 
 @media (max-width: 860px) {
+
   .categories-grid,
   .showcase-grid,
   #layer2-products-grid {
@@ -643,52 +653,63 @@
 }
 
 @media (max-width: 540px) {
+
   .categories-grid,
   .showcase-grid,
   #layer2-products-grid {
     grid-template-columns: minmax(0, 1fr);
   }
+
   .layer2-toolbar {
     padding: var(--space-3);
     flex-direction: column;
     align-items: stretch;
   }
+
   .layer2-search-box {
     min-width: 0;
     width: 100%;
   }
+
   .layer2-search-input {
     font-size: 1rem;
   }
+
   .layer2-sort-wrap {
     width: 100%;
     justify-content: space-between;
   }
+
   .layer2-sort-select {
     flex: 1;
     font-size: 1rem;
     min-height: 42px;
   }
+
   .layer2-chips-wrapper {
     overflow-x: auto;
     flex-wrap: nowrap;
     padding-bottom: 6px;
     -webkit-overflow-scrolling: touch;
   }
+
   .cat-chip {
     flex-shrink: 0;
     min-height: 40px;
     padding: 8px 14px;
     font-size: 0.8125rem;
   }
+
   .detail-specs-table-wrapper {
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
   }
+
   .detail-actions-row {
     flex-direction: column;
     width: 100%;
   }
+
   .detail-actions-row .btn {
     width: 100%;
     min-height: 48px;

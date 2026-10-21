@@ -3,10 +3,10 @@
  * Clean Code Architecture: Reactive State, Dynamic Accordion Filtering, Live Search & Booking Form
  */
 
-import { contactData } from "./data/contact.js?v=4";
-import { i18nData } from "./data/i18n.js?v=4";
-import { companyData } from "./data/company.js?v=4";
-import { buildWhatsAppLink } from "./utils/whatsapp.js?v=4";
+import { contactData } from "./data/contact.js?v=5";
+import { i18nData } from "./data/i18n.js?v=5";
+import { companyData } from "./data/company.js?v=5";
+import { buildWhatsAppLink } from "./utils/whatsapp.js?v=5";
 import { 
   getCurrentLanguage, 
   setCurrentLanguage, 
@@ -16,8 +16,8 @@ import {
   setSafeHref, 
   renderSharedHeader, 
   renderSharedFooter 
-} from "./utils/dom.js?v=4";
-import { updateWhatsAppWidgetLang } from "./components/whatsapp-widget.js?v=4";
+} from "./utils/dom.js?v=5";
+import { updateWhatsAppWidgetLang } from "./components/whatsapp-widget.js?v=5";
 
 // Page State
 const PageState = {
@@ -105,9 +105,7 @@ function renderChannels() {
               Hotline: <strong style="color: var(--accent-gold);">${ch.phone}</strong>
             </div>
             <a href="${waUrl}" target="_blank" rel="noopener" class="channel-btn">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.311.045-.698.034-1.85-.444-1.294-.537-2.13-1.849-2.196-1.936-.064-.087-.521-.692-.521-1.319 0-.626.326-.935.443-1.062.116-.127.255-.159.34-.159.085 0 .17.001.244.005.078.004.183-.029.287.218.106.254.361.88.393.945.032.064.053.14.01.223-.042.085-.064.138-.127.212-.064.074-.134.165-.192.222-.063.064-.13.133-.056.26.074.127.329.544.706.88.486.433.896.568 1.023.632.127.063.201.053.276-.032.074-.085.318-.371.403-.498.085-.127.17-.106.286-.064.116.043.742.35.869.414.127.064.212.095.244.148.031.053.031.307-.113.712z"/>
-              </svg>
+              <i class="ri-whatsapp-fill"></i>
               <span>${cT.channelsDirectBtn}</span>
             </a>
           </div>
@@ -150,9 +148,7 @@ function renderShowroomsAndBooking() {
         <ul class="showroom-features-list">
           ${sh.features.map(f => `
             <li>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                <polyline points="20 6 9 17 4 12"></polyline>
-              </svg>
+              <i class="ri-check-line" style="color: var(--accent-gold); font-size: 1rem; margin-right: 4px;"></i>
               <span>${f[lang]}</span>
             </li>
           `).join("")}
@@ -276,9 +272,7 @@ function renderFaqAccordion() {
       <div class="faq-accordion-item ${isOpen ? 'open' : ''}" data-faq-id="${faq.id}">
         <button type="button" class="faq-accordion-header" aria-expanded="${isOpen}">
           <span class="faq-question-text">${faq.q[lang]}</span>
-          <svg class="faq-chevron-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <polyline points="6 9 12 15 18 9"></polyline>
-          </svg>
+          <i class="ri-arrow-down-s-line faq-chevron-icon"></i>
         </button>
         <div class="faq-accordion-body">
           <p class="faq-answer-text">${faq.a[lang]}</p>

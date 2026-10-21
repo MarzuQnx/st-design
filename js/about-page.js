@@ -4,10 +4,10 @@
  * Standards: Utilitarian Industrial High-Craft, Marketing 5.0 (Human-Centered Automation)
  */
 
-import { aboutData } from "./data/about.js?v=4";
-import { i18nData } from "./data/i18n.js?v=4";
-import { companyData } from "./data/company.js?v=4";
-import { buildWhatsAppLink } from "./utils/whatsapp.js?v=4";
+import { aboutData } from "./data/about.js?v=5";
+import { i18nData } from "./data/i18n.js?v=5";
+import { companyData } from "./data/company.js?v=5";
+import { buildWhatsAppLink } from "./utils/whatsapp.js?v=5";
 import { 
   getCurrentLanguage, 
   setCurrentLanguage, 
@@ -17,51 +17,20 @@ import {
   setSafeHref, 
   renderSharedHeader, 
   renderSharedFooter 
-} from "./utils/dom.js?v=4";
-import { updateWhatsAppWidgetLang } from "./components/whatsapp-widget.js?v=4";
+} from "./utils/dom.js?v=5";
+import { updateWhatsAppWidgetLang } from "./components/whatsapp-widget.js?v=5";
 
 // Page State
 const PageState = {
   currentLang: getCurrentLanguage()
 };
 
-// SVG Icons for 4 Pillars
+// Icons for 4 Pillars using Remix Icon glyphs
 const pillarIcons = {
-  audit: `
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-      <rect x="4" y="2" width="16" height="20" rx="2"></rect>
-      <line x1="8" y1="6" x2="16" y2="6"></line>
-      <line x1="16" y1="14" x2="16" y2="18"></line>
-      <path d="M16 10h.01"></path>
-      <path d="M12 10h.01"></path>
-      <path d="M8 10h.01"></path>
-      <path d="M12 14h.01"></path>
-      <path d="M8 14h.01"></path>
-      <path d="M12 18h.01"></path>
-      <path d="M8 18h.01"></path>
-    </svg>
-  `,
-  testKitchen: `
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-      <path d="M4.5 3h15M6 3v16a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V3"></path>
-      <path d="M6 14h12"></path>
-      <path d="M10 9a2 2 0 1 0 4 0"></path>
-    </svg>
-  `,
-  zeroDowntime: `
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-      <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
-      <path d="m9 12 2 2 4-4"></path>
-    </svg>
-  `,
-  training: `
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-      <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
-      <circle cx="9" cy="7" r="4"></circle>
-      <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
-      <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
-    </svg>
-  `
+  audit: `<i class="ri-survey-line"></i>`,
+  testKitchen: `<i class="ri-flask-line"></i>`,
+  zeroDowntime: `<i class="ri-shield-check-line"></i>`,
+  training: `<i class="ri-group-line"></i>`
 };
 
 /**
@@ -210,9 +179,7 @@ function renderSpecialists() {
 
           <div>
             <a href="${waUrl}" target="_blank" rel="noopener" class="spec-action-btn">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.311.045-.698.034-1.85-.444-1.294-.537-2.13-1.849-2.196-1.936-.064-.087-.521-.692-.521-1.319 0-.626.326-.935.443-1.062.116-.127.255-.159.34-.159.085 0 .17.001.244.005.078.004.183-.029.287.218.106.254.361.88.393.945.032.064.053.14.01.223-.042.085-.064.138-.127.212-.064.074-.134.165-.192.222-.063.064-.13.133-.056.26.074.127.329.544.706.88.486.433.896.568 1.023.632.127.063.201.053.276-.032.074-.085.318-.371.403-.498.085-.127.17-.106.286-.064.116.043.742.35.869.414.127.064.212.095.244.148.031.053.031.307-.113.712z"/>
-              </svg>
+              <i class="ri-whatsapp-fill"></i>
               <span>${t.specialistBtnText}</span>
             </a>
           </div>
@@ -247,9 +214,7 @@ function renderWhyUs() {
         <div>
           <div class="whyus-card-stars" aria-label="Rating: 5 Stars">
             ${Array.from({ length: item.rating }).map(() => `
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
-              </svg>
+              <i class="ri-star-fill" style="color: var(--accent-gold); font-size: 1.1rem; margin-right: 2px;"></i>
             `).join("")}
           </div>
           <p class="whyus-card-quote">"${item.quote[lang]}"</p>
@@ -310,9 +275,7 @@ function renderFacilities() {
           <ul class="facility-features-list">
             ${fac.highlights.map(hl => `
               <li>
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                  <polyline points="20 6 9 17 4 12"></polyline>
-                </svg>
+                <i class="ri-check-line" style="color: var(--accent-gold); font-size: 1rem; margin-right: 4px;"></i>
                 <span>${hl[lang]}</span>
               </li>
             `).join("")}
@@ -323,9 +286,7 @@ function renderFacilities() {
           </div>
 
           <a href="${waUrl}" target="_blank" rel="noopener" class="btn btn-primary" style="width: 100%; justify-content: center; font-size: 0.875rem;">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.311.045-.698.034-1.85-.444-1.294-.537-2.13-1.849-2.196-1.936-.064-.087-.521-.692-.521-1.319 0-.626.326-.935.443-1.062.116-.127.255-.159.34-.159.085 0 .17.001.244.005.078.004.183-.029.287.218.106.254.361.88.393.945.032.064.053.14.01.223-.042.085-.064.138-.127.212-.064.074-.134.165-.192.222-.063.064-.13.133-.056.26.074.127.329.544.706.88.486.433.896.568 1.023.632.127.063.201.053.276-.032.074-.085.318-.371.403-.498.085-.127.17-.106.286-.064.116.043.742.35.869.414.127.064.212.095.244.148.031.053.031.307-.113.712z"/>
-            </svg>
+            <i class="ri-whatsapp-fill"></i>
             <span>${t.facilitiesBookBtn}</span>
           </a>
         </article>
