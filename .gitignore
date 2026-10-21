@@ -99,7 +99,9 @@ crawl-cache/
 lighthouse-reports/
 pagespeed-reports/
 screenshots/
+screens/
 snapshots/
+*.skill
 *.har
 *.cpuprofile
 *.heapprofile
