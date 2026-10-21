@@ -1,6 +1,5 @@
 # .gitignore — st-design
 
-```gitignore
 # ============================================================
 # ST-DESIGN — SECURITY & REPOSITORY HYGIENE
 # Project: PT Relasi Sukses Bersama
@@ -196,5 +195,4 @@ settings.local.json
 # .htaccess, .github/workflows/
 # README.md, ACTION-PLAN.md, FULL-AUDIT-REPORT.md
 # ============================================================
-```
 
