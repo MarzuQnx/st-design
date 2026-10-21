@@ -941,6 +941,12 @@ p:last-child {
   margin-top: var(--space-8);
 }
 
+/* Homepage Product Showcase Grid (3 columns on desktop) */
+#products-showcase-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--space-5);
+}
+
 @media (max-width: 1200px) {
   .showcase-grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -948,14 +954,16 @@ p:last-child {
 }
 
 @media (max-width: 860px) {
-  .showcase-grid {
+  .showcase-grid,
+  #products-showcase-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: var(--space-4);
   }
 }
 
 @media (max-width: 540px) {
-  .showcase-grid {
+  .showcase-grid,
+  #products-showcase-grid {
     grid-template-columns: minmax(0, 1fr);
   }
 
