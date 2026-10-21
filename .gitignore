@@ -73,21 +73,8 @@ webkit-profile/
 trace.zip
 
 # 4. LOCAL AGENT RUNTIME & SESSIONS
-.agent/cache/
-.agent/tmp/
-.agent/temp/
-.agent/logs/
-.agent/output/
-.agent/outputs/
-.agent/sessions/
-.agent/state/
-.agents/cache/
-.agents/tmp/
-.agents/logs/
-.agents/sessions/
-.agents/state/
-.agent/**/*.log
-.agent/**/__pycache__/
+.agent/
+.agents/
 
 # 5. SEO AUDIT RUNTIME OUTPUTS
 .github-seo-data/
